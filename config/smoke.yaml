@@ -1,0 +1,37 @@
+# Smoke configuration: fast end-to-end check of every stage (target < 3 min, < 4 GB RAM, 1 core).
+run_id: smoke
+seeds: [532]
+data:
+  raw_dir: data/raw            # unpacked UCI-447 archive (scripts/fetch_data.py)
+  manifest: data/manifest.json # SHA-256 per file; load fails closed on mismatch
+  cache: data/cache
+  subset: {stride: 3}          # every 3rd cycle -> 735 cycles
+split:
+  scheme: blocked              # contiguous blocks; no adjacent-cycle leakage
+  block_size: 30
+  fractions: {train: 0.6, cal: 0.2, test: 0.2}
+features:                      # A1: frozen statistical representation
+  segments: 6
+  sensors: null                # null = all 17 sensors
+a1: {erank_floor_frac: 0.1, drift_ratio: 0.5}   # A1 collapse diagnostics (batch-level)
+model:
+  kinds: [logreg]
+  C: 1.0
+  max_iter: 2000
+calibration:                   # A2: split-conformal (LAC) on the calibration partition
+  method: split_conformal_lac
+  alpha: 0.05
+policy:
+  tau: {medium: 0.80, high: 0.90, critical: 0.95}   # course RiskTier vocabulary
+  repair: true                 # drop-one-sensor models for localized faults
+checkers:
+  integrity: {range_margin: 0.10, flatline_rel: 0.5, spike_factor: 2.0}   # C1
+  physics: {residual_quantile: 0.995, slack: 1.5, coherence_margin: 0.05}   # C2
+  causal: {min_support: 0.9, interval_margin: 0.05}                       # A3 / O4
+injection:
+  modes: [dropout, stuck, offset]
+  sensors: [PS1, TS1, FS1]
+  offset_sd: 3.0
+  adversarial_sensors: []
+outputs: {dir: experiments/smoke}
+budget: {wall_seconds: 300, peak_rss_mib: 4096}

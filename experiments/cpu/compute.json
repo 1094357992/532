@@ -1,0 +1,17 @@
+{
+ "api_cost_usd": 0.0,
+ "budget": {
+  "peak_rss_mib": 16384,
+  "wall_seconds": 7200
+ },
+ "cpu_count": 2,
+ "device": "cpu",
+ "gpu_hours": 0.0,
+ "peak_rss_mib": 1044.6,
+ "peak_rss_note": "main process; workers measured separately",
+ "run_id": "cpu",
+ "threads_per_worker": 1,
+ "wall_seconds": 1448.13,
+ "worker_peak_rss_mib": 1024.9,
+ "workers": 2
+}

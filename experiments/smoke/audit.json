@@ -1,0 +1,1309 @@
+{
+ "artifacts": {
+  "trace": {
+   "path": "experiments/smoke/trace.jsonl.gz",
+   "records": 4740,
+   "sha256": "e22d0e3ad457737aa220137d0db5de0ca0dfb1b6e1dfc4ed6566b5397c4b68e6"
+  }
+ },
+ "checkers": {
+  "logreg/s532": {
+   "C1": {
+    "checker": "C1_integrity",
+    "flatline_blind_sensors": [
+     "PS4"
+    ],
+    "sensor_coverage": "17/17",
+    "tests": [
+     "non_finite",
+     "range",
+     "flatline",
+     "jump"
+    ]
+   },
+   "C2": {
+    "checker": "C2_physics",
+    "coherence_band": [
+     -0.906973,
+     0.171951
+    ],
+    "equations": {
+     "cooling_eff": {
+      "bound": 5.873301,
+      "r2": 0.99295
+     },
+     "cooling_pow": {
+      "bound": 0.016656,
+      "r2": 0.99985
+     },
+     "efficiency": {
+      "bound": 1.111635,
+      "r2": 0.99912
+     },
+     "flow_FS2": {
+      "bound": 0.090568,
+      "r2": 0.99699
+     },
+     "power_balance": {
+      "bound": 29.585141,
+      "r2": 0.99324
+     },
+     "pressure_PS1": {
+      "bound": 1.545652,
+      "r2": 0.99328
+     },
+     "pressure_PS2": {
+      "bound": 1.669198,
+      "r2": 0.99328
+     },
+     "pressure_PS5": {
+      "bound": 0.009861,
+      "r2": 0.99999
+     },
+     "pressure_PS6": {
+      "bound": 0.009398,
+      "r2": 0.99999
+     },
+     "thermal_TS1": {
+      "bound": 0.246951,
+      "r2": 0.99997
+     },
+     "thermal_TS2": {
+      "bound": 0.831045,
+      "r2": 0.99946
+     },
+     "thermal_TS3": {
+      "bound": 0.330278,
+      "r2": 0.99994
+     },
+     "thermal_TS4": {
+      "bound": 0.693454,
+      "r2": 0.99963
+     }
+    },
+    "sensor_coverage": "14/17",
+    "uncovered_sensors": [
+     "PS3",
+     "PS4",
+     "VS1"
+    ]
+   }
+  }
+ },
+ "claim_injection": {
+  "admitted": 0,
+  "cases": 7,
+  "per_case_admitted": {
+   "A3_not_implemented": false,
+   "checker_error": false,
+   "interpolated_grade": false,
+   "missing_provenance": false,
+   "no_obligation_results": false,
+   "unknown_component": false,
+   "unknown_type_RUL": false
+  }
+ },
+ "code_sha256": "49706719be2b4300e8414b0096ac0cb533bbeab7670b3a5d6a28ac62a00d1eee",
+ "command": "run",
+ "config": {
+  "path": "config/smoke.yaml",
+  "sha256": "023e20c33e0762b77995769a30dca1384d9e8f5fc30790fc04fe7a4643d369b7"
+ },
+ "data": {
+  "dataset": "UCI-447 Condition monitoring of hydraulic systems (Helwig et al. 2015)",
+  "manifest_sha256": "15e6aebc2ba27e786bc03f77749122d7389414e3f89b6f4586f3b019015bfe69",
+  "n_cycles_loaded": 735,
+  "partitions": {
+   "logreg/s532": {
+    "cal": 89,
+    "shift_unstable": 35,
+    "test": 115,
+    "train": 279
+   }
+  },
+  "subset_size": 735
+ },
+ "environment": {
+  "device": "cpu",
+  "network_after_setup": false,
+  "numpy": "2.5.3",
+  "python": "3.13.18",
+  "scipy": "1.18.1",
+  "sklearn": "1.9.1"
+ },
+ "failure_injection": {
+  "adversarial": {},
+  "modes": [
+   "dropout",
+   "stuck",
+   "offset"
+  ],
+  "sensors": [
+   "PS1",
+   "TS1",
+   "FS1"
+  ]
+ },
+ "interfaces": {
+  "logreg/s532": {
+   "A1": {
+    "artifact_id": "features/seg6-stats-v1/e259dea20164",
+    "bounded_conditions": [
+     "UCI-447 rig, 60 s cycles",
+     "train-split reference statistics",
+     "4 feature(s) constant in train are excluded from dead-dim test"
+    ],
+    "checker": {
+     "erank_floor": 17.0,
+     "passed": true
+    },
+    "collapse_diagnostics": {
+     "constant_in_reference": 4,
+     "dead_dims": 0,
+     "dim": 170,
+     "erank": 23.557901,
+     "std_max": 0.127038,
+     "std_median": 0.077621,
+     "std_min": 0.0
+    },
+    "dim": 170,
+    "disposition": "act",
+    "feature_names_sha256": "e259dea201646fb01850e4391536ac3642eb3d564f2f757aab995ae17dc04686",
+    "interface": "A1.RepresentationEvidence",
+    "n": 279,
+    "nan_fraction": 0.0,
+    "provenance": {
+     "data_manifest_sha256": "15e6aebc2ba27e786bc03f77749122d7389414e3f89b6f4586f3b019015bfe69",
+     "seed": 532,
+     "split": "train"
+    },
+    "representation_config": {
+     "diagnostic_normalization": "train z-score, then row l2 (A1 convention)",
+     "segments": 6,
+     "spec": "seg6-stats-v1",
+     "stats": [
+      "seg_mean x6",
+      "std",
+      "min",
+      "max",
+      "slope"
+     ]
+    },
+    "segments": 6,
+    "sensors": [
+     "PS1",
+     "PS2",
+     "PS3",
+     "PS4",
+     "PS5",
+     "PS6",
+     "EPS1",
+     "FS1",
+     "FS2",
+     "TS1",
+     "TS2",
+     "TS3",
+     "TS4",
+     "VS1",
+     "CE",
+     "CP",
+     "SE"
+    ],
+    "spec_version": "seg6-stats-v1",
+    "supported_claim": "frozen 170-d per-cycle statistics retain multi-dimensional structure on train cycles"
+   },
+   "A2": {
+    "accumulator": {
+     "cal_coverage": 0.9775280898876404,
+     "ece": 0.5744168618282536,
+     "ece_bins": 15,
+     "interface": "A2.CalibratedEvidence",
+     "mean_set_size": 3.9775280898876404,
+     "nll": 6.048334382673829,
+     "qhat": 0.9999995097775752
+    },
+    "cooler": {
+     "cal_coverage": 0.9775280898876404,
+     "ece": 0.002049001582725807,
+     "ece_bins": 15,
+     "interface": "A2.CalibratedEvidence",
+     "mean_set_size": 0.9775280898876404,
+     "nll": 0.0020518101510034474,
+     "qhat": 0.004344286720669666
+    },
+    "pump": {
+     "cal_coverage": 0.9775280898876404,
+     "ece": 0.12052935015222738,
+     "ece_bins": 15,
+     "interface": "A2.CalibratedEvidence",
+     "mean_set_size": 0.9775280898876404,
+     "nll": 0.1760296856467804,
+     "qhat": 0.4070791823963805
+    },
+    "valve": {
+     "cal_coverage": 0.9775280898876404,
+     "ece": 0.10401140471191436,
+     "ece_bins": 15,
+     "interface": "A2.CalibratedEvidence",
+     "mean_set_size": 0.9887640449438202,
+     "nll": 0.13032278573027073,
+     "qhat": 0.441656111409104
+    }
+   },
+   "A3": {
+    "A3-cooler-CE": {
+     "cause": "cooler",
+     "claim_id": "A3-cooler-CE",
+     "effect": "CE",
+     "falsifier": "sign disagreement in >10% of strata (other components held fixed)",
+     "mechanism": "reduced cooler efficiency lowers measured cooling efficiency",
+     "scope": "UCI-447 test rig, stable cycles, fixed 60 s load profile",
+     "sign": 1,
+     "status": "SUPPORTED",
+     "strata": 30,
+     "support": 1.0
+    },
+    "A3-pump-FS1": {
+     "cause": "pump",
+     "claim_id": "A3-pump-FS1",
+     "effect": "FS1",
+     "falsifier": "sign disagreement in >10% of strata (other components held fixed)",
+     "mechanism": "internal leakage returns flow to tank, reducing delivered volume flow",
+     "scope": "UCI-447 test rig, stable cycles, fixed 60 s load profile",
+     "sign": -1,
+     "status": "SUPPORTED",
+     "strata": 30,
+     "support": 1.0
+    },
+    "A3-valve-FS1early": {
+     "cause": "valve",
+     "claim_id": "A3-valve-FS1early",
+     "effect": "FS1_early",
+     "falsifier": "sign disagreement in >10% of strata (other components held fixed)",
+     "mechanism": "switching lag delays flow onset in the first 10 s of the cycle",
+     "scope": "UCI-447 test rig, stable cycles, fixed 60 s load profile",
+     "sign": 1,
+     "status": "SUPPORTED",
+     "strata": 22,
+     "support": 0.9545
+    }
+   }
+  }
+ },
+ "invariant": {
+  "checked_records": 4740,
+  "name": "no_unverified_admission",
+  "violations": 0
+ },
+ "policy": {
+  "alpha": 0.05,
+  "fail_closed": true,
+  "obligations": {
+   "critical": [
+    "O1_integrity",
+    "O2_physics",
+    "O3_confidence",
+    "O4_causal_signature",
+    "O5_conformal_singleton"
+   ],
+   "high": [
+    "O1_integrity",
+    "O2_physics",
+    "O3_confidence",
+    "O5_conformal_singleton"
+   ],
+   "medium": [
+    "O1_integrity",
+    "O3_confidence"
+   ]
+  },
+  "routes": [
+   "act",
+   "repair",
+   "request_evidence",
+   "hand_off",
+   "defer"
+  ],
+  "tau": {
+   "critical": 0.95,
+   "high": 0.9,
+   "medium": 0.8
+  },
+  "tiers": {
+   "accumulator=100": "medium",
+   "accumulator=115": "medium",
+   "accumulator=130": "high",
+   "accumulator=90": "critical",
+   "cooler=100": "high",
+   "cooler=20": "medium",
+   "cooler=3": "critical",
+   "pump=0": "high",
+   "pump=1": "medium",
+   "pump=2": "critical",
+   "valve=100": "high",
+   "valve=73": "critical",
+   "valve=80": "medium",
+   "valve=90": "medium"
+  }
+ },
+ "results": {
+  "logreg/s532": {
+   "clean": {
+    "detection": {
+     "A1_dead_dims": 0.0,
+     "A1_erank": 22.83457,
+     "A1_passed": 1.0,
+     "C1_any": 0.0,
+     "C2_any": 0.0,
+     "either": 0.0
+    },
+    "variants": {
+     "B0_always_act": {
+      "coverage": 1.0,
+      "critical_missed_admitted": 0.07619,
+      "false_admission_rate": 0.15435,
+      "n": 460,
+      "selective_risk": 0.15435,
+      "task_accuracy": 0.84565,
+      "unnecessary_rejection_rate": 0.0
+     },
+     "B1_confidence": {
+      "coverage": 0.69348,
+      "critical_missed_admitted": 0.0381,
+      "false_admission_rate": 0.0413,
+      "n": 460,
+      "selective_risk": 0.05956,
+      "task_accuracy": 0.84565,
+      "unnecessary_rejection_rate": 0.19348
+     },
+     "B2_conformal": {
+      "coverage": 0.6413,
+      "critical_missed_admitted": 0.0381,
+      "false_admission_rate": 0.03696,
+      "n": 460,
+      "selective_risk": 0.05763,
+      "task_accuracy": 0.84565,
+      "unnecessary_rejection_rate": 0.2413
+     },
+     "G_full": {
+      "coverage": 0.6413,
+      "critical_missed_admitted": 0.0381,
+      "false_admission_rate": 0.03696,
+      "n": 460,
+      "selective_risk": 0.05763,
+      "task_accuracy": 0.84565,
+      "unnecessary_rejection_rate": 0.2413
+     },
+     "G_full_repair": {
+      "coverage": 0.6413,
+      "critical_missed_admitted": 0.0381,
+      "false_admission_rate": 0.03696,
+      "n": 460,
+      "selective_risk": 0.05763,
+      "task_accuracy": 0.84565,
+      "unnecessary_rejection_rate": 0.2413
+     },
+     "G_no_A3": {
+      "coverage": 0.6413,
+      "critical_missed_admitted": 0.0381,
+      "false_admission_rate": 0.03696,
+      "n": 460,
+      "selective_risk": 0.05763,
+      "task_accuracy": 0.84565,
+      "unnecessary_rejection_rate": 0.2413
+     },
+     "G_no_C1": {
+      "coverage": 0.6413,
+      "critical_missed_admitted": 0.0381,
+      "false_admission_rate": 0.03696,
+      "n": 460,
+      "selective_risk": 0.05763,
+      "task_accuracy": 0.84565,
+      "unnecessary_rejection_rate": 0.2413
+     },
+     "G_no_C2": {
+      "coverage": 0.6413,
+      "critical_missed_admitted": 0.0381,
+      "false_admission_rate": 0.03696,
+      "n": 460,
+      "selective_risk": 0.05763,
+      "task_accuracy": 0.84565,
+      "unnecessary_rejection_rate": 0.2413
+     }
+    }
+   },
+   "dropout:FS1": {
+    "detection": {
+     "A1_dead_dims": 9.0,
+     "A1_erank": 22.19735,
+     "A1_passed": 0.0,
+     "C1_any": 1.0,
+     "C2_any": 1.0,
+     "either": 1.0
+    },
+    "variants": {
+     "B0_always_act": {
+      "coverage": 1.0,
+      "critical_missed_admitted": 0.25714,
+      "false_admission_rate": 0.22391,
+      "n": 460,
+      "selective_risk": 0.22391,
+      "task_accuracy": 0.77609,
+      "unnecessary_rejection_rate": 0.0
+     },
+     "B1_confidence": {
+      "coverage": 0.50652,
+      "critical_missed_admitted": 0.10476,
+      "false_admission_rate": 0.06522,
+      "n": 460,
+      "selective_risk": 0.12876,
+      "task_accuracy": 0.77609,
+      "unnecessary_rejection_rate": 0.33478
+     },
+     "B2_conformal": {
+      "coverage": 0.47609,
+      "critical_missed_admitted": 0.10476,
+      "false_admission_rate": 0.06087,
+      "n": 460,
+      "selective_risk": 0.12785,
+      "task_accuracy": 0.77609,
+      "unnecessary_rejection_rate": 0.36087
+     },
+     "G_full": {
+      "coverage": 0.0,
+      "critical_missed_admitted": 0.0,
+      "false_admission_rate": 0.0,
+      "n": 460,
+      "selective_risk": 0.0,
+      "task_accuracy": 0.77609,
+      "unnecessary_rejection_rate": 0.77609
+     },
+     "G_full_repair": {
+      "coverage": 0.52826,
+      "critical_missed_admitted": 0.0381,
+      "false_admission_rate": 0.0413,
+      "n": 460,
+      "repair_attempts": 460,
+      "repair_success_rate": 0.48696,
+      "selective_risk": 0.07819,
+      "task_accuracy": 0.8413,
+      "unnecessary_rejection_rate": 0.35435
+     },
+     "G_no_A3": {
+      "coverage": 0.0,
+      "critical_missed_admitted": 0.0,
+      "false_admission_rate": 0.0,
+      "n": 460,
+      "selective_risk": 0.0,
+      "task_accuracy": 0.77609,
+      "unnecessary_rejection_rate": 0.77609
+     },
+     "G_no_C1": {
+      "coverage": 0.3,
+      "critical_missed_admitted": 0.10476,
+      "false_admission_rate": 0.06087,
+      "n": 460,
+      "selective_risk": 0.2029,
+      "task_accuracy": 0.77609,
+      "unnecessary_rejection_rate": 0.53696
+     },
+     "G_no_C2": {
+      "coverage": 0.0,
+      "critical_missed_admitted": 0.0,
+      "false_admission_rate": 0.0,
+      "n": 460,
+      "selective_risk": 0.0,
+      "task_accuracy": 0.77609,
+      "unnecessary_rejection_rate": 0.77609
+     }
+    }
+   },
+   "dropout:PS1": {
+    "detection": {
+     "A1_dead_dims": 10.0,
+     "A1_erank": 22.5401,
+     "A1_passed": 0.0,
+     "C1_any": 1.0,
+     "C2_any": 1.0,
+     "either": 1.0
+    },
+    "variants": {
+     "B0_always_act": {
+      "coverage": 1.0,
+      "critical_missed_admitted": 0.14286,
+      "false_admission_rate": 0.21739,
+      "n": 460,
+      "selective_risk": 0.21739,
+      "task_accuracy": 0.78261,
+      "unnecessary_rejection_rate": 0.0
+     },
+     "B1_confidence": {
+      "coverage": 0.65652,
+      "critical_missed_admitted": 0.06667,
+      "false_admission_rate": 0.07826,
+      "n": 460,
+      "selective_risk": 0.11921,
+      "task_accuracy": 0.78261,
+      "unnecessary_rejection_rate": 0.20435
+     },
+     "B2_conformal": {
+      "coverage": 0.60652,
+      "critical_missed_admitted": 0.06667,
+      "false_admission_rate": 0.05652,
+      "n": 460,
+      "selective_risk": 0.09319,
+      "task_accuracy": 0.78261,
+      "unnecessary_rejection_rate": 0.23261
+     },
+     "G_full": {
+      "coverage": 0.0,
+      "critical_missed_admitted": 0.0,
+      "false_admission_rate": 0.0,
+      "n": 460,
+      "selective_risk": 0.0,
+      "task_accuracy": 0.78261,
+      "unnecessary_rejection_rate": 0.78261
+     },
+     "G_full_repair": {
+      "coverage": 0.61522,
+      "critical_missed_admitted": 0.0381,
+      "false_admission_rate": 0.03696,
+      "n": 460,
+      "repair_attempts": 460,
+      "repair_success_rate": 0.57826,
+      "selective_risk": 0.06007,
+      "task_accuracy": 0.84783,
+      "unnecessary_rejection_rate": 0.26957
+     },
+     "G_no_A3": {
+      "coverage": 0.0,
+      "critical_missed_admitted": 0.0,
+      "false_admission_rate": 0.0,
+      "n": 460,
+      "selective_risk": 0.0,
+      "task_accuracy": 0.78261,
+      "unnecessary_rejection_rate": 0.78261
+     },
+     "G_no_C1": {
+      "coverage": 0.31304,
+      "critical_missed_admitted": 0.06667,
+      "false_admission_rate": 0.05652,
+      "n": 460,
+      "selective_risk": 0.18056,
+      "task_accuracy": 0.78261,
+      "unnecessary_rejection_rate": 0.52609
+     },
+     "G_no_C2": {
+      "coverage": 0.0,
+      "critical_missed_admitted": 0.0,
+      "false_admission_rate": 0.0,
+      "n": 460,
+      "selective_risk": 0.0,
+      "task_accuracy": 0.78261,
+      "unnecessary_rejection_rate": 0.78261
+     }
+    }
+   },
+   "dropout:TS1": {
+    "detection": {
+     "A1_dead_dims": 10.0,
+     "A1_erank": 22.24164,
+     "A1_passed": 0.0,
+     "C1_any": 1.0,
+     "C2_any": 1.0,
+     "either": 1.0
+    },
+    "variants": {
+     "B0_always_act": {
+      "coverage": 1.0,
+      "critical_missed_admitted": 0.07619,
+      "false_admission_rate": 0.16522,
+      "n": 460,
+      "selective_risk": 0.16522,
+      "task_accuracy": 0.83478,
+      "unnecessary_rejection_rate": 0.0
+     },
+     "B1_confidence": {
+      "coverage": 0.67609,
+      "critical_missed_admitted": 0.02857,
+      "false_admission_rate": 0.03913,
+      "n": 460,
+      "selective_risk": 0.05788,
+      "task_accuracy": 0.83478,
+      "unnecessary_rejection_rate": 0.19783
+     },
+     "B2_conformal": {
+      "coverage": 0.62391,
+      "critical_missed_admitted": 0.02857,
+      "false_admission_rate": 0.02609,
+      "n": 460,
+      "selective_risk": 0.04181,
+      "task_accuracy": 0.83478,
+      "unnecessary_rejection_rate": 0.23696
+     },
+     "G_full": {
+      "coverage": 0.0,
+      "critical_missed_admitted": 0.0,
+      "false_admission_rate": 0.0,
+      "n": 460,
+      "selective_risk": 0.0,
+      "task_accuracy": 0.83478,
+      "unnecessary_rejection_rate": 0.83478
+     },
+     "G_full_repair": {
+      "coverage": 0.62609,
+      "critical_missed_admitted": 0.02857,
+      "false_admission_rate": 0.03478,
+      "n": 460,
+      "repair_attempts": 460,
+      "repair_success_rate": 0.5913,
+      "selective_risk": 0.05556,
+      "task_accuracy": 0.84565,
+      "unnecessary_rejection_rate": 0.25435
+     },
+     "G_no_A3": {
+      "coverage": 0.0,
+      "critical_missed_admitted": 0.0,
+      "false_admission_rate": 0.0,
+      "n": 460,
+      "selective_risk": 0.0,
+      "task_accuracy": 0.83478,
+      "unnecessary_rejection_rate": 0.83478
+     },
+     "G_no_C1": {
+      "coverage": 0.29348,
+      "critical_missed_admitted": 0.02857,
+      "false_admission_rate": 0.02609,
+      "n": 460,
+      "selective_risk": 0.08889,
+      "task_accuracy": 0.83478,
+      "unnecessary_rejection_rate": 0.56739
+     },
+     "G_no_C2": {
+      "coverage": 0.0,
+      "critical_missed_admitted": 0.0,
+      "false_admission_rate": 0.0,
+      "n": 460,
+      "selective_risk": 0.0,
+      "task_accuracy": 0.83478,
+      "unnecessary_rejection_rate": 0.83478
+     }
+    }
+   },
+   "offset:FS1": {
+    "detection": {
+     "A1_dead_dims": 0.0,
+     "A1_erank": 10.23927,
+     "A1_passed": 0.0,
+     "C1_any": 1.0,
+     "C2_any": 1.0,
+     "either": 1.0
+    },
+    "variants": {
+     "B0_always_act": {
+      "coverage": 1.0,
+      "critical_missed_admitted": 0.74286,
+      "false_admission_rate": 0.52826,
+      "n": 460,
+      "selective_risk": 0.52826,
+      "task_accuracy": 0.47174,
+      "unnecessary_rejection_rate": 0.0
+     },
+     "B1_confidence": {
+      "coverage": 0.9913,
+      "critical_missed_admitted": 0.74286,
+      "false_admission_rate": 0.52609,
+      "n": 460,
+      "selective_risk": 0.5307,
+      "task_accuracy": 0.47174,
+      "unnecessary_rejection_rate": 0.00652
+     },
+     "B2_conformal": {
+      "coverage": 0.92826,
+      "critical_missed_admitted": 0.74286,
+      "false_admission_rate": 0.47174,
+      "n": 460,
+      "selective_risk": 0.5082,
+      "task_accuracy": 0.47174,
+      "unnecessary_rejection_rate": 0.01522
+     },
+     "G_full": {
+      "coverage": 0.0,
+      "critical_missed_admitted": 0.0,
+      "false_admission_rate": 0.0,
+      "n": 460,
+      "selective_risk": 0.0,
+      "task_accuracy": 0.47174,
+      "unnecessary_rejection_rate": 0.47174
+     },
+     "G_full_repair": {
+      "coverage": 0.52826,
+      "critical_missed_admitted": 0.0381,
+      "false_admission_rate": 0.0413,
+      "n": 460,
+      "repair_attempts": 460,
+      "repair_success_rate": 0.48696,
+      "selective_risk": 0.07819,
+      "task_accuracy": 0.8413,
+      "unnecessary_rejection_rate": 0.35435
+     },
+     "G_no_A3": {
+      "coverage": 0.0,
+      "critical_missed_admitted": 0.0,
+      "false_admission_rate": 0.0,
+      "n": 460,
+      "selective_risk": 0.0,
+      "task_accuracy": 0.47174,
+      "unnecessary_rejection_rate": 0.47174
+     },
+     "G_no_C1": {
+      "coverage": 0.38261,
+      "critical_missed_admitted": 0.26667,
+      "false_admission_rate": 0.19348,
+      "n": 460,
+      "selective_risk": 0.50568,
+      "task_accuracy": 0.47174,
+      "unnecessary_rejection_rate": 0.28261
+     },
+     "G_no_C2": {
+      "coverage": 0.0,
+      "critical_missed_admitted": 0.0,
+      "false_admission_rate": 0.0,
+      "n": 460,
+      "selective_risk": 0.0,
+      "task_accuracy": 0.47174,
+      "unnecessary_rejection_rate": 0.47174
+     }
+    }
+   },
+   "offset:PS1": {
+    "detection": {
+     "A1_dead_dims": 0.0,
+     "A1_erank": 9.33938,
+     "A1_passed": 0.0,
+     "C1_any": 1.0,
+     "C2_any": 1.0,
+     "either": 1.0
+    },
+    "variants": {
+     "B0_always_act": {
+      "coverage": 1.0,
+      "critical_missed_admitted": 0.66667,
+      "false_admission_rate": 0.56087,
+      "n": 460,
+      "selective_risk": 0.56087,
+      "task_accuracy": 0.43913,
+      "unnecessary_rejection_rate": 0.0
+     },
+     "B1_confidence": {
+      "coverage": 0.88913,
+      "critical_missed_admitted": 0.66667,
+      "false_admission_rate": 0.47174,
+      "n": 460,
+      "selective_risk": 0.53056,
+      "task_accuracy": 0.43913,
+      "unnecessary_rejection_rate": 0.02174
+     },
+     "B2_conformal": {
+      "coverage": 0.70652,
+      "critical_missed_admitted": 0.66667,
+      "false_admission_rate": 0.34348,
+      "n": 460,
+      "selective_risk": 0.48615,
+      "task_accuracy": 0.43913,
+      "unnecessary_rejection_rate": 0.07609
+     },
+     "G_full": {
+      "coverage": 0.0,
+      "critical_missed_admitted": 0.0,
+      "false_admission_rate": 0.0,
+      "n": 460,
+      "selective_risk": 0.0,
+      "task_accuracy": 0.43913,
+      "unnecessary_rejection_rate": 0.43913
+     },
+     "G_full_repair": {
+      "coverage": 0.61522,
+      "critical_missed_admitted": 0.0381,
+      "false_admission_rate": 0.03696,
+      "n": 460,
+      "repair_attempts": 460,
+      "repair_success_rate": 0.57826,
+      "selective_risk": 0.06007,
+      "task_accuracy": 0.84783,
+      "unnecessary_rejection_rate": 0.26957
+     },
+     "G_no_A3": {
+      "coverage": 0.0,
+      "critical_missed_admitted": 0.0,
+      "false_admission_rate": 0.0,
+      "n": 460,
+      "selective_risk": 0.0,
+      "task_accuracy": 0.43913,
+      "unnecessary_rejection_rate": 0.43913
+     },
+     "G_no_C1": {
+      "coverage": 0.39565,
+      "critical_missed_admitted": 0.26667,
+      "false_admission_rate": 0.20217,
+      "n": 460,
+      "selective_risk": 0.51099,
+      "task_accuracy": 0.43913,
+      "unnecessary_rejection_rate": 0.24565
+     },
+     "G_no_C2": {
+      "coverage": 0.0,
+      "critical_missed_admitted": 0.0,
+      "false_admission_rate": 0.0,
+      "n": 460,
+      "selective_risk": 0.0,
+      "task_accuracy": 0.43913,
+      "unnecessary_rejection_rate": 0.43913
+     }
+    }
+   },
+   "offset:TS1": {
+    "detection": {
+     "A1_dead_dims": 0.0,
+     "A1_erank": 18.96889,
+     "A1_passed": 1.0,
+     "C1_any": 1.0,
+     "C2_any": 1.0,
+     "either": 1.0
+    },
+    "variants": {
+     "B0_always_act": {
+      "coverage": 1.0,
+      "critical_missed_admitted": 0.21905,
+      "false_admission_rate": 0.22391,
+      "n": 460,
+      "selective_risk": 0.22391,
+      "task_accuracy": 0.77609,
+      "unnecessary_rejection_rate": 0.0
+     },
+     "B1_confidence": {
+      "coverage": 0.68478,
+      "critical_missed_admitted": 0.0381,
+      "false_admission_rate": 0.11304,
+      "n": 460,
+      "selective_risk": 0.16508,
+      "task_accuracy": 0.77609,
+      "unnecessary_rejection_rate": 0.20435
+     },
+     "B2_conformal": {
+      "coverage": 0.54348,
+      "critical_missed_admitted": 0.0381,
+      "false_admission_rate": 0.03478,
+      "n": 460,
+      "selective_risk": 0.064,
+      "task_accuracy": 0.77609,
+      "unnecessary_rejection_rate": 0.26739
+     },
+     "G_full": {
+      "coverage": 0.0,
+      "critical_missed_admitted": 0.0,
+      "false_admission_rate": 0.0,
+      "n": 460,
+      "selective_risk": 0.0,
+      "task_accuracy": 0.77609,
+      "unnecessary_rejection_rate": 0.77609
+     },
+     "G_full_repair": {
+      "coverage": 0.62609,
+      "critical_missed_admitted": 0.02857,
+      "false_admission_rate": 0.03478,
+      "n": 460,
+      "repair_attempts": 460,
+      "repair_success_rate": 0.5913,
+      "selective_risk": 0.05556,
+      "task_accuracy": 0.84565,
+      "unnecessary_rejection_rate": 0.25435
+     },
+     "G_no_A3": {
+      "coverage": 0.0,
+      "critical_missed_admitted": 0.0,
+      "false_admission_rate": 0.0,
+      "n": 460,
+      "selective_risk": 0.0,
+      "task_accuracy": 0.77609,
+      "unnecessary_rejection_rate": 0.77609
+     },
+     "G_no_C1": {
+      "coverage": 0.26957,
+      "critical_missed_admitted": 0.0381,
+      "false_admission_rate": 0.03478,
+      "n": 460,
+      "selective_risk": 0.12903,
+      "task_accuracy": 0.77609,
+      "unnecessary_rejection_rate": 0.5413
+     },
+     "G_no_C2": {
+      "coverage": 0.0,
+      "critical_missed_admitted": 0.0,
+      "false_admission_rate": 0.0,
+      "n": 460,
+      "selective_risk": 0.0,
+      "task_accuracy": 0.77609,
+      "unnecessary_rejection_rate": 0.77609
+     }
+    }
+   },
+   "shift_unstable": {
+    "detection": {
+     "A1_dead_dims": 0.0,
+     "A1_erank": 12.64593,
+     "A1_passed": 1.0,
+     "C1_any": 0.17143,
+     "C2_any": 0.17143,
+     "either": 0.17143
+    },
+    "variants": {
+     "B0_always_act": {
+      "coverage": 1.0,
+      "critical_missed_admitted": 0.84,
+      "false_admission_rate": 0.37857,
+      "n": 140,
+      "selective_risk": 0.37857,
+      "task_accuracy": 0.62143,
+      "unnecessary_rejection_rate": 0.0
+     },
+     "B1_confidence": {
+      "coverage": 0.76429,
+      "critical_missed_admitted": 0.8,
+      "false_admission_rate": 0.29286,
+      "n": 140,
+      "selective_risk": 0.38318,
+      "task_accuracy": 0.62143,
+      "unnecessary_rejection_rate": 0.15
+     },
+     "B2_conformal": {
+      "coverage": 0.62857,
+      "critical_missed_admitted": 0.8,
+      "false_admission_rate": 0.29286,
+      "n": 140,
+      "selective_risk": 0.46591,
+      "task_accuracy": 0.62143,
+      "unnecessary_rejection_rate": 0.28571
+     },
+     "G_full": {
+      "coverage": 0.5,
+      "critical_missed_admitted": 0.6,
+      "false_admission_rate": 0.20714,
+      "n": 140,
+      "selective_risk": 0.41429,
+      "task_accuracy": 0.62143,
+      "unnecessary_rejection_rate": 0.32857
+     },
+     "G_full_repair": {
+      "coverage": 0.6,
+      "critical_missed_admitted": 0.8,
+      "false_admission_rate": 0.30714,
+      "n": 140,
+      "repair_attempts": 24,
+      "repair_success_rate": 0.0,
+      "selective_risk": 0.5119,
+      "task_accuracy": 0.60714,
+      "unnecessary_rejection_rate": 0.31429
+     },
+     "G_no_A3": {
+      "coverage": 0.5,
+      "critical_missed_admitted": 0.6,
+      "false_admission_rate": 0.20714,
+      "n": 140,
+      "selective_risk": 0.41429,
+      "task_accuracy": 0.62143,
+      "unnecessary_rejection_rate": 0.32857
+     },
+     "G_no_C1": {
+      "coverage": 0.58571,
+      "critical_missed_admitted": 0.8,
+      "false_admission_rate": 0.29286,
+      "n": 140,
+      "selective_risk": 0.5,
+      "task_accuracy": 0.62143,
+      "unnecessary_rejection_rate": 0.32857
+     },
+     "G_no_C2": {
+      "coverage": 0.5,
+      "critical_missed_admitted": 0.6,
+      "false_admission_rate": 0.20714,
+      "n": 140,
+      "selective_risk": 0.41429,
+      "task_accuracy": 0.62143,
+      "unnecessary_rejection_rate": 0.32857
+     }
+    }
+   },
+   "stuck:FS1": {
+    "detection": {
+     "A1_dead_dims": 2.0,
+     "A1_erank": 6.35489,
+     "A1_passed": 0.0,
+     "C1_any": 1.0,
+     "C2_any": 1.0,
+     "either": 1.0
+    },
+    "variants": {
+     "B0_always_act": {
+      "coverage": 1.0,
+      "critical_missed_admitted": 0.34286,
+      "false_admission_rate": 0.54565,
+      "n": 460,
+      "selective_risk": 0.54565,
+      "task_accuracy": 0.45435,
+      "unnecessary_rejection_rate": 0.0
+     },
+     "B1_confidence": {
+      "coverage": 0.98478,
+      "critical_missed_admitted": 0.33333,
+      "false_admission_rate": 0.53261,
+      "n": 460,
+      "selective_risk": 0.54084,
+      "task_accuracy": 0.45435,
+      "unnecessary_rejection_rate": 0.00217
+     },
+     "B2_conformal": {
+      "coverage": 0.74348,
+      "critical_missed_admitted": 0.26667,
+      "false_admission_rate": 0.35217,
+      "n": 460,
+      "selective_risk": 0.47368,
+      "task_accuracy": 0.45435,
+      "unnecessary_rejection_rate": 0.06304
+     },
+     "G_full": {
+      "coverage": 0.0,
+      "critical_missed_admitted": 0.0,
+      "false_admission_rate": 0.0,
+      "n": 460,
+      "selective_risk": 0.0,
+      "task_accuracy": 0.45435,
+      "unnecessary_rejection_rate": 0.45435
+     },
+     "G_full_repair": {
+      "coverage": 0.52826,
+      "critical_missed_admitted": 0.0381,
+      "false_admission_rate": 0.0413,
+      "n": 460,
+      "repair_attempts": 460,
+      "repair_success_rate": 0.48696,
+      "selective_risk": 0.07819,
+      "task_accuracy": 0.8413,
+      "unnecessary_rejection_rate": 0.35435
+     },
+     "G_no_A3": {
+      "coverage": 0.0,
+      "critical_missed_admitted": 0.0,
+      "false_admission_rate": 0.0,
+      "n": 460,
+      "selective_risk": 0.0,
+      "task_accuracy": 0.45435,
+      "unnecessary_rejection_rate": 0.45435
+     },
+     "G_no_C1": {
+      "coverage": 0.38261,
+      "critical_missed_admitted": 0.26667,
+      "false_admission_rate": 0.19348,
+      "n": 460,
+      "selective_risk": 0.50568,
+      "task_accuracy": 0.45435,
+      "unnecessary_rejection_rate": 0.26522
+     },
+     "G_no_C2": {
+      "coverage": 0.0,
+      "critical_missed_admitted": 0.0,
+      "false_admission_rate": 0.0,
+      "n": 460,
+      "selective_risk": 0.0,
+      "task_accuracy": 0.45435,
+      "unnecessary_rejection_rate": 0.45435
+     }
+    }
+   },
+   "stuck:PS1": {
+    "detection": {
+     "A1_dead_dims": 2.0,
+     "A1_erank": 5.03238,
+     "A1_passed": 0.0,
+     "C1_any": 1.0,
+     "C2_any": 1.0,
+     "either": 1.0
+    },
+    "variants": {
+     "B0_always_act": {
+      "coverage": 1.0,
+      "critical_missed_admitted": 0.34286,
+      "false_admission_rate": 0.64783,
+      "n": 460,
+      "selective_risk": 0.64783,
+      "task_accuracy": 0.35217,
+      "unnecessary_rejection_rate": 0.0
+     },
+     "B1_confidence": {
+      "coverage": 0.87391,
+      "critical_missed_admitted": 0.34286,
+      "false_admission_rate": 0.54783,
+      "n": 460,
+      "selective_risk": 0.62687,
+      "task_accuracy": 0.35217,
+      "unnecessary_rejection_rate": 0.02609
+     },
+     "B2_conformal": {
+      "coverage": 0.8087,
+      "critical_missed_admitted": 0.34286,
+      "false_admission_rate": 0.53261,
+      "n": 460,
+      "selective_risk": 0.6586,
+      "task_accuracy": 0.35217,
+      "unnecessary_rejection_rate": 0.07609
+     },
+     "G_full": {
+      "coverage": 0.0,
+      "critical_missed_admitted": 0.0,
+      "false_admission_rate": 0.0,
+      "n": 460,
+      "selective_risk": 0.0,
+      "task_accuracy": 0.35217,
+      "unnecessary_rejection_rate": 0.35217
+     },
+     "G_full_repair": {
+      "coverage": 0.61522,
+      "critical_missed_admitted": 0.0381,
+      "false_admission_rate": 0.03696,
+      "n": 460,
+      "repair_attempts": 460,
+      "repair_success_rate": 0.57826,
+      "selective_risk": 0.06007,
+      "task_accuracy": 0.84783,
+      "unnecessary_rejection_rate": 0.26957
+     },
+     "G_no_A3": {
+      "coverage": 0.0,
+      "critical_missed_admitted": 0.0,
+      "false_admission_rate": 0.0,
+      "n": 460,
+      "selective_risk": 0.0,
+      "task_accuracy": 0.35217,
+      "unnecessary_rejection_rate": 0.35217
+     },
+     "G_no_C1": {
+      "coverage": 0.0,
+      "critical_missed_admitted": 0.0,
+      "false_admission_rate": 0.0,
+      "n": 460,
+      "selective_risk": 0.0,
+      "task_accuracy": 0.35217,
+      "unnecessary_rejection_rate": 0.35217
+     },
+     "G_no_C2": {
+      "coverage": 0.0,
+      "critical_missed_admitted": 0.0,
+      "false_admission_rate": 0.0,
+      "n": 460,
+      "selective_risk": 0.0,
+      "task_accuracy": 0.35217,
+      "unnecessary_rejection_rate": 0.35217
+     }
+    }
+   },
+   "stuck:TS1": {
+    "detection": {
+     "A1_dead_dims": 2.0,
+     "A1_erank": 18.62949,
+     "A1_passed": 0.0,
+     "C1_any": 1.0,
+     "C2_any": 0.07826,
+     "either": 1.0
+    },
+    "variants": {
+     "B0_always_act": {
+      "coverage": 1.0,
+      "critical_missed_admitted": 0.44762,
+      "false_admission_rate": 0.23913,
+      "n": 460,
+      "selective_risk": 0.23913,
+      "task_accuracy": 0.76087,
+      "unnecessary_rejection_rate": 0.0
+     },
+     "B1_confidence": {
+      "coverage": 0.68043,
+      "critical_missed_admitted": 0.22857,
+      "false_admission_rate": 0.14783,
+      "n": 460,
+      "selective_risk": 0.21725,
+      "task_accuracy": 0.76087,
+      "unnecessary_rejection_rate": 0.22826
+     },
+     "B2_conformal": {
+      "coverage": 0.67174,
+      "critical_missed_admitted": 0.22857,
+      "false_admission_rate": 0.14783,
+      "n": 460,
+      "selective_risk": 0.22006,
+      "task_accuracy": 0.76087,
+      "unnecessary_rejection_rate": 0.23696
+     },
+     "G_full": {
+      "coverage": 0.0,
+      "critical_missed_admitted": 0.0,
+      "false_admission_rate": 0.0,
+      "n": 460,
+      "selective_risk": 0.0,
+      "task_accuracy": 0.76087,
+      "unnecessary_rejection_rate": 0.76087
+     },
+     "G_full_repair": {
+      "coverage": 0.62609,
+      "critical_missed_admitted": 0.02857,
+      "false_admission_rate": 0.03478,
+      "n": 460,
+      "repair_attempts": 460,
+      "repair_success_rate": 0.5913,
+      "selective_risk": 0.05556,
+      "task_accuracy": 0.84565,
+      "unnecessary_rejection_rate": 0.25435
+     },
+     "G_no_A3": {
+      "coverage": 0.0,
+      "critical_missed_admitted": 0.0,
+      "false_admission_rate": 0.0,
+      "n": 460,
+      "selective_risk": 0.0,
+      "task_accuracy": 0.76087,
+      "unnecessary_rejection_rate": 0.76087
+     },
+     "G_no_C1": {
+      "coverage": 0.65,
+      "critical_missed_admitted": 0.22857,
+      "false_admission_rate": 0.14783,
+      "n": 460,
+      "selective_risk": 0.22742,
+      "task_accuracy": 0.76087,
+      "unnecessary_rejection_rate": 0.2587
+     },
+     "G_no_C2": {
+      "coverage": 0.0,
+      "critical_missed_admitted": 0.0,
+      "false_admission_rate": 0.0,
+      "n": 460,
+      "selective_risk": 0.0,
+      "task_accuracy": 0.76087,
+      "unnecessary_rejection_rate": 0.76087
+     }
+    }
+   }
+  }
+ },
+ "run_id": "smoke",
+ "schema": "hydrogate.audit/v1",
+ "status": "PASS",
+ "unwarranted_claims": [
+  "remaining useful life or time-to-failure of any component",
+  "fault diagnosis for components other than cooler, valve, pump, accumulator",
+  "condition grades not present in training (e.g. interpolated severities)",
+  "any claim about plants or rigs other than the UCI-447 test rig",
+  "root-cause attribution among simultaneously degraded components",
+  "claims on cycles whose evidence failed integrity without repair"
+ ],
+ "version": "0.1.0-proposal"
+}

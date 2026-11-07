@@ -1,0 +1,4632 @@
+{
+ "action_gates": [
+  {
+   "claim_id": "a1-representation",
+   "fail_closed": true,
+   "obligations_met": true,
+   "outcome": "act",
+   "reason": "All required obligations satisfied",
+   "risk_tier": "low"
+  },
+  {
+   "claim_id": "a2-calibration-hgb-cooler",
+   "fail_closed": true,
+   "obligations_met": true,
+   "outcome": "act",
+   "reason": "All required obligations satisfied",
+   "risk_tier": "medium"
+  },
+  {
+   "claim_id": "a2-calibration-hgb-valve",
+   "fail_closed": true,
+   "obligations_met": true,
+   "outcome": "act",
+   "reason": "All required obligations satisfied",
+   "risk_tier": "medium"
+  },
+  {
+   "claim_id": "a2-calibration-hgb-pump",
+   "fail_closed": true,
+   "obligations_met": true,
+   "outcome": "act",
+   "reason": "All required obligations satisfied",
+   "risk_tier": "medium"
+  },
+  {
+   "claim_id": "a2-calibration-hgb-accumulator",
+   "fail_closed": true,
+   "obligations_met": false,
+   "outcome": "request_evidence",
+   "reason": "Required check failed",
+   "risk_tier": "medium"
+  },
+  {
+   "claim_id": "a2-calibration-logreg-cooler",
+   "fail_closed": true,
+   "obligations_met": true,
+   "outcome": "act",
+   "reason": "All required obligations satisfied",
+   "risk_tier": "medium"
+  },
+  {
+   "claim_id": "a2-calibration-logreg-valve",
+   "fail_closed": true,
+   "obligations_met": true,
+   "outcome": "act",
+   "reason": "All required obligations satisfied",
+   "risk_tier": "medium"
+  },
+  {
+   "claim_id": "a2-calibration-logreg-pump",
+   "fail_closed": true,
+   "obligations_met": true,
+   "outcome": "act",
+   "reason": "All required obligations satisfied",
+   "risk_tier": "medium"
+  },
+  {
+   "claim_id": "a2-calibration-logreg-accumulator",
+   "fail_closed": true,
+   "obligations_met": false,
+   "outcome": "request_evidence",
+   "reason": "Required check failed",
+   "risk_tier": "medium"
+  },
+  {
+   "claim_id": "A3-cooler-CE",
+   "fail_closed": true,
+   "obligations_met": true,
+   "outcome": "act",
+   "reason": "All required obligations satisfied",
+   "risk_tier": "high"
+  },
+  {
+   "claim_id": "A3-pump-FS1",
+   "fail_closed": true,
+   "obligations_met": true,
+   "outcome": "act",
+   "reason": "All required obligations satisfied",
+   "risk_tier": "high"
+  },
+  {
+   "claim_id": "A3-valve-FS1early",
+   "fail_closed": true,
+   "obligations_met": false,
+   "outcome": "defer",
+   "reason": "Required check failed",
+   "risk_tier": "high"
+  },
+  {
+   "claim_id": "a3-accumulator-signature",
+   "fail_closed": true,
+   "obligations_met": false,
+   "outcome": "defer",
+   "reason": "Non-identified causal signature: fail closed",
+   "risk_tier": "critical"
+  },
+  {
+   "claim_id": "policy-hgb-adv_offset",
+   "fail_closed": true,
+   "obligations_met": true,
+   "outcome": "act",
+   "reason": "All required obligations satisfied",
+   "risk_tier": "high"
+  },
+  {
+   "claim_id": "failure-hgb-adv_offset",
+   "fail_closed": true,
+   "obligations_met": false,
+   "outcome": "hand_off",
+   "reason": "Detected by checkers; G FAR 19.2%, G+repair FAR 19.6%",
+   "risk_tier": "high"
+  },
+  {
+   "claim_id": "policy-hgb-clean",
+   "fail_closed": true,
+   "obligations_met": true,
+   "outcome": "act",
+   "reason": "All required obligations satisfied",
+   "risk_tier": "high"
+  },
+  {
+   "claim_id": "policy-hgb-dropout",
+   "fail_closed": true,
+   "obligations_met": true,
+   "outcome": "act",
+   "reason": "All required obligations satisfied",
+   "risk_tier": "high"
+  },
+  {
+   "claim_id": "failure-hgb-dropout",
+   "fail_closed": true,
+   "obligations_met": false,
+   "outcome": "repair",
+   "reason": "Detected by checkers; G FAR 0.0%, G+repair FAR 5.8%",
+   "risk_tier": "high"
+  },
+  {
+   "claim_id": "policy-hgb-gain",
+   "fail_closed": true,
+   "obligations_met": true,
+   "outcome": "act",
+   "reason": "All required obligations satisfied",
+   "risk_tier": "high"
+  },
+  {
+   "claim_id": "failure-hgb-gain",
+   "fail_closed": true,
+   "obligations_met": false,
+   "outcome": "repair",
+   "reason": "Detected by checkers; G FAR 4.5%, G+repair FAR 7.1%",
+   "risk_tier": "high"
+  },
+  {
+   "claim_id": "policy-hgb-novel_severity",
+   "fail_closed": true,
+   "obligations_met": true,
+   "outcome": "act",
+   "reason": "All required obligations satisfied",
+   "risk_tier": "high"
+  },
+  {
+   "claim_id": "failure-hgb-novel_severity",
+   "fail_closed": true,
+   "obligations_met": false,
+   "outcome": "hand_off",
+   "reason": "Detected by checkers; G FAR 27.7%, G+repair FAR 28.1%",
+   "risk_tier": "high"
+  },
+  {
+   "claim_id": "policy-hgb-offset",
+   "fail_closed": true,
+   "obligations_met": true,
+   "outcome": "act",
+   "reason": "All required obligations satisfied",
+   "risk_tier": "high"
+  },
+  {
+   "claim_id": "failure-hgb-offset",
+   "fail_closed": true,
+   "obligations_met": false,
+   "outcome": "repair",
+   "reason": "Detected by checkers; G FAR 1.4%, G+repair FAR 5.9%",
+   "risk_tier": "high"
+  },
+  {
+   "claim_id": "policy-hgb-shift_unstable",
+   "fail_closed": true,
+   "obligations_met": true,
+   "outcome": "act",
+   "reason": "All required obligations satisfied",
+   "risk_tier": "high"
+  },
+  {
+   "claim_id": "failure-hgb-shift_unstable",
+   "fail_closed": true,
+   "obligations_met": false,
+   "outcome": "hand_off",
+   "reason": "Detected by checkers; G FAR 4.9%, G+repair FAR 5.3%",
+   "risk_tier": "high"
+  },
+  {
+   "claim_id": "policy-hgb-spike",
+   "fail_closed": true,
+   "obligations_met": true,
+   "outcome": "act",
+   "reason": "All required obligations satisfied",
+   "risk_tier": "high"
+  },
+  {
+   "claim_id": "failure-hgb-spike",
+   "fail_closed": true,
+   "obligations_met": false,
+   "outcome": "repair",
+   "reason": "Detected by checkers; G FAR 0.5%, G+repair FAR 5.8%",
+   "risk_tier": "high"
+  },
+  {
+   "claim_id": "policy-hgb-stuck",
+   "fail_closed": true,
+   "obligations_met": true,
+   "outcome": "act",
+   "reason": "All required obligations satisfied",
+   "risk_tier": "high"
+  },
+  {
+   "claim_id": "failure-hgb-stuck",
+   "fail_closed": true,
+   "obligations_met": false,
+   "outcome": "repair",
+   "reason": "Detected by checkers; G FAR 0.0%, G+repair FAR 5.8%",
+   "risk_tier": "high"
+  },
+  {
+   "claim_id": "policy-hgb-time_shift",
+   "fail_closed": true,
+   "obligations_met": true,
+   "outcome": "act",
+   "reason": "All required obligations satisfied",
+   "risk_tier": "high"
+  },
+  {
+   "claim_id": "failure-hgb-time_shift",
+   "fail_closed": true,
+   "obligations_met": false,
+   "outcome": "hand_off",
+   "reason": "Detected by checkers; G FAR 6.4%, G+repair FAR 6.5%",
+   "risk_tier": "high"
+  },
+  {
+   "claim_id": "policy-logreg-adv_offset",
+   "fail_closed": true,
+   "obligations_met": true,
+   "outcome": "act",
+   "reason": "All required obligations satisfied",
+   "risk_tier": "high"
+  },
+  {
+   "claim_id": "failure-logreg-adv_offset",
+   "fail_closed": true,
+   "obligations_met": false,
+   "outcome": "hand_off",
+   "reason": "Detected by checkers; G FAR 20.6%, G+repair FAR 22.6%",
+   "risk_tier": "high"
+  },
+  {
+   "claim_id": "policy-logreg-clean",
+   "fail_closed": true,
+   "obligations_met": true,
+   "outcome": "act",
+   "reason": "All required obligations satisfied",
+   "risk_tier": "high"
+  },
+  {
+   "claim_id": "policy-logreg-dropout",
+   "fail_closed": true,
+   "obligations_met": true,
+   "outcome": "act",
+   "reason": "All required obligations satisfied",
+   "risk_tier": "high"
+  },
+  {
+   "claim_id": "failure-logreg-dropout",
+   "fail_closed": true,
+   "obligations_met": false,
+   "outcome": "repair",
+   "reason": "Detected by checkers; G FAR 0.0%, G+repair FAR 2.7%",
+   "risk_tier": "high"
+  },
+  {
+   "claim_id": "policy-logreg-gain",
+   "fail_closed": true,
+   "obligations_met": true,
+   "outcome": "act",
+   "reason": "All required obligations satisfied",
+   "risk_tier": "high"
+  },
+  {
+   "claim_id": "failure-logreg-gain",
+   "fail_closed": true,
+   "obligations_met": false,
+   "outcome": "repair",
+   "reason": "Detected by checkers; G FAR 4.8%, G+repair FAR 6.1%",
+   "risk_tier": "high"
+  },
+  {
+   "claim_id": "policy-logreg-novel_severity",
+   "fail_closed": true,
+   "obligations_met": true,
+   "outcome": "act",
+   "reason": "All required obligations satisfied",
+   "risk_tier": "high"
+  },
+  {
+   "claim_id": "failure-logreg-novel_severity",
+   "fail_closed": true,
+   "obligations_met": false,
+   "outcome": "hand_off",
+   "reason": "Detected by checkers; G FAR 26.9%, G+repair FAR 27.3%",
+   "risk_tier": "high"
+  },
+  {
+   "claim_id": "policy-logreg-offset",
+   "fail_closed": true,
+   "obligations_met": true,
+   "outcome": "act",
+   "reason": "All required obligations satisfied",
+   "risk_tier": "high"
+  },
+  {
+   "claim_id": "failure-logreg-offset",
+   "fail_closed": true,
+   "obligations_met": false,
+   "outcome": "repair",
+   "reason": "Detected by checkers; G FAR 2.9%, G+repair FAR 5.0%",
+   "risk_tier": "high"
+  },
+  {
+   "claim_id": "policy-logreg-shift_unstable",
+   "fail_closed": true,
+   "obligations_met": true,
+   "outcome": "act",
+   "reason": "All required obligations satisfied",
+   "risk_tier": "high"
+  },
+  {
+   "claim_id": "failure-logreg-shift_unstable",
+   "fail_closed": true,
+   "obligations_met": false,
+   "outcome": "hand_off",
+   "reason": "Detected by checkers; G FAR 2.3%, G+repair FAR 2.5%",
+   "risk_tier": "high"
+  },
+  {
+   "claim_id": "policy-logreg-spike",
+   "fail_closed": true,
+   "obligations_met": true,
+   "outcome": "act",
+   "reason": "All required obligations satisfied",
+   "risk_tier": "high"
+  },
+  {
+   "claim_id": "failure-logreg-spike",
+   "fail_closed": true,
+   "obligations_met": false,
+   "outcome": "repair",
+   "reason": "Detected by checkers; G FAR 0.4%, G+repair FAR 2.9%",
+   "risk_tier": "high"
+  },
+  {
+   "claim_id": "policy-logreg-stuck",
+   "fail_closed": true,
+   "obligations_met": true,
+   "outcome": "act",
+   "reason": "All required obligations satisfied",
+   "risk_tier": "high"
+  },
+  {
+   "claim_id": "failure-logreg-stuck",
+   "fail_closed": true,
+   "obligations_met": false,
+   "outcome": "repair",
+   "reason": "Detected by checkers; G FAR 0.0%, G+repair FAR 2.7%",
+   "risk_tier": "high"
+  },
+  {
+   "claim_id": "policy-logreg-time_shift",
+   "fail_closed": true,
+   "obligations_met": true,
+   "outcome": "act",
+   "reason": "All required obligations satisfied",
+   "risk_tier": "high"
+  },
+  {
+   "claim_id": "failure-logreg-time_shift",
+   "fail_closed": true,
+   "obligations_met": false,
+   "outcome": "hand_off",
+   "reason": "Detected by checkers; G FAR 12.9%, G+repair FAR 13.1%",
+   "risk_tier": "high"
+  },
+  {
+   "claim_id": "invariant-no-unverified-admission",
+   "fail_closed": true,
+   "obligations_met": true,
+   "outcome": "act",
+   "reason": "All required obligations satisfied",
+   "risk_tier": "critical"
+  },
+  {
+   "claim_id": "claim-injection-rejected",
+   "fail_closed": true,
+   "obligations_met": true,
+   "outcome": "act",
+   "reason": "All required obligations satisfied",
+   "risk_tier": "critical"
+  },
+  {
+   "claim_id": "decision:logreg/s0:clean:0:cooler",
+   "fail_closed": true,
+   "obligations_met": true,
+   "outcome": "act",
+   "reason": "route=act",
+   "risk_tier": "critical"
+  },
+  {
+   "claim_id": "decision:logreg/s0:clean:188:cooler",
+   "fail_closed": true,
+   "obligations_met": false,
+   "outcome": "request_evidence",
+   "reason": "route=request_evidence",
+   "risk_tier": "high"
+  },
+  {
+   "claim_id": "decision:logreg/s0:clean:0:pump",
+   "fail_closed": true,
+   "obligations_met": false,
+   "outcome": "hand_off",
+   "reason": "route=hand_off",
+   "risk_tier": "critical"
+  },
+  {
+   "claim_id": "decision:logreg/s0:clean:72:accumulator",
+   "fail_closed": true,
+   "obligations_met": false,
+   "outcome": "defer",
+   "reason": "route=defer",
+   "risk_tier": "critical"
+  },
+  {
+   "claim_id": "decision:logreg/s0:dropout:PS1:0:cooler",
+   "fail_closed": true,
+   "obligations_met": false,
+   "outcome": "repair",
+   "reason": "route=repair",
+   "risk_tier": "critical"
+  },
+  {
+   "claim_id": "decision:logreg/s0:dropout:PS1:0:cooler:repaired",
+   "fail_closed": true,
+   "obligations_met": true,
+   "outcome": "act",
+   "reason": "route=act",
+   "risk_tier": "critical"
+  },
+  {
+   "claim_id": "decision:logreg/s0:dropout:PS1:188:cooler",
+   "fail_closed": true,
+   "obligations_met": false,
+   "outcome": "repair",
+   "reason": "route=repair",
+   "risk_tier": "high"
+  },
+  {
+   "claim_id": "decision:logreg/s0:dropout:PS1:188:cooler:repaired",
+   "fail_closed": true,
+   "obligations_met": false,
+   "outcome": "request_evidence",
+   "reason": "route=request_evidence",
+   "risk_tier": "high"
+  }
+ ],
+ "assignment": "project",
+ "checker_results": [
+  {
+   "checker_id": "a1-collapse-train",
+   "checker_kind": "statistical",
+   "input_contract": {},
+   "message": "erank 25.20-28.82 >= floor and dead dims = 0",
+   "passed": true,
+   "scope": "A1 collapse diagnostics on train features",
+   "unavailable": false
+  },
+  {
+   "checker_id": "a2-calibration-hgb-cooler:coverage",
+   "checker_kind": "statistical",
+   "input_contract": {},
+   "message": "coverage 0.960 vs target 0.95",
+   "passed": true,
+   "scope": "A2 split-conformal coverage on the calibration partition",
+   "unavailable": false
+  },
+  {
+   "checker_id": "a2-calibration-hgb-cooler:ece",
+   "checker_kind": "statistical",
+   "input_contract": {},
+   "message": "ECE 0.003 vs bound 0.10",
+   "passed": true,
+   "scope": "A2 calibration bound before confidence may gate actions",
+   "unavailable": false
+  },
+  {
+   "checker_id": "a2-calibration-hgb-valve:coverage",
+   "checker_kind": "statistical",
+   "input_contract": {},
+   "message": "coverage 0.960 vs target 0.95",
+   "passed": true,
+   "scope": "A2 split-conformal coverage on the calibration partition",
+   "unavailable": false
+  },
+  {
+   "checker_id": "a2-calibration-hgb-valve:ece",
+   "checker_kind": "statistical",
+   "input_contract": {},
+   "message": "ECE 0.005 vs bound 0.10",
+   "passed": true,
+   "scope": "A2 calibration bound before confidence may gate actions",
+   "unavailable": false
+  },
+  {
+   "checker_id": "a2-calibration-hgb-pump:coverage",
+   "checker_kind": "statistical",
+   "input_contract": {},
+   "message": "coverage 0.960 vs target 0.95",
+   "passed": true,
+   "scope": "A2 split-conformal coverage on the calibration partition",
+   "unavailable": false
+  },
+  {
+   "checker_id": "a2-calibration-hgb-pump:ece",
+   "checker_kind": "statistical",
+   "input_contract": {},
+   "message": "ECE 0.027 vs bound 0.10",
+   "passed": true,
+   "scope": "A2 calibration bound before confidence may gate actions",
+   "unavailable": false
+  },
+  {
+   "checker_id": "a2-calibration-hgb-accumulator:coverage",
+   "checker_kind": "statistical",
+   "input_contract": {},
+   "message": "coverage 0.958 vs target 0.95",
+   "passed": true,
+   "scope": "A2 split-conformal coverage on the calibration partition",
+   "unavailable": false
+  },
+  {
+   "checker_id": "a2-calibration-hgb-accumulator:ece",
+   "checker_kind": "statistical",
+   "input_contract": {},
+   "message": "ECE 0.266 vs bound 0.10",
+   "passed": false,
+   "scope": "A2 calibration bound before confidence may gate actions",
+   "unavailable": false
+  },
+  {
+   "checker_id": "a2-calibration-logreg-cooler:coverage",
+   "checker_kind": "statistical",
+   "input_contract": {},
+   "message": "coverage 0.960 vs target 0.95",
+   "passed": true,
+   "scope": "A2 split-conformal coverage on the calibration partition",
+   "unavailable": false
+  },
+  {
+   "checker_id": "a2-calibration-logreg-cooler:ece",
+   "checker_kind": "statistical",
+   "input_contract": {},
+   "message": "ECE 0.001 vs bound 0.10",
+   "passed": true,
+   "scope": "A2 calibration bound before confidence may gate actions",
+   "unavailable": false
+  },
+  {
+   "checker_id": "a2-calibration-logreg-valve:coverage",
+   "checker_kind": "statistical",
+   "input_contract": {},
+   "message": "coverage 0.960 vs target 0.95",
+   "passed": true,
+   "scope": "A2 split-conformal coverage on the calibration partition",
+   "unavailable": false
+  },
+  {
+   "checker_id": "a2-calibration-logreg-valve:ece",
+   "checker_kind": "statistical",
+   "input_contract": {},
+   "message": "ECE 0.036 vs bound 0.10",
+   "passed": true,
+   "scope": "A2 calibration bound before confidence may gate actions",
+   "unavailable": false
+  },
+  {
+   "checker_id": "a2-calibration-logreg-pump:coverage",
+   "checker_kind": "statistical",
+   "input_contract": {},
+   "message": "coverage 0.960 vs target 0.95",
+   "passed": true,
+   "scope": "A2 split-conformal coverage on the calibration partition",
+   "unavailable": false
+  },
+  {
+   "checker_id": "a2-calibration-logreg-pump:ece",
+   "checker_kind": "statistical",
+   "input_contract": {},
+   "message": "ECE 0.069 vs bound 0.10",
+   "passed": true,
+   "scope": "A2 calibration bound before confidence may gate actions",
+   "unavailable": false
+  },
+  {
+   "checker_id": "a2-calibration-logreg-accumulator:coverage",
+   "checker_kind": "statistical",
+   "input_contract": {},
+   "message": "coverage 0.959 vs target 0.95",
+   "passed": true,
+   "scope": "A2 split-conformal coverage on the calibration partition",
+   "unavailable": false
+  },
+  {
+   "checker_id": "a2-calibration-logreg-accumulator:ece",
+   "checker_kind": "statistical",
+   "input_contract": {},
+   "message": "ECE 0.198 vs bound 0.10",
+   "passed": false,
+   "scope": "A2 calibration bound before confidence may gate actions",
+   "unavailable": false
+  },
+  {
+   "checker_id": "A3-cooler-CE:strata",
+   "checker_kind": "statistical",
+   "input_contract": {},
+   "message": "support 1.00-1.00; sign disagreement in >10% of strata (other components held fixed)",
+   "passed": true,
+   "scope": "A3 falsifier: within-stratum sign agreement >= 0.9 with other components held fixed",
+   "unavailable": false
+  },
+  {
+   "checker_id": "A3-pump-FS1:strata",
+   "checker_kind": "statistical",
+   "input_contract": {},
+   "message": "support 1.00-1.00; sign disagreement in >10% of strata (other components held fixed)",
+   "passed": true,
+   "scope": "A3 falsifier: within-stratum sign agreement >= 0.9 with other components held fixed",
+   "unavailable": false
+  },
+  {
+   "checker_id": "A3-valve-FS1early:strata",
+   "checker_kind": "statistical",
+   "input_contract": {},
+   "message": "support 0.88-0.95; sign disagreement in >10% of strata (other components held fixed)",
+   "passed": false,
+   "scope": "A3 falsifier: within-stratum sign agreement >= 0.9 with other components held fixed",
+   "unavailable": false
+  },
+  {
+   "checker_id": "a3-accumulator:identified",
+   "checker_kind": "statistical",
+   "input_contract": {},
+   "message": "no candidate channel passed the stratified sign test (not yet searched systematically)",
+   "passed": false,
+   "scope": "A3 identification of an accumulator signature",
+   "unavailable": false
+  },
+  {
+   "checker_id": "trace-invariant",
+   "checker_kind": "deterministic",
+   "input_contract": {},
+   "message": "0 admitted claims lack a PASS obligation over 384820 records",
+   "passed": true,
+   "scope": "No action without an executed PASS on every obligation of its tier",
+   "unavailable": false
+  },
+  {
+   "checker_id": "trace-hash",
+   "checker_kind": "deterministic",
+   "input_contract": {},
+   "message": "trace sha256 085f1d9d912bbe01",
+   "passed": true,
+   "scope": "Metrics derive from the hash-pinned trace",
+   "unavailable": false
+  },
+  {
+   "checker_id": "failure-hgb-adv_offset:C1",
+   "checker_kind": "deterministic",
+   "input_contract": {},
+   "message": "C1 flagged 0.0% of cycles",
+   "passed": true,
+   "scope": "C1 per-channel integrity on injected evidence",
+   "unavailable": false
+  },
+  {
+   "checker_id": "failure-hgb-adv_offset:C2",
+   "checker_kind": "statistical",
+   "input_contract": {},
+   "message": "C2 flagged 100.0% of cycles",
+   "passed": false,
+   "scope": "C2 cross-modal physics on injected evidence",
+   "unavailable": false
+  },
+  {
+   "checker_id": "failure-hgb-adv_offset:A1",
+   "checker_kind": "statistical",
+   "input_contract": {},
+   "message": "A1 batch collapse check passed in 0% of runs; mean dead dims 1.0",
+   "passed": false,
+   "scope": "A1 collapse diagnostics on injected evidence",
+   "unavailable": false
+  },
+  {
+   "checker_id": "failure-hgb-dropout:C1",
+   "checker_kind": "deterministic",
+   "input_contract": {},
+   "message": "C1 flagged 100.0% of cycles",
+   "passed": false,
+   "scope": "C1 per-channel integrity on injected evidence",
+   "unavailable": false
+  },
+  {
+   "checker_id": "failure-hgb-dropout:C2",
+   "checker_kind": "statistical",
+   "input_contract": {},
+   "message": "C2 flagged 85.8% of cycles",
+   "passed": false,
+   "scope": "C2 cross-modal physics on injected evidence",
+   "unavailable": false
+  },
+  {
+   "checker_id": "failure-hgb-dropout:A1",
+   "checker_kind": "statistical",
+   "input_contract": {},
+   "message": "A1 batch collapse check passed in 0% of runs; mean dead dims 10.5",
+   "passed": false,
+   "scope": "A1 collapse diagnostics on injected evidence",
+   "unavailable": false
+  },
+  {
+   "checker_id": "failure-hgb-gain:C1",
+   "checker_kind": "deterministic",
+   "input_contract": {},
+   "message": "C1 flagged 22.9% of cycles",
+   "passed": false,
+   "scope": "C1 per-channel integrity on injected evidence",
+   "unavailable": false
+  },
+  {
+   "checker_id": "failure-hgb-gain:C2",
+   "checker_kind": "statistical",
+   "input_contract": {},
+   "message": "C2 flagged 71.5% of cycles",
+   "passed": false,
+   "scope": "C2 cross-modal physics on injected evidence",
+   "unavailable": false
+  },
+  {
+   "checker_id": "failure-hgb-gain:A1",
+   "checker_kind": "statistical",
+   "input_contract": {},
+   "message": "A1 batch collapse check passed in 20% of runs; mean dead dims 0.8",
+   "passed": false,
+   "scope": "A1 collapse diagnostics on injected evidence",
+   "unavailable": false
+  },
+  {
+   "checker_id": "failure-hgb-novel_severity:C1",
+   "checker_kind": "deterministic",
+   "input_contract": {},
+   "message": "C1 flagged 0.8% of cycles",
+   "passed": true,
+   "scope": "C1 per-channel integrity on injected evidence",
+   "unavailable": false
+  },
+  {
+   "checker_id": "failure-hgb-novel_severity:C2",
+   "checker_kind": "statistical",
+   "input_contract": {},
+   "message": "C2 flagged 3.7% of cycles",
+   "passed": false,
+   "scope": "C2 cross-modal physics on injected evidence",
+   "unavailable": false
+  },
+  {
+   "checker_id": "failure-hgb-novel_severity:A1",
+   "checker_kind": "statistical",
+   "input_contract": {},
+   "message": "A1 batch collapse check passed in 20% of runs; mean dead dims 0.8",
+   "passed": false,
+   "scope": "A1 collapse diagnostics on injected evidence",
+   "unavailable": false
+  },
+  {
+   "checker_id": "failure-hgb-offset:C1",
+   "checker_kind": "deterministic",
+   "input_contract": {},
+   "message": "C1 flagged 75.1% of cycles",
+   "passed": false,
+   "scope": "C1 per-channel integrity on injected evidence",
+   "unavailable": false
+  },
+  {
+   "checker_id": "failure-hgb-offset:C2",
+   "checker_kind": "statistical",
+   "input_contract": {},
+   "message": "C2 flagged 85.8% of cycles",
+   "passed": false,
+   "scope": "C2 cross-modal physics on injected evidence",
+   "unavailable": false
+  },
+  {
+   "checker_id": "failure-hgb-offset:A1",
+   "checker_kind": "statistical",
+   "input_contract": {},
+   "message": "A1 batch collapse check passed in 11% of runs; mean dead dims 0.8",
+   "passed": false,
+   "scope": "A1 collapse diagnostics on injected evidence",
+   "unavailable": false
+  },
+  {
+   "checker_id": "failure-hgb-shift_unstable:C1",
+   "checker_kind": "deterministic",
+   "input_contract": {},
+   "message": "C1 flagged 1.3% of cycles",
+   "passed": false,
+   "scope": "C1 per-channel integrity on injected evidence",
+   "unavailable": false
+  },
+  {
+   "checker_id": "failure-hgb-shift_unstable:C2",
+   "checker_kind": "statistical",
+   "input_contract": {},
+   "message": "C2 flagged 3.7% of cycles",
+   "passed": false,
+   "scope": "C2 cross-modal physics on injected evidence",
+   "unavailable": false
+  },
+  {
+   "checker_id": "failure-hgb-shift_unstable:A1",
+   "checker_kind": "statistical",
+   "input_contract": {},
+   "message": "A1 batch collapse check passed in 20% of runs; mean dead dims 0.8",
+   "passed": false,
+   "scope": "A1 collapse diagnostics on injected evidence",
+   "unavailable": false
+  },
+  {
+   "checker_id": "failure-hgb-spike:C1",
+   "checker_kind": "deterministic",
+   "input_contract": {},
+   "message": "C1 flagged 90.0% of cycles",
+   "passed": false,
+   "scope": "C1 per-channel integrity on injected evidence",
+   "unavailable": false
+  },
+  {
+   "checker_id": "failure-hgb-spike:C2",
+   "checker_kind": "statistical",
+   "input_contract": {},
+   "message": "C2 flagged 3.4% of cycles",
+   "passed": false,
+   "scope": "C2 cross-modal physics on injected evidence",
+   "unavailable": false
+  },
+  {
+   "checker_id": "failure-hgb-spike:A1",
+   "checker_kind": "statistical",
+   "input_contract": {},
+   "message": "A1 batch collapse check passed in 11% of runs; mean dead dims 0.7",
+   "passed": false,
+   "scope": "A1 collapse diagnostics on injected evidence",
+   "unavailable": false
+  },
+  {
+   "checker_id": "failure-hgb-stuck:C1",
+   "checker_kind": "deterministic",
+   "input_contract": {},
+   "message": "C1 flagged 100.0% of cycles",
+   "passed": false,
+   "scope": "C1 per-channel integrity on injected evidence",
+   "unavailable": false
+  },
+  {
+   "checker_id": "failure-hgb-stuck:C2",
+   "checker_kind": "statistical",
+   "input_contract": {},
+   "message": "C2 flagged 57.6% of cycles",
+   "passed": false,
+   "scope": "C2 cross-modal physics on injected evidence",
+   "unavailable": false
+  },
+  {
+   "checker_id": "failure-hgb-stuck:A1",
+   "checker_kind": "statistical",
+   "input_contract": {},
+   "message": "A1 batch collapse check passed in 0% of runs; mean dead dims 2.7",
+   "passed": false,
+   "scope": "A1 collapse diagnostics on injected evidence",
+   "unavailable": false
+  },
+  {
+   "checker_id": "failure-hgb-time_shift:C1",
+   "checker_kind": "deterministic",
+   "input_contract": {},
+   "message": "C1 flagged 0.8% of cycles",
+   "passed": true,
+   "scope": "C1 per-channel integrity on injected evidence",
+   "unavailable": false
+  },
+  {
+   "checker_id": "failure-hgb-time_shift:C2",
+   "checker_kind": "statistical",
+   "input_contract": {},
+   "message": "C2 flagged 30.4% of cycles",
+   "passed": false,
+   "scope": "C2 cross-modal physics on injected evidence",
+   "unavailable": false
+  },
+  {
+   "checker_id": "failure-hgb-time_shift:A1",
+   "checker_kind": "statistical",
+   "input_contract": {},
+   "message": "A1 batch collapse check passed in 11% of runs; mean dead dims 0.8",
+   "passed": false,
+   "scope": "A1 collapse diagnostics on injected evidence",
+   "unavailable": false
+  },
+  {
+   "checker_id": "failure-logreg-adv_offset:C1",
+   "checker_kind": "deterministic",
+   "input_contract": {},
+   "message": "C1 flagged 0.6% of cycles",
+   "passed": true,
+   "scope": "C1 per-channel integrity on injected evidence",
+   "unavailable": false
+  },
+  {
+   "checker_id": "failure-logreg-adv_offset:C2",
+   "checker_kind": "statistical",
+   "input_contract": {},
+   "message": "C2 flagged 100.0% of cycles",
+   "passed": false,
+   "scope": "C2 cross-modal physics on injected evidence",
+   "unavailable": false
+  },
+  {
+   "checker_id": "failure-logreg-adv_offset:A1",
+   "checker_kind": "statistical",
+   "input_contract": {},
+   "message": "A1 batch collapse check passed in 21% of runs; mean dead dims 0.8",
+   "passed": false,
+   "scope": "A1 collapse diagnostics on injected evidence",
+   "unavailable": false
+  },
+  {
+   "checker_id": "failure-logreg-dropout:C1",
+   "checker_kind": "deterministic",
+   "input_contract": {},
+   "message": "C1 flagged 100.0% of cycles",
+   "passed": false,
+   "scope": "C1 per-channel integrity on injected evidence",
+   "unavailable": false
+  },
+  {
+   "checker_id": "failure-logreg-dropout:C2",
+   "checker_kind": "statistical",
+   "input_contract": {},
+   "message": "C2 flagged 85.8% of cycles",
+   "passed": false,
+   "scope": "C2 cross-modal physics on injected evidence",
+   "unavailable": false
+  },
+  {
+   "checker_id": "failure-logreg-dropout:A1",
+   "checker_kind": "statistical",
+   "input_contract": {},
+   "message": "A1 batch collapse check passed in 0% of runs; mean dead dims 10.5",
+   "passed": false,
+   "scope": "A1 collapse diagnostics on injected evidence",
+   "unavailable": false
+  },
+  {
+   "checker_id": "failure-logreg-gain:C1",
+   "checker_kind": "deterministic",
+   "input_contract": {},
+   "message": "C1 flagged 22.9% of cycles",
+   "passed": false,
+   "scope": "C1 per-channel integrity on injected evidence",
+   "unavailable": false
+  },
+  {
+   "checker_id": "failure-logreg-gain:C2",
+   "checker_kind": "statistical",
+   "input_contract": {},
+   "message": "C2 flagged 71.5% of cycles",
+   "passed": false,
+   "scope": "C2 cross-modal physics on injected evidence",
+   "unavailable": false
+  },
+  {
+   "checker_id": "failure-logreg-gain:A1",
+   "checker_kind": "statistical",
+   "input_contract": {},
+   "message": "A1 batch collapse check passed in 20% of runs; mean dead dims 0.8",
+   "passed": false,
+   "scope": "A1 collapse diagnostics on injected evidence",
+   "unavailable": false
+  },
+  {
+   "checker_id": "failure-logreg-novel_severity:C1",
+   "checker_kind": "deterministic",
+   "input_contract": {},
+   "message": "C1 flagged 0.8% of cycles",
+   "passed": true,
+   "scope": "C1 per-channel integrity on injected evidence",
+   "unavailable": false
+  },
+  {
+   "checker_id": "failure-logreg-novel_severity:C2",
+   "checker_kind": "statistical",
+   "input_contract": {},
+   "message": "C2 flagged 3.7% of cycles",
+   "passed": false,
+   "scope": "C2 cross-modal physics on injected evidence",
+   "unavailable": false
+  },
+  {
+   "checker_id": "failure-logreg-novel_severity:A1",
+   "checker_kind": "statistical",
+   "input_contract": {},
+   "message": "A1 batch collapse check passed in 20% of runs; mean dead dims 0.8",
+   "passed": false,
+   "scope": "A1 collapse diagnostics on injected evidence",
+   "unavailable": false
+  },
+  {
+   "checker_id": "failure-logreg-offset:C1",
+   "checker_kind": "deterministic",
+   "input_contract": {},
+   "message": "C1 flagged 75.1% of cycles",
+   "passed": false,
+   "scope": "C1 per-channel integrity on injected evidence",
+   "unavailable": false
+  },
+  {
+   "checker_id": "failure-logreg-offset:C2",
+   "checker_kind": "statistical",
+   "input_contract": {},
+   "message": "C2 flagged 85.8% of cycles",
+   "passed": false,
+   "scope": "C2 cross-modal physics on injected evidence",
+   "unavailable": false
+  },
+  {
+   "checker_id": "failure-logreg-offset:A1",
+   "checker_kind": "statistical",
+   "input_contract": {},
+   "message": "A1 batch collapse check passed in 11% of runs; mean dead dims 0.8",
+   "passed": false,
+   "scope": "A1 collapse diagnostics on injected evidence",
+   "unavailable": false
+  },
+  {
+   "checker_id": "failure-logreg-shift_unstable:C1",
+   "checker_kind": "deterministic",
+   "input_contract": {},
+   "message": "C1 flagged 1.3% of cycles",
+   "passed": false,
+   "scope": "C1 per-channel integrity on injected evidence",
+   "unavailable": false
+  },
+  {
+   "checker_id": "failure-logreg-shift_unstable:C2",
+   "checker_kind": "statistical",
+   "input_contract": {},
+   "message": "C2 flagged 3.7% of cycles",
+   "passed": false,
+   "scope": "C2 cross-modal physics on injected evidence",
+   "unavailable": false
+  },
+  {
+   "checker_id": "failure-logreg-shift_unstable:A1",
+   "checker_kind": "statistical",
+   "input_contract": {},
+   "message": "A1 batch collapse check passed in 20% of runs; mean dead dims 0.8",
+   "passed": false,
+   "scope": "A1 collapse diagnostics on injected evidence",
+   "unavailable": false
+  },
+  {
+   "checker_id": "failure-logreg-spike:C1",
+   "checker_kind": "deterministic",
+   "input_contract": {},
+   "message": "C1 flagged 90.0% of cycles",
+   "passed": false,
+   "scope": "C1 per-channel integrity on injected evidence",
+   "unavailable": false
+  },
+  {
+   "checker_id": "failure-logreg-spike:C2",
+   "checker_kind": "statistical",
+   "input_contract": {},
+   "message": "C2 flagged 3.4% of cycles",
+   "passed": false,
+   "scope": "C2 cross-modal physics on injected evidence",
+   "unavailable": false
+  },
+  {
+   "checker_id": "failure-logreg-spike:A1",
+   "checker_kind": "statistical",
+   "input_contract": {},
+   "message": "A1 batch collapse check passed in 11% of runs; mean dead dims 0.7",
+   "passed": false,
+   "scope": "A1 collapse diagnostics on injected evidence",
+   "unavailable": false
+  },
+  {
+   "checker_id": "failure-logreg-stuck:C1",
+   "checker_kind": "deterministic",
+   "input_contract": {},
+   "message": "C1 flagged 100.0% of cycles",
+   "passed": false,
+   "scope": "C1 per-channel integrity on injected evidence",
+   "unavailable": false
+  },
+  {
+   "checker_id": "failure-logreg-stuck:C2",
+   "checker_kind": "statistical",
+   "input_contract": {},
+   "message": "C2 flagged 57.6% of cycles",
+   "passed": false,
+   "scope": "C2 cross-modal physics on injected evidence",
+   "unavailable": false
+  },
+  {
+   "checker_id": "failure-logreg-stuck:A1",
+   "checker_kind": "statistical",
+   "input_contract": {},
+   "message": "A1 batch collapse check passed in 0% of runs; mean dead dims 2.7",
+   "passed": false,
+   "scope": "A1 collapse diagnostics on injected evidence",
+   "unavailable": false
+  },
+  {
+   "checker_id": "failure-logreg-time_shift:C1",
+   "checker_kind": "deterministic",
+   "input_contract": {},
+   "message": "C1 flagged 0.8% of cycles",
+   "passed": true,
+   "scope": "C1 per-channel integrity on injected evidence",
+   "unavailable": false
+  },
+  {
+   "checker_id": "failure-logreg-time_shift:C2",
+   "checker_kind": "statistical",
+   "input_contract": {},
+   "message": "C2 flagged 30.4% of cycles",
+   "passed": false,
+   "scope": "C2 cross-modal physics on injected evidence",
+   "unavailable": false
+  },
+  {
+   "checker_id": "failure-logreg-time_shift:A1",
+   "checker_kind": "statistical",
+   "input_contract": {},
+   "message": "A1 batch collapse check passed in 11% of runs; mean dead dims 0.8",
+   "passed": false,
+   "scope": "A1 collapse diagnostics on injected evidence",
+   "unavailable": false
+  },
+  {
+   "checker_id": "claim-injection",
+   "checker_kind": "deterministic",
+   "input_contract": {},
+   "message": "0/7 admitted: {'unknown_type_RUL': False, 'missing_provenance': False, 'no_obligation_results': False, 'A3_not_implemented': False, 'interpolated_grade': False, 'unknown_component': False, 'checker_error': False}",
+   "passed": true,
+   "scope": "Gate rejects unknown types, missing provenance, interpolated grades, missing obligations",
+   "unavailable": false
+  },
+  {
+   "checker_id": "decision:logreg/s0:clean:0:cooler:O1_integrity",
+   "checker_kind": "deterministic",
+   "input_contract": {},
+   "message": "O1_integrity = PASS",
+   "passed": true,
+   "scope": "C1: every channel used passes non-finite/range/flatline/jump tests",
+   "unavailable": false
+  },
+  {
+   "checker_id": "decision:logreg/s0:clean:0:cooler:O2_physics",
+   "checker_kind": "statistical",
+   "input_contract": {},
+   "message": "O2_physics = PASS",
+   "passed": true,
+   "scope": "C2: all cross-modal balance relations within training residual bounds",
+   "unavailable": false
+  },
+  {
+   "checker_id": "decision:logreg/s0:clean:0:cooler:O3_confidence",
+   "checker_kind": "statistical",
+   "input_contract": {},
+   "message": "O3_confidence = PASS",
+   "passed": true,
+   "scope": "A2: calibrated confidence >= tier threshold",
+   "unavailable": false
+  },
+  {
+   "checker_id": "decision:logreg/s0:clean:0:cooler:O4_causal_signature",
+   "checker_kind": "statistical",
+   "input_contract": {},
+   "message": "O4_causal_signature = PASS",
+   "passed": true,
+   "scope": "A3: causal-signature interval matches the claimed grade",
+   "unavailable": false
+  },
+  {
+   "checker_id": "decision:logreg/s0:clean:0:cooler:O5_conformal_singleton",
+   "checker_kind": "statistical",
+   "input_contract": {},
+   "message": "O5_conformal_singleton = PASS",
+   "passed": true,
+   "scope": "A2: split-conformal set equals the claimed grade",
+   "unavailable": false
+  },
+  {
+   "checker_id": "decision:logreg/s0:clean:188:cooler:O1_integrity",
+   "checker_kind": "deterministic",
+   "input_contract": {},
+   "message": "O1_integrity = PASS",
+   "passed": true,
+   "scope": "C1: every channel used passes non-finite/range/flatline/jump tests",
+   "unavailable": false
+  },
+  {
+   "checker_id": "decision:logreg/s0:clean:188:cooler:O2_physics",
+   "checker_kind": "statistical",
+   "input_contract": {},
+   "message": "O2_physics = PASS",
+   "passed": true,
+   "scope": "C2: all cross-modal balance relations within training residual bounds",
+   "unavailable": false
+  },
+  {
+   "checker_id": "decision:logreg/s0:clean:188:cooler:O3_confidence",
+   "checker_kind": "statistical",
+   "input_contract": {},
+   "message": "O3_confidence = PASS",
+   "passed": true,
+   "scope": "A2: calibrated confidence >= tier threshold",
+   "unavailable": false
+  },
+  {
+   "checker_id": "decision:logreg/s0:clean:188:cooler:O5_conformal_singleton",
+   "checker_kind": "statistical",
+   "input_contract": {},
+   "message": "O5_conformal_singleton = FAIL",
+   "passed": false,
+   "scope": "A2: split-conformal set equals the claimed grade",
+   "unavailable": false
+  },
+  {
+   "checker_id": "decision:logreg/s0:clean:0:pump:O1_integrity",
+   "checker_kind": "deterministic",
+   "input_contract": {},
+   "message": "O1_integrity = PASS",
+   "passed": true,
+   "scope": "C1: every channel used passes non-finite/range/flatline/jump tests",
+   "unavailable": false
+  },
+  {
+   "checker_id": "decision:logreg/s0:clean:0:pump:O2_physics",
+   "checker_kind": "statistical",
+   "input_contract": {},
+   "message": "O2_physics = PASS",
+   "passed": true,
+   "scope": "C2: all cross-modal balance relations within training residual bounds",
+   "unavailable": false
+  },
+  {
+   "checker_id": "decision:logreg/s0:clean:0:pump:O3_confidence",
+   "checker_kind": "statistical",
+   "input_contract": {},
+   "message": "O3_confidence = FAIL",
+   "passed": false,
+   "scope": "A2: calibrated confidence >= tier threshold",
+   "unavailable": false
+  },
+  {
+   "checker_id": "decision:logreg/s0:clean:0:pump:O4_causal_signature",
+   "checker_kind": "statistical",
+   "input_contract": {},
+   "message": "O4_causal_signature = PASS",
+   "passed": true,
+   "scope": "A3: causal-signature interval matches the claimed grade",
+   "unavailable": false
+  },
+  {
+   "checker_id": "decision:logreg/s0:clean:0:pump:O5_conformal_singleton",
+   "checker_kind": "statistical",
+   "input_contract": {},
+   "message": "O5_conformal_singleton = PASS",
+   "passed": true,
+   "scope": "A2: split-conformal set equals the claimed grade",
+   "unavailable": false
+  },
+  {
+   "checker_id": "decision:logreg/s0:clean:72:accumulator:O1_integrity",
+   "checker_kind": "deterministic",
+   "input_contract": {},
+   "message": "O1_integrity = PASS",
+   "passed": true,
+   "scope": "C1: every channel used passes non-finite/range/flatline/jump tests",
+   "unavailable": false
+  },
+  {
+   "checker_id": "decision:logreg/s0:clean:72:accumulator:O2_physics",
+   "checker_kind": "statistical",
+   "input_contract": {},
+   "message": "O2_physics = PASS",
+   "passed": true,
+   "scope": "C2: all cross-modal balance relations within training residual bounds",
+   "unavailable": false
+  },
+  {
+   "checker_id": "decision:logreg/s0:clean:72:accumulator:O3_confidence",
+   "checker_kind": "statistical",
+   "input_contract": {},
+   "message": "O3_confidence = FAIL",
+   "passed": false,
+   "scope": "A2: calibrated confidence >= tier threshold",
+   "unavailable": false
+  },
+  {
+   "checker_id": "decision:logreg/s0:clean:72:accumulator:O4_causal_signature",
+   "checker_kind": "statistical",
+   "input_contract": {},
+   "message": "O4_causal_signature = NOT_IMPLEMENTED",
+   "passed": false,
+   "scope": "A3: causal-signature interval matches the claimed grade",
+   "unavailable": false
+  },
+  {
+   "checker_id": "decision:logreg/s0:clean:72:accumulator:O5_conformal_singleton",
+   "checker_kind": "statistical",
+   "input_contract": {},
+   "message": "O5_conformal_singleton = FAIL",
+   "passed": false,
+   "scope": "A2: split-conformal set equals the claimed grade",
+   "unavailable": false
+  },
+  {
+   "checker_id": "decision:logreg/s0:dropout:PS1:0:cooler:O1_integrity",
+   "checker_kind": "deterministic",
+   "input_contract": {},
+   "message": "O1_integrity = FAIL",
+   "passed": false,
+   "scope": "C1: every channel used passes non-finite/range/flatline/jump tests",
+   "unavailable": false
+  },
+  {
+   "checker_id": "decision:logreg/s0:dropout:PS1:0:cooler:O2_physics",
+   "checker_kind": "statistical",
+   "input_contract": {},
+   "message": "O2_physics = FAIL",
+   "passed": false,
+   "scope": "C2: all cross-modal balance relations within training residual bounds",
+   "unavailable": false
+  },
+  {
+   "checker_id": "decision:logreg/s0:dropout:PS1:0:cooler:O3_confidence",
+   "checker_kind": "statistical",
+   "input_contract": {},
+   "message": "O3_confidence = PASS",
+   "passed": true,
+   "scope": "A2: calibrated confidence >= tier threshold",
+   "unavailable": false
+  },
+  {
+   "checker_id": "decision:logreg/s0:dropout:PS1:0:cooler:O4_causal_signature",
+   "checker_kind": "statistical",
+   "input_contract": {},
+   "message": "O4_causal_signature = PASS",
+   "passed": true,
+   "scope": "A3: causal-signature interval matches the claimed grade",
+   "unavailable": false
+  },
+  {
+   "checker_id": "decision:logreg/s0:dropout:PS1:0:cooler:O5_conformal_singleton",
+   "checker_kind": "statistical",
+   "input_contract": {},
+   "message": "O5_conformal_singleton = PASS",
+   "passed": true,
+   "scope": "A2: split-conformal set equals the claimed grade",
+   "unavailable": false
+  },
+  {
+   "checker_id": "decision:logreg/s0:dropout:PS1:0:cooler:repaired:O1_integrity",
+   "checker_kind": "deterministic",
+   "input_contract": {},
+   "message": "O1_integrity = PASS",
+   "passed": true,
+   "scope": "C1: every channel used passes non-finite/range/flatline/jump tests",
+   "unavailable": false
+  },
+  {
+   "checker_id": "decision:logreg/s0:dropout:PS1:0:cooler:repaired:O2_physics",
+   "checker_kind": "statistical",
+   "input_contract": {},
+   "message": "O2_physics = PASS",
+   "passed": true,
+   "scope": "C2: all cross-modal balance relations within training residual bounds",
+   "unavailable": false
+  },
+  {
+   "checker_id": "decision:logreg/s0:dropout:PS1:0:cooler:repaired:O3_confidence",
+   "checker_kind": "statistical",
+   "input_contract": {},
+   "message": "O3_confidence = PASS",
+   "passed": true,
+   "scope": "A2: calibrated confidence >= tier threshold",
+   "unavailable": false
+  },
+  {
+   "checker_id": "decision:logreg/s0:dropout:PS1:0:cooler:repaired:O4_causal_signature",
+   "checker_kind": "statistical",
+   "input_contract": {},
+   "message": "O4_causal_signature = PASS",
+   "passed": true,
+   "scope": "A3: causal-signature interval matches the claimed grade",
+   "unavailable": false
+  },
+  {
+   "checker_id": "decision:logreg/s0:dropout:PS1:0:cooler:repaired:O5_conformal_singleton",
+   "checker_kind": "statistical",
+   "input_contract": {},
+   "message": "O5_conformal_singleton = PASS",
+   "passed": true,
+   "scope": "A2: split-conformal set equals the claimed grade",
+   "unavailable": false
+  },
+  {
+   "checker_id": "decision:logreg/s0:dropout:PS1:188:cooler:O1_integrity",
+   "checker_kind": "deterministic",
+   "input_contract": {},
+   "message": "O1_integrity = FAIL",
+   "passed": false,
+   "scope": "C1: every channel used passes non-finite/range/flatline/jump tests",
+   "unavailable": false
+  },
+  {
+   "checker_id": "decision:logreg/s0:dropout:PS1:188:cooler:O2_physics",
+   "checker_kind": "statistical",
+   "input_contract": {},
+   "message": "O2_physics = FAIL",
+   "passed": false,
+   "scope": "C2: all cross-modal balance relations within training residual bounds",
+   "unavailable": false
+  },
+  {
+   "checker_id": "decision:logreg/s0:dropout:PS1:188:cooler:O3_confidence",
+   "checker_kind": "statistical",
+   "input_contract": {},
+   "message": "O3_confidence = PASS",
+   "passed": true,
+   "scope": "A2: calibrated confidence >= tier threshold",
+   "unavailable": false
+  },
+  {
+   "checker_id": "decision:logreg/s0:dropout:PS1:188:cooler:O5_conformal_singleton",
+   "checker_kind": "statistical",
+   "input_contract": {},
+   "message": "O5_conformal_singleton = FAIL",
+   "passed": false,
+   "scope": "A2: split-conformal set equals the claimed grade",
+   "unavailable": false
+  },
+  {
+   "checker_id": "decision:logreg/s0:dropout:PS1:188:cooler:repaired:O1_integrity",
+   "checker_kind": "deterministic",
+   "input_contract": {},
+   "message": "O1_integrity = PASS",
+   "passed": true,
+   "scope": "C1: every channel used passes non-finite/range/flatline/jump tests",
+   "unavailable": false
+  },
+  {
+   "checker_id": "decision:logreg/s0:dropout:PS1:188:cooler:repaired:O2_physics",
+   "checker_kind": "statistical",
+   "input_contract": {},
+   "message": "O2_physics = PASS",
+   "passed": true,
+   "scope": "C2: all cross-modal balance relations within training residual bounds",
+   "unavailable": false
+  },
+  {
+   "checker_id": "decision:logreg/s0:dropout:PS1:188:cooler:repaired:O3_confidence",
+   "checker_kind": "statistical",
+   "input_contract": {},
+   "message": "O3_confidence = PASS",
+   "passed": true,
+   "scope": "A2: calibrated confidence >= tier threshold",
+   "unavailable": false
+  },
+  {
+   "checker_id": "decision:logreg/s0:dropout:PS1:188:cooler:repaired:O5_conformal_singleton",
+   "checker_kind": "statistical",
+   "input_contract": {},
+   "message": "O5_conformal_singleton = FAIL",
+   "passed": false,
+   "scope": "A2: split-conformal set equals the claimed grade",
+   "unavailable": false
+  }
+ ],
+ "claims": [
+  {
+   "claim_id": "a1-representation",
+   "claim_type": "representation",
+   "confidence": null,
+   "evidence_ids": [
+    "uci447:electrical",
+    "uci447:flow",
+    "uci447:pressure",
+    "uci447:thermal",
+    "uci447:vibration",
+    "uci447:virtual"
+   ],
+   "risk_tier": "low",
+   "statement": "features/seg6-stats-v1/e259dea20164: 170-d frozen features; train effective rank 25.2-28.8 over 10 runs (floor 17.0), 0 dead dims"
+  },
+  {
+   "claim_id": "a2-calibration-hgb-cooler",
+   "claim_type": "calibration",
+   "confidence": null,
+   "evidence_ids": [
+    "uci447:electrical",
+    "uci447:flow",
+    "uci447:pressure",
+    "uci447:thermal",
+    "uci447:vibration",
+    "uci447:virtual"
+   ],
+   "risk_tier": "medium",
+   "statement": "hgb, cooler, 5 seeds, calibration split: ECE(B=15) 0.003, NLL 0.017, conformal coverage 0.960 (target 0.95), mean set size 0.96"
+  },
+  {
+   "claim_id": "a2-calibration-hgb-valve",
+   "claim_type": "calibration",
+   "confidence": null,
+   "evidence_ids": [
+    "uci447:electrical",
+    "uci447:flow",
+    "uci447:pressure",
+    "uci447:thermal",
+    "uci447:vibration",
+    "uci447:virtual"
+   ],
+   "risk_tier": "medium",
+   "statement": "hgb, valve, 5 seeds, calibration split: ECE(B=15) 0.005, NLL 0.035, conformal coverage 0.960 (target 0.95), mean set size 0.96"
+  },
+  {
+   "claim_id": "a2-calibration-hgb-pump",
+   "claim_type": "calibration",
+   "confidence": null,
+   "evidence_ids": [
+    "uci447:electrical",
+    "uci447:flow",
+    "uci447:pressure",
+    "uci447:thermal",
+    "uci447:vibration",
+    "uci447:virtual"
+   ],
+   "risk_tier": "medium",
+   "statement": "hgb, pump, 5 seeds, calibration split: ECE(B=15) 0.027, NLL 0.140, conformal coverage 0.960 (target 0.95), mean set size 1.00"
+  },
+  {
+   "claim_id": "a2-calibration-hgb-accumulator",
+   "claim_type": "calibration",
+   "confidence": null,
+   "evidence_ids": [
+    "uci447:electrical",
+    "uci447:flow",
+    "uci447:pressure",
+    "uci447:thermal",
+    "uci447:vibration",
+    "uci447:virtual"
+   ],
+   "risk_tier": "medium",
+   "statement": "hgb, accumulator, 5 seeds, calibration split: ECE(B=15) 0.266, NLL 2.178, conformal coverage 0.958 (target 0.95), mean set size 2.73"
+  },
+  {
+   "claim_id": "a2-calibration-logreg-cooler",
+   "claim_type": "calibration",
+   "confidence": null,
+   "evidence_ids": [
+    "uci447:electrical",
+    "uci447:flow",
+    "uci447:pressure",
+    "uci447:thermal",
+    "uci447:vibration",
+    "uci447:virtual"
+   ],
+   "risk_tier": "medium",
+   "statement": "logreg, cooler, 5 seeds, calibration split: ECE(B=15) 0.001, NLL 0.001, conformal coverage 0.960 (target 0.95), mean set size 0.96"
+  },
+  {
+   "claim_id": "a2-calibration-logreg-valve",
+   "claim_type": "calibration",
+   "confidence": null,
+   "evidence_ids": [
+    "uci447:electrical",
+    "uci447:flow",
+    "uci447:pressure",
+    "uci447:thermal",
+    "uci447:vibration",
+    "uci447:virtual"
+   ],
+   "risk_tier": "medium",
+   "statement": "logreg, valve, 5 seeds, calibration split: ECE(B=15) 0.036, NLL 0.079, conformal coverage 0.960 (target 0.95), mean set size 0.97"
+  },
+  {
+   "claim_id": "a2-calibration-logreg-pump",
+   "claim_type": "calibration",
+   "confidence": null,
+   "evidence_ids": [
+    "uci447:electrical",
+    "uci447:flow",
+    "uci447:pressure",
+    "uci447:thermal",
+    "uci447:vibration",
+    "uci447:virtual"
+   ],
+   "risk_tier": "medium",
+   "statement": "logreg, pump, 5 seeds, calibration split: ECE(B=15) 0.069, NLL 0.210, conformal coverage 0.960 (target 0.95), mean set size 1.06"
+  },
+  {
+   "claim_id": "a2-calibration-logreg-accumulator",
+   "claim_type": "calibration",
+   "confidence": null,
+   "evidence_ids": [
+    "uci447:electrical",
+    "uci447:flow",
+    "uci447:pressure",
+    "uci447:thermal",
+    "uci447:vibration",
+    "uci447:virtual"
+   ],
+   "risk_tier": "medium",
+   "statement": "logreg, accumulator, 5 seeds, calibration split: ECE(B=15) 0.198, NLL 1.079, conformal coverage 0.959 (target 0.95), mean set size 2.18"
+  },
+  {
+   "claim_id": "A3-cooler-CE",
+   "claim_type": "interventional",
+   "confidence": null,
+   "evidence_ids": [
+    "uci447:electrical",
+    "uci447:flow",
+    "uci447:pressure",
+    "uci447:thermal",
+    "uci447:vibration",
+    "uci447:virtual",
+    "uci447:labels"
+   ],
+   "risk_tier": "high",
+   "statement": "Setting a higher cooler condition grade (designed intervention on the rig) yields higher CE; stratified sign agreement 1.00-1.00 over 10 runs"
+  },
+  {
+   "claim_id": "A3-pump-FS1",
+   "claim_type": "interventional",
+   "confidence": null,
+   "evidence_ids": [
+    "uci447:electrical",
+    "uci447:flow",
+    "uci447:pressure",
+    "uci447:thermal",
+    "uci447:vibration",
+    "uci447:virtual",
+    "uci447:labels"
+   ],
+   "risk_tier": "high",
+   "statement": "Setting a higher pump condition grade (designed intervention on the rig) yields lower FS1; stratified sign agreement 1.00-1.00 over 10 runs"
+  },
+  {
+   "claim_id": "A3-valve-FS1early",
+   "claim_type": "interventional",
+   "confidence": null,
+   "evidence_ids": [
+    "uci447:electrical",
+    "uci447:flow",
+    "uci447:pressure",
+    "uci447:thermal",
+    "uci447:vibration",
+    "uci447:virtual",
+    "uci447:labels"
+   ],
+   "risk_tier": "high",
+   "statement": "Setting a higher valve condition grade (designed intervention on the rig) yields higher FS1_early; stratified sign agreement 0.88-0.95 over 10 runs"
+  },
+  {
+   "claim_id": "a3-accumulator-signature",
+   "claim_type": "deferred",
+   "confidence": null,
+   "evidence_ids": [
+    "uci447:electrical",
+    "uci447:flow",
+    "uci447:pressure",
+    "uci447:thermal",
+    "uci447:vibration",
+    "uci447:virtual",
+    "uci447:labels"
+   ],
+   "risk_tier": "critical",
+   "statement": "No causal signature for accumulator pressure is identified from the available channels; critical accumulator claims therefore cannot satisfy O4 and are never admitted"
+  },
+  {
+   "claim_id": "policy-hgb-adv_offset",
+   "claim_type": "statistical",
+   "confidence": null,
+   "evidence_ids": [
+    "eval:adv_offset",
+    "decision-trace"
+   ],
+   "risk_tier": "high",
+   "statement": "hgb, adv_offset (2 runs): FAR/coverage B0 31.8%/100.0%, B2 21.7%/84.1%, G 19.2%/52.4%, G+repair 19.6%/58.3%"
+  },
+  {
+   "claim_id": "failure-hgb-adv_offset",
+   "claim_type": "protocol",
+   "confidence": null,
+   "evidence_ids": [
+    "eval:adv_offset"
+   ],
+   "risk_tier": "high",
+   "statement": "Evidence under the 'adv_offset' condition is fit to act on without checks (ungated FAR would be 31.8%)"
+  },
+  {
+   "claim_id": "policy-hgb-clean",
+   "claim_type": "statistical",
+   "confidence": null,
+   "evidence_ids": [
+    "eval:clean",
+    "decision-trace"
+   ],
+   "risk_tier": "high",
+   "statement": "hgb, clean (5 runs): FAR/coverage B0 12.5%/100.0%, B2 6.1%/87.0%, G 5.5%/84.7%, G+repair 5.5%/85.2%"
+  },
+  {
+   "claim_id": "policy-hgb-dropout",
+   "claim_type": "statistical",
+   "confidence": null,
+   "evidence_ids": [
+    "eval:dropout",
+    "decision-trace"
+   ],
+   "risk_tier": "high",
+   "statement": "hgb, dropout (35 runs): FAR/coverage B0 18.2%/100.0%, B2 10.1%/84.4%, G 0.0%/0.0%, G+repair 5.8%/82.7%"
+  },
+  {
+   "claim_id": "failure-hgb-dropout",
+   "claim_type": "protocol",
+   "confidence": null,
+   "evidence_ids": [
+    "eval:dropout"
+   ],
+   "risk_tier": "high",
+   "statement": "Evidence under the 'dropout' condition is fit to act on without checks (ungated FAR would be 18.2%)"
+  },
+  {
+   "claim_id": "policy-hgb-gain",
+   "claim_type": "statistical",
+   "confidence": null,
+   "evidence_ids": [
+    "eval:gain",
+    "decision-trace"
+   ],
+   "risk_tier": "high",
+   "statement": "hgb, gain (35 runs): FAR/coverage B0 18.4%/100.0%, B2 8.7%/82.6%, G 4.5%/42.8%, G+repair 7.1%/72.4%"
+  },
+  {
+   "claim_id": "failure-hgb-gain",
+   "claim_type": "protocol",
+   "confidence": null,
+   "evidence_ids": [
+    "eval:gain"
+   ],
+   "risk_tier": "high",
+   "statement": "Evidence under the 'gain' condition is fit to act on without checks (ungated FAR would be 18.4%)"
+  },
+  {
+   "claim_id": "policy-hgb-novel_severity",
+   "claim_type": "statistical",
+   "confidence": null,
+   "evidence_ids": [
+    "eval:novel_severity",
+    "decision-trace"
+   ],
+   "risk_tier": "high",
+   "statement": "hgb, novel_severity (5 runs): FAR/coverage B0 40.3%/100.0%, B2 28.9%/79.5%, G 27.7%/76.6%, G+repair 28.1%/78.0%"
+  },
+  {
+   "claim_id": "failure-hgb-novel_severity",
+   "claim_type": "protocol",
+   "confidence": null,
+   "evidence_ids": [
+    "eval:novel_severity"
+   ],
+   "risk_tier": "high",
+   "statement": "Evidence under the 'novel_severity' condition is fit to act on without checks (ungated FAR would be 40.3%)"
+  },
+  {
+   "claim_id": "policy-hgb-offset",
+   "claim_type": "statistical",
+   "confidence": null,
+   "evidence_ids": [
+    "eval:offset",
+    "decision-trace"
+   ],
+   "risk_tier": "high",
+   "statement": "hgb, offset (35 runs): FAR/coverage B0 18.6%/100.0%, B2 9.3%/82.7%, G 1.4%/15.3%, G+repair 5.9%/81.6%"
+  },
+  {
+   "claim_id": "failure-hgb-offset",
+   "claim_type": "protocol",
+   "confidence": null,
+   "evidence_ids": [
+    "eval:offset"
+   ],
+   "risk_tier": "high",
+   "statement": "Evidence under the 'offset' condition is fit to act on without checks (ungated FAR would be 18.6%)"
+  },
+  {
+   "claim_id": "policy-hgb-shift_unstable",
+   "claim_type": "statistical",
+   "confidence": null,
+   "evidence_ids": [
+    "eval:shift_unstable",
+    "decision-trace"
+   ],
+   "risk_tier": "high",
+   "statement": "hgb, shift_unstable (5 runs): FAR/coverage B0 11.4%/100.0%, B2 5.3%/76.8%, G 4.9%/72.9%, G+repair 5.3%/73.9%"
+  },
+  {
+   "claim_id": "failure-hgb-shift_unstable",
+   "claim_type": "protocol",
+   "confidence": null,
+   "evidence_ids": [
+    "eval:shift_unstable"
+   ],
+   "risk_tier": "high",
+   "statement": "Evidence under the 'shift_unstable' condition is fit to act on without checks (ungated FAR would be 11.4%)"
+  },
+  {
+   "claim_id": "policy-hgb-spike",
+   "claim_type": "statistical",
+   "confidence": null,
+   "evidence_ids": [
+    "eval:spike",
+    "decision-trace"
+   ],
+   "risk_tier": "high",
+   "statement": "hgb, spike (35 runs): FAR/coverage B0 14.8%/100.0%, B2 6.8%/84.9%, G 0.5%/8.5%, G+repair 5.8%/82.7%"
+  },
+  {
+   "claim_id": "failure-hgb-spike",
+   "claim_type": "protocol",
+   "confidence": null,
+   "evidence_ids": [
+    "eval:spike"
+   ],
+   "risk_tier": "high",
+   "statement": "Evidence under the 'spike' condition is fit to act on without checks (ungated FAR would be 14.8%)"
+  },
+  {
+   "claim_id": "policy-hgb-stuck",
+   "claim_type": "statistical",
+   "confidence": null,
+   "evidence_ids": [
+    "eval:stuck",
+    "decision-trace"
+   ],
+   "risk_tier": "high",
+   "statement": "hgb, stuck (35 runs): FAR/coverage B0 18.5%/100.0%, B2 8.7%/80.7%, G 0.0%/0.0%, G+repair 5.8%/82.7%"
+  },
+  {
+   "claim_id": "failure-hgb-stuck",
+   "claim_type": "protocol",
+   "confidence": null,
+   "evidence_ids": [
+    "eval:stuck"
+   ],
+   "risk_tier": "high",
+   "statement": "Evidence under the 'stuck' condition is fit to act on without checks (ungated FAR would be 18.5%)"
+  },
+  {
+   "claim_id": "policy-hgb-time_shift",
+   "claim_type": "statistical",
+   "confidence": null,
+   "evidence_ids": [
+    "eval:time_shift",
+    "decision-trace"
+   ],
+   "risk_tier": "high",
+   "statement": "hgb, time_shift (35 runs): FAR/coverage B0 16.0%/100.0%, B2 8.0%/83.8%, G 6.4%/69.2%, G+repair 6.5%/69.8%"
+  },
+  {
+   "claim_id": "failure-hgb-time_shift",
+   "claim_type": "protocol",
+   "confidence": null,
+   "evidence_ids": [
+    "eval:time_shift"
+   ],
+   "risk_tier": "high",
+   "statement": "Evidence under the 'time_shift' condition is fit to act on without checks (ungated FAR would be 16.0%)"
+  },
+  {
+   "claim_id": "policy-logreg-adv_offset",
+   "claim_type": "statistical",
+   "confidence": null,
+   "evidence_ids": [
+    "eval:adv_offset",
+    "decision-trace"
+   ],
+   "risk_tier": "high",
+   "statement": "logreg, adv_offset (14 runs): FAR/coverage B0 43.5%/100.0%, B2 34.1%/83.5%, G 20.6%/44.0%, G+repair 22.6%/49.3%"
+  },
+  {
+   "claim_id": "failure-logreg-adv_offset",
+   "claim_type": "protocol",
+   "confidence": null,
+   "evidence_ids": [
+    "eval:adv_offset"
+   ],
+   "risk_tier": "high",
+   "statement": "Evidence under the 'adv_offset' condition is fit to act on without checks (ungated FAR would be 43.5%)"
+  },
+  {
+   "claim_id": "policy-logreg-clean",
+   "claim_type": "statistical",
+   "confidence": null,
+   "evidence_ids": [
+    "eval:clean",
+    "decision-trace"
+   ],
+   "risk_tier": "high",
+   "statement": "logreg, clean (5 runs): FAR/coverage B0 12.6%/100.0%, B2 2.6%/73.1%, G 2.5%/71.6%, G+repair 2.6%/72.0%"
+  },
+  {
+   "claim_id": "policy-logreg-dropout",
+   "claim_type": "statistical",
+   "confidence": null,
+   "evidence_ids": [
+    "eval:dropout",
+    "decision-trace"
+   ],
+   "risk_tier": "high",
+   "statement": "logreg, dropout (35 runs): FAR/coverage B0 19.6%/100.0%, B2 7.4%/68.8%, G 0.0%/0.0%, G+repair 2.7%/69.2%"
+  },
+  {
+   "claim_id": "failure-logreg-dropout",
+   "claim_type": "protocol",
+   "confidence": null,
+   "evidence_ids": [
+    "eval:dropout"
+   ],
+   "risk_tier": "high",
+   "statement": "Evidence under the 'dropout' condition is fit to act on without checks (ungated FAR would be 19.6%)"
+  },
+  {
+   "claim_id": "policy-logreg-gain",
+   "claim_type": "statistical",
+   "confidence": null,
+   "evidence_ids": [
+    "eval:gain",
+    "decision-trace"
+   ],
+   "risk_tier": "high",
+   "statement": "logreg, gain (35 runs): FAR/coverage B0 27.2%/100.0%, B2 18.0%/78.3%, G 4.8%/37.6%, G+repair 6.1%/63.0%"
+  },
+  {
+   "claim_id": "failure-logreg-gain",
+   "claim_type": "protocol",
+   "confidence": null,
+   "evidence_ids": [
+    "eval:gain"
+   ],
+   "risk_tier": "high",
+   "statement": "Evidence under the 'gain' condition is fit to act on without checks (ungated FAR would be 27.2%)"
+  },
+  {
+   "claim_id": "policy-logreg-novel_severity",
+   "claim_type": "statistical",
+   "confidence": null,
+   "evidence_ids": [
+    "eval:novel_severity",
+    "decision-trace"
+   ],
+   "risk_tier": "high",
+   "statement": "logreg, novel_severity (5 runs): FAR/coverage B0 41.3%/100.0%, B2 28.3%/74.1%, G 26.9%/69.0%, G+repair 27.3%/70.0%"
+  },
+  {
+   "claim_id": "failure-logreg-novel_severity",
+   "claim_type": "protocol",
+   "confidence": null,
+   "evidence_ids": [
+    "eval:novel_severity"
+   ],
+   "risk_tier": "high",
+   "statement": "Evidence under the 'novel_severity' condition is fit to act on without checks (ungated FAR would be 41.3%)"
+  },
+  {
+   "claim_id": "policy-logreg-offset",
+   "claim_type": "statistical",
+   "confidence": null,
+   "evidence_ids": [
+    "eval:offset",
+    "decision-trace"
+   ],
+   "risk_tier": "high",
+   "statement": "logreg, offset (35 runs): FAR/coverage B0 39.9%/100.0%, B2 34.8%/86.8%, G 2.9%/12.8%, G+repair 5.0%/68.7%"
+  },
+  {
+   "claim_id": "failure-logreg-offset",
+   "claim_type": "protocol",
+   "confidence": null,
+   "evidence_ids": [
+    "eval:offset"
+   ],
+   "risk_tier": "high",
+   "statement": "Evidence under the 'offset' condition is fit to act on without checks (ungated FAR would be 39.9%)"
+  },
+  {
+   "claim_id": "policy-logreg-shift_unstable",
+   "claim_type": "statistical",
+   "confidence": null,
+   "evidence_ids": [
+    "eval:shift_unstable",
+    "decision-trace"
+   ],
+   "risk_tier": "high",
+   "statement": "logreg, shift_unstable (5 runs): FAR/coverage B0 12.4%/100.0%, B2 2.5%/49.5%, G 2.3%/46.0%, G+repair 2.5%/46.9%"
+  },
+  {
+   "claim_id": "failure-logreg-shift_unstable",
+   "claim_type": "protocol",
+   "confidence": null,
+   "evidence_ids": [
+    "eval:shift_unstable"
+   ],
+   "risk_tier": "high",
+   "statement": "Evidence under the 'shift_unstable' condition is fit to act on without checks (ungated FAR would be 12.4%)"
+  },
+  {
+   "claim_id": "policy-logreg-spike",
+   "claim_type": "statistical",
+   "confidence": null,
+   "evidence_ids": [
+    "eval:spike",
+    "decision-trace"
+   ],
+   "risk_tier": "high",
+   "statement": "logreg, spike (35 runs): FAR/coverage B0 39.3%/100.0%, B2 32.7%/83.7%, G 0.4%/7.4%, G+repair 2.9%/69.2%"
+  },
+  {
+   "claim_id": "failure-logreg-spike",
+   "claim_type": "protocol",
+   "confidence": null,
+   "evidence_ids": [
+    "eval:spike"
+   ],
+   "risk_tier": "high",
+   "statement": "Evidence under the 'spike' condition is fit to act on without checks (ungated FAR would be 39.3%)"
+  },
+  {
+   "claim_id": "policy-logreg-stuck",
+   "claim_type": "statistical",
+   "confidence": null,
+   "evidence_ids": [
+    "eval:stuck",
+    "decision-trace"
+   ],
+   "risk_tier": "high",
+   "statement": "logreg, stuck (35 runs): FAR/coverage B0 39.0%/100.0%, B2 33.0%/84.7%, G 0.0%/0.0%, G+repair 2.7%/69.2%"
+  },
+  {
+   "claim_id": "failure-logreg-stuck",
+   "claim_type": "protocol",
+   "confidence": null,
+   "evidence_ids": [
+    "eval:stuck"
+   ],
+   "risk_tier": "high",
+   "statement": "Evidence under the 'stuck' condition is fit to act on without checks (ungated FAR would be 39.0%)"
+  },
+  {
+   "claim_id": "policy-logreg-time_shift",
+   "claim_type": "statistical",
+   "confidence": null,
+   "evidence_ids": [
+    "eval:time_shift",
+    "decision-trace"
+   ],
+   "risk_tier": "high",
+   "statement": "logreg, time_shift (35 runs): FAR/coverage B0 30.8%/100.0%, B2 23.8%/81.0%, G 12.9%/58.7%, G+repair 13.1%/59.3%"
+  },
+  {
+   "claim_id": "failure-logreg-time_shift",
+   "claim_type": "protocol",
+   "confidence": null,
+   "evidence_ids": [
+    "eval:time_shift"
+   ],
+   "risk_tier": "high",
+   "statement": "Evidence under the 'time_shift' condition is fit to act on without checks (ungated FAR would be 30.8%)"
+  },
+  {
+   "claim_id": "invariant-no-unverified-admission",
+   "claim_type": "protocol",
+   "confidence": null,
+   "evidence_ids": [
+    "decision-trace"
+   ],
+   "risk_tier": "critical",
+   "statement": "No component-condition claim was admitted without an executed PASS on every obligation of its tier (384820 decision records)"
+  },
+  {
+   "claim_id": "claim-injection-rejected",
+   "claim_type": "protocol",
+   "confidence": null,
+   "evidence_ids": [
+    "audit"
+   ],
+   "risk_tier": "critical",
+   "statement": "All 7 fabricated or unwarranted claims were rejected by the gate"
+  },
+  {
+   "claim_id": "decision:logreg/s0:clean:0:cooler",
+   "claim_type": "statistical",
+   "confidence": 0.9956,
+   "evidence_ids": [
+    "uci447:electrical",
+    "uci447:flow",
+    "uci447:pressure",
+    "uci447:thermal",
+    "uci447:vibration",
+    "uci447:virtual",
+    "eval:clean"
+   ],
+   "risk_tier": "critical",
+   "statement": "clean cycle 0: cooler grade 3 (conformal set [3]; licenses STOP_AND_SERVICE)"
+  },
+  {
+   "claim_id": "decision:logreg/s0:clean:188:cooler",
+   "claim_type": "statistical",
+   "confidence": 0.9496,
+   "evidence_ids": [
+    "uci447:electrical",
+    "uci447:flow",
+    "uci447:pressure",
+    "uci447:thermal",
+    "uci447:vibration",
+    "uci447:virtual",
+    "eval:clean"
+   ],
+   "risk_tier": "high",
+   "statement": "clean cycle 188: cooler grade 100 (conformal set []; licenses nothing)"
+  },
+  {
+   "claim_id": "decision:logreg/s0:clean:0:pump",
+   "claim_type": "statistical",
+   "confidence": 0.8863,
+   "evidence_ids": [
+    "uci447:electrical",
+    "uci447:flow",
+    "uci447:pressure",
+    "uci447:thermal",
+    "uci447:vibration",
+    "uci447:virtual",
+    "eval:clean"
+   ],
+   "risk_tier": "critical",
+   "statement": "clean cycle 0: pump grade 2 (conformal set [2]; licenses nothing)"
+  },
+  {
+   "claim_id": "decision:logreg/s0:clean:72:accumulator",
+   "claim_type": "statistical",
+   "confidence": 0.3967,
+   "evidence_ids": [
+    "uci447:electrical",
+    "uci447:flow",
+    "uci447:pressure",
+    "uci447:thermal",
+    "uci447:vibration",
+    "uci447:virtual",
+    "eval:clean"
+   ],
+   "risk_tier": "critical",
+   "statement": "clean cycle 72: accumulator grade 90 (conformal set [90, 100, 115]; licenses nothing)"
+  },
+  {
+   "claim_id": "decision:logreg/s0:dropout:PS1:0:cooler",
+   "claim_type": "statistical",
+   "confidence": 0.9918,
+   "evidence_ids": [
+    "uci447:electrical",
+    "uci447:flow",
+    "uci447:pressure",
+    "uci447:thermal",
+    "uci447:vibration",
+    "uci447:virtual",
+    "eval:dropout"
+   ],
+   "risk_tier": "critical",
+   "statement": "dropout:PS1 cycle 0: cooler grade 3 (conformal set [3]; licenses nothing)"
+  },
+  {
+   "claim_id": "decision:logreg/s0:dropout:PS1:0:cooler:repaired",
+   "claim_type": "statistical",
+   "confidence": 0.9962,
+   "evidence_ids": [
+    "uci447:electrical",
+    "uci447:flow",
+    "uci447:pressure",
+    "uci447:thermal",
+    "uci447:vibration",
+    "uci447:virtual",
+    "eval:dropout"
+   ],
+   "risk_tier": "critical",
+   "statement": "dropout:PS1 cycle 0: cooler grade 3 (conformal set [3]; licenses STOP_AND_SERVICE); re-derived without PS1"
+  },
+  {
+   "claim_id": "decision:logreg/s0:dropout:PS1:188:cooler",
+   "claim_type": "statistical",
+   "confidence": 0.94,
+   "evidence_ids": [
+    "uci447:electrical",
+    "uci447:flow",
+    "uci447:pressure",
+    "uci447:thermal",
+    "uci447:vibration",
+    "uci447:virtual",
+    "eval:dropout"
+   ],
+   "risk_tier": "high",
+   "statement": "dropout:PS1 cycle 188: cooler grade 100 (conformal set []; licenses nothing)"
+  },
+  {
+   "claim_id": "decision:logreg/s0:dropout:PS1:188:cooler:repaired",
+   "claim_type": "statistical",
+   "confidence": 0.9218,
+   "evidence_ids": [
+    "uci447:electrical",
+    "uci447:flow",
+    "uci447:pressure",
+    "uci447:thermal",
+    "uci447:vibration",
+    "uci447:virtual",
+    "eval:dropout"
+   ],
+   "risk_tier": "high",
+   "statement": "dropout:PS1 cycle 188: cooler grade 100 (conformal set []; licenses nothing); re-derived without PS1"
+  }
+ ],
+ "environment": "Linux x86_64, Python 3.13.18, numpy 2.5.3, scikit-learn 1.9.1, device cpu, 1 thread",
+ "failures_injected": [
+  "dropout on PS1, PS2, EPS1, FS1, TS1, CE, VS1 (all test cycles)",
+  "stuck on PS1, PS2, EPS1, FS1, TS1, CE, VS1 (all test cycles)",
+  "offset on PS1, PS2, EPS1, FS1, TS1, CE, VS1 (all test cycles)",
+  "gain on PS1, PS2, EPS1, FS1, TS1, CE, VS1 (all test cycles)",
+  "time_shift on PS1, PS2, EPS1, FS1, TS1, CE, VS1 (all test cycles)",
+  "spike on PS1, PS2, EPS1, FS1, TS1, CE, VS1 (all test cycles)",
+  "adversarial C1-passing bias on PS1",
+  "adversarial C1-passing bias on FS1",
+  "adversarial C1-passing bias on TS1",
+  "adversarial C1-passing bias on EPS1",
+  "fabricated claim: unknown_type_RUL",
+  "fabricated claim: missing_provenance",
+  "fabricated claim: no_obligation_results",
+  "fabricated claim: A3_not_implemented",
+  "fabricated claim: interpolated_grade",
+  "fabricated claim: unknown_component",
+  "fabricated claim: checker_error"
+ ],
+ "obligations": [
+  {
+   "checker_id": "a1-collapse-train",
+   "claim_id": "a1-representation",
+   "description": "A1 collapse diagnostics on train features",
+   "obligation_id": "obl:a1-representation:a1-collapse-train",
+   "required": true
+  },
+  {
+   "checker_id": "a2-calibration-hgb-cooler:coverage",
+   "claim_id": "a2-calibration-hgb-cooler",
+   "description": "A2 split-conformal coverage on the calibration partition",
+   "obligation_id": "obl:a2-calibration-hgb-cooler:a2-calibration-hgb-cooler:coverage",
+   "required": true
+  },
+  {
+   "checker_id": "a2-calibration-hgb-cooler:ece",
+   "claim_id": "a2-calibration-hgb-cooler",
+   "description": "A2 calibration bound before confidence may gate actions",
+   "obligation_id": "obl:a2-calibration-hgb-cooler:a2-calibration-hgb-cooler:ece",
+   "required": true
+  },
+  {
+   "checker_id": "a2-calibration-hgb-valve:coverage",
+   "claim_id": "a2-calibration-hgb-valve",
+   "description": "A2 split-conformal coverage on the calibration partition",
+   "obligation_id": "obl:a2-calibration-hgb-valve:a2-calibration-hgb-valve:coverage",
+   "required": true
+  },
+  {
+   "checker_id": "a2-calibration-hgb-valve:ece",
+   "claim_id": "a2-calibration-hgb-valve",
+   "description": "A2 calibration bound before confidence may gate actions",
+   "obligation_id": "obl:a2-calibration-hgb-valve:a2-calibration-hgb-valve:ece",
+   "required": true
+  },
+  {
+   "checker_id": "a2-calibration-hgb-pump:coverage",
+   "claim_id": "a2-calibration-hgb-pump",
+   "description": "A2 split-conformal coverage on the calibration partition",
+   "obligation_id": "obl:a2-calibration-hgb-pump:a2-calibration-hgb-pump:coverage",
+   "required": true
+  },
+  {
+   "checker_id": "a2-calibration-hgb-pump:ece",
+   "claim_id": "a2-calibration-hgb-pump",
+   "description": "A2 calibration bound before confidence may gate actions",
+   "obligation_id": "obl:a2-calibration-hgb-pump:a2-calibration-hgb-pump:ece",
+   "required": true
+  },
+  {
+   "checker_id": "a2-calibration-hgb-accumulator:coverage",
+   "claim_id": "a2-calibration-hgb-accumulator",
+   "description": "A2 split-conformal coverage on the calibration partition",
+   "obligation_id": "obl:a2-calibration-hgb-accumulator:a2-calibration-hgb-accumulator:coverage",
+   "required": true
+  },
+  {
+   "checker_id": "a2-calibration-hgb-accumulator:ece",
+   "claim_id": "a2-calibration-hgb-accumulator",
+   "description": "A2 calibration bound before confidence may gate actions",
+   "obligation_id": "obl:a2-calibration-hgb-accumulator:a2-calibration-hgb-accumulator:ece",
+   "required": true
+  },
+  {
+   "checker_id": "a2-calibration-logreg-cooler:coverage",
+   "claim_id": "a2-calibration-logreg-cooler",
+   "description": "A2 split-conformal coverage on the calibration partition",
+   "obligation_id": "obl:a2-calibration-logreg-cooler:a2-calibration-logreg-cooler:coverage",
+   "required": true
+  },
+  {
+   "checker_id": "a2-calibration-logreg-cooler:ece",
+   "claim_id": "a2-calibration-logreg-cooler",
+   "description": "A2 calibration bound before confidence may gate actions",
+   "obligation_id": "obl:a2-calibration-logreg-cooler:a2-calibration-logreg-cooler:ece",
+   "required": true
+  },
+  {
+   "checker_id": "a2-calibration-logreg-valve:coverage",
+   "claim_id": "a2-calibration-logreg-valve",
+   "description": "A2 split-conformal coverage on the calibration partition",
+   "obligation_id": "obl:a2-calibration-logreg-valve:a2-calibration-logreg-valve:coverage",
+   "required": true
+  },
+  {
+   "checker_id": "a2-calibration-logreg-valve:ece",
+   "claim_id": "a2-calibration-logreg-valve",
+   "description": "A2 calibration bound before confidence may gate actions",
+   "obligation_id": "obl:a2-calibration-logreg-valve:a2-calibration-logreg-valve:ece",
+   "required": true
+  },
+  {
+   "checker_id": "a2-calibration-logreg-pump:coverage",
+   "claim_id": "a2-calibration-logreg-pump",
+   "description": "A2 split-conformal coverage on the calibration partition",
+   "obligation_id": "obl:a2-calibration-logreg-pump:a2-calibration-logreg-pump:coverage",
+   "required": true
+  },
+  {
+   "checker_id": "a2-calibration-logreg-pump:ece",
+   "claim_id": "a2-calibration-logreg-pump",
+   "description": "A2 calibration bound before confidence may gate actions",
+   "obligation_id": "obl:a2-calibration-logreg-pump:a2-calibration-logreg-pump:ece",
+   "required": true
+  },
+  {
+   "checker_id": "a2-calibration-logreg-accumulator:coverage",
+   "claim_id": "a2-calibration-logreg-accumulator",
+   "description": "A2 split-conformal coverage on the calibration partition",
+   "obligation_id": "obl:a2-calibration-logreg-accumulator:a2-calibration-logreg-accumulator:coverage",
+   "required": true
+  },
+  {
+   "checker_id": "a2-calibration-logreg-accumulator:ece",
+   "claim_id": "a2-calibration-logreg-accumulator",
+   "description": "A2 calibration bound before confidence may gate actions",
+   "obligation_id": "obl:a2-calibration-logreg-accumulator:a2-calibration-logreg-accumulator:ece",
+   "required": true
+  },
+  {
+   "checker_id": "A3-cooler-CE:strata",
+   "claim_id": "A3-cooler-CE",
+   "description": "A3 falsifier: within-stratum sign agreement >= 0.9 with other components held fixed",
+   "obligation_id": "obl:A3-cooler-CE:A3-cooler-CE:strata",
+   "required": true
+  },
+  {
+   "checker_id": "A3-pump-FS1:strata",
+   "claim_id": "A3-pump-FS1",
+   "description": "A3 falsifier: within-stratum sign agreement >= 0.9 with other components held fixed",
+   "obligation_id": "obl:A3-pump-FS1:A3-pump-FS1:strata",
+   "required": true
+  },
+  {
+   "checker_id": "A3-valve-FS1early:strata",
+   "claim_id": "A3-valve-FS1early",
+   "description": "A3 falsifier: within-stratum sign agreement >= 0.9 with other components held fixed",
+   "obligation_id": "obl:A3-valve-FS1early:A3-valve-FS1early:strata",
+   "required": true
+  },
+  {
+   "checker_id": "a3-accumulator:identified",
+   "claim_id": "a3-accumulator-signature",
+   "description": "A3 identification of an accumulator signature",
+   "obligation_id": "obl:a3-accumulator-signature:a3-accumulator:identified",
+   "required": true
+  },
+  {
+   "checker_id": "trace-invariant",
+   "claim_id": "policy-hgb-adv_offset",
+   "description": "No action without an executed PASS on every obligation of its tier",
+   "obligation_id": "obl:policy-hgb-adv_offset:trace-invariant",
+   "required": true
+  },
+  {
+   "checker_id": "trace-hash",
+   "claim_id": "policy-hgb-adv_offset",
+   "description": "Metrics derive from the hash-pinned trace",
+   "obligation_id": "obl:policy-hgb-adv_offset:trace-hash",
+   "required": true
+  },
+  {
+   "checker_id": "failure-hgb-adv_offset:C1",
+   "claim_id": "failure-hgb-adv_offset",
+   "description": "C1 per-channel integrity on injected evidence",
+   "obligation_id": "obl:failure-hgb-adv_offset:failure-hgb-adv_offset:C1",
+   "required": true
+  },
+  {
+   "checker_id": "failure-hgb-adv_offset:C2",
+   "claim_id": "failure-hgb-adv_offset",
+   "description": "C2 cross-modal physics on injected evidence",
+   "obligation_id": "obl:failure-hgb-adv_offset:failure-hgb-adv_offset:C2",
+   "required": true
+  },
+  {
+   "checker_id": "failure-hgb-adv_offset:A1",
+   "claim_id": "failure-hgb-adv_offset",
+   "description": "A1 collapse diagnostics on injected evidence",
+   "obligation_id": "obl:failure-hgb-adv_offset:failure-hgb-adv_offset:A1",
+   "required": true
+  },
+  {
+   "checker_id": "trace-invariant",
+   "claim_id": "policy-hgb-clean",
+   "description": "No action without an executed PASS on every obligation of its tier",
+   "obligation_id": "obl:policy-hgb-clean:trace-invariant",
+   "required": true
+  },
+  {
+   "checker_id": "trace-hash",
+   "claim_id": "policy-hgb-clean",
+   "description": "Metrics derive from the hash-pinned trace",
+   "obligation_id": "obl:policy-hgb-clean:trace-hash",
+   "required": true
+  },
+  {
+   "checker_id": "trace-invariant",
+   "claim_id": "policy-hgb-dropout",
+   "description": "No action without an executed PASS on every obligation of its tier",
+   "obligation_id": "obl:policy-hgb-dropout:trace-invariant",
+   "required": true
+  },
+  {
+   "checker_id": "trace-hash",
+   "claim_id": "policy-hgb-dropout",
+   "description": "Metrics derive from the hash-pinned trace",
+   "obligation_id": "obl:policy-hgb-dropout:trace-hash",
+   "required": true
+  },
+  {
+   "checker_id": "failure-hgb-dropout:C1",
+   "claim_id": "failure-hgb-dropout",
+   "description": "C1 per-channel integrity on injected evidence",
+   "obligation_id": "obl:failure-hgb-dropout:failure-hgb-dropout:C1",
+   "required": true
+  },
+  {
+   "checker_id": "failure-hgb-dropout:C2",
+   "claim_id": "failure-hgb-dropout",
+   "description": "C2 cross-modal physics on injected evidence",
+   "obligation_id": "obl:failure-hgb-dropout:failure-hgb-dropout:C2",
+   "required": true
+  },
+  {
+   "checker_id": "failure-hgb-dropout:A1",
+   "claim_id": "failure-hgb-dropout",
+   "description": "A1 collapse diagnostics on injected evidence",
+   "obligation_id": "obl:failure-hgb-dropout:failure-hgb-dropout:A1",
+   "required": true
+  },
+  {
+   "checker_id": "trace-invariant",
+   "claim_id": "policy-hgb-gain",
+   "description": "No action without an executed PASS on every obligation of its tier",
+   "obligation_id": "obl:policy-hgb-gain:trace-invariant",
+   "required": true
+  },
+  {
+   "checker_id": "trace-hash",
+   "claim_id": "policy-hgb-gain",
+   "description": "Metrics derive from the hash-pinned trace",
+   "obligation_id": "obl:policy-hgb-gain:trace-hash",
+   "required": true
+  },
+  {
+   "checker_id": "failure-hgb-gain:C1",
+   "claim_id": "failure-hgb-gain",
+   "description": "C1 per-channel integrity on injected evidence",
+   "obligation_id": "obl:failure-hgb-gain:failure-hgb-gain:C1",
+   "required": true
+  },
+  {
+   "checker_id": "failure-hgb-gain:C2",
+   "claim_id": "failure-hgb-gain",
+   "description": "C2 cross-modal physics on injected evidence",
+   "obligation_id": "obl:failure-hgb-gain:failure-hgb-gain:C2",
+   "required": true
+  },
+  {
+   "checker_id": "failure-hgb-gain:A1",
+   "claim_id": "failure-hgb-gain",
+   "description": "A1 collapse diagnostics on injected evidence",
+   "obligation_id": "obl:failure-hgb-gain:failure-hgb-gain:A1",
+   "required": true
+  },
+  {
+   "checker_id": "trace-invariant",
+   "claim_id": "policy-hgb-novel_severity",
+   "description": "No action without an executed PASS on every obligation of its tier",
+   "obligation_id": "obl:policy-hgb-novel_severity:trace-invariant",
+   "required": true
+  },
+  {
+   "checker_id": "trace-hash",
+   "claim_id": "policy-hgb-novel_severity",
+   "description": "Metrics derive from the hash-pinned trace",
+   "obligation_id": "obl:policy-hgb-novel_severity:trace-hash",
+   "required": true
+  },
+  {
+   "checker_id": "failure-hgb-novel_severity:C1",
+   "claim_id": "failure-hgb-novel_severity",
+   "description": "C1 per-channel integrity on injected evidence",
+   "obligation_id": "obl:failure-hgb-novel_severity:failure-hgb-novel_severity:C1",
+   "required": true
+  },
+  {
+   "checker_id": "failure-hgb-novel_severity:C2",
+   "claim_id": "failure-hgb-novel_severity",
+   "description": "C2 cross-modal physics on injected evidence",
+   "obligation_id": "obl:failure-hgb-novel_severity:failure-hgb-novel_severity:C2",
+   "required": true
+  },
+  {
+   "checker_id": "failure-hgb-novel_severity:A1",
+   "claim_id": "failure-hgb-novel_severity",
+   "description": "A1 collapse diagnostics on injected evidence",
+   "obligation_id": "obl:failure-hgb-novel_severity:failure-hgb-novel_severity:A1",
+   "required": true
+  },
+  {
+   "checker_id": "trace-invariant",
+   "claim_id": "policy-hgb-offset",
+   "description": "No action without an executed PASS on every obligation of its tier",
+   "obligation_id": "obl:policy-hgb-offset:trace-invariant",
+   "required": true
+  },
+  {
+   "checker_id": "trace-hash",
+   "claim_id": "policy-hgb-offset",
+   "description": "Metrics derive from the hash-pinned trace",
+   "obligation_id": "obl:policy-hgb-offset:trace-hash",
+   "required": true
+  },
+  {
+   "checker_id": "failure-hgb-offset:C1",
+   "claim_id": "failure-hgb-offset",
+   "description": "C1 per-channel integrity on injected evidence",
+   "obligation_id": "obl:failure-hgb-offset:failure-hgb-offset:C1",
+   "required": true
+  },
+  {
+   "checker_id": "failure-hgb-offset:C2",
+   "claim_id": "failure-hgb-offset",
+   "description": "C2 cross-modal physics on injected evidence",
+   "obligation_id": "obl:failure-hgb-offset:failure-hgb-offset:C2",
+   "required": true
+  },
+  {
+   "checker_id": "failure-hgb-offset:A1",
+   "claim_id": "failure-hgb-offset",
+   "description": "A1 collapse diagnostics on injected evidence",
+   "obligation_id": "obl:failure-hgb-offset:failure-hgb-offset:A1",
+   "required": true
+  },
+  {
+   "checker_id": "trace-invariant",
+   "claim_id": "policy-hgb-shift_unstable",
+   "description": "No action without an executed PASS on every obligation of its tier",
+   "obligation_id": "obl:policy-hgb-shift_unstable:trace-invariant",
+   "required": true
+  },
+  {
+   "checker_id": "trace-hash",
+   "claim_id": "policy-hgb-shift_unstable",
+   "description": "Metrics derive from the hash-pinned trace",
+   "obligation_id": "obl:policy-hgb-shift_unstable:trace-hash",
+   "required": true
+  },
+  {
+   "checker_id": "failure-hgb-shift_unstable:C1",
+   "claim_id": "failure-hgb-shift_unstable",
+   "description": "C1 per-channel integrity on injected evidence",
+   "obligation_id": "obl:failure-hgb-shift_unstable:failure-hgb-shift_unstable:C1",
+   "required": true
+  },
+  {
+   "checker_id": "failure-hgb-shift_unstable:C2",
+   "claim_id": "failure-hgb-shift_unstable",
+   "description": "C2 cross-modal physics on injected evidence",
+   "obligation_id": "obl:failure-hgb-shift_unstable:failure-hgb-shift_unstable:C2",
+   "required": true
+  },
+  {
+   "checker_id": "failure-hgb-shift_unstable:A1",
+   "claim_id": "failure-hgb-shift_unstable",
+   "description": "A1 collapse diagnostics on injected evidence",
+   "obligation_id": "obl:failure-hgb-shift_unstable:failure-hgb-shift_unstable:A1",
+   "required": true
+  },
+  {
+   "checker_id": "trace-invariant",
+   "claim_id": "policy-hgb-spike",
+   "description": "No action without an executed PASS on every obligation of its tier",
+   "obligation_id": "obl:policy-hgb-spike:trace-invariant",
+   "required": true
+  },
+  {
+   "checker_id": "trace-hash",
+   "claim_id": "policy-hgb-spike",
+   "description": "Metrics derive from the hash-pinned trace",
+   "obligation_id": "obl:policy-hgb-spike:trace-hash",
+   "required": true
+  },
+  {
+   "checker_id": "failure-hgb-spike:C1",
+   "claim_id": "failure-hgb-spike",
+   "description": "C1 per-channel integrity on injected evidence",
+   "obligation_id": "obl:failure-hgb-spike:failure-hgb-spike:C1",
+   "required": true
+  },
+  {
+   "checker_id": "failure-hgb-spike:C2",
+   "claim_id": "failure-hgb-spike",
+   "description": "C2 cross-modal physics on injected evidence",
+   "obligation_id": "obl:failure-hgb-spike:failure-hgb-spike:C2",
+   "required": true
+  },
+  {
+   "checker_id": "failure-hgb-spike:A1",
+   "claim_id": "failure-hgb-spike",
+   "description": "A1 collapse diagnostics on injected evidence",
+   "obligation_id": "obl:failure-hgb-spike:failure-hgb-spike:A1",
+   "required": true
+  },
+  {
+   "checker_id": "trace-invariant",
+   "claim_id": "policy-hgb-stuck",
+   "description": "No action without an executed PASS on every obligation of its tier",
+   "obligation_id": "obl:policy-hgb-stuck:trace-invariant",
+   "required": true
+  },
+  {
+   "checker_id": "trace-hash",
+   "claim_id": "policy-hgb-stuck",
+   "description": "Metrics derive from the hash-pinned trace",
+   "obligation_id": "obl:policy-hgb-stuck:trace-hash",
+   "required": true
+  },
+  {
+   "checker_id": "failure-hgb-stuck:C1",
+   "claim_id": "failure-hgb-stuck",
+   "description": "C1 per-channel integrity on injected evidence",
+   "obligation_id": "obl:failure-hgb-stuck:failure-hgb-stuck:C1",
+   "required": true
+  },
+  {
+   "checker_id": "failure-hgb-stuck:C2",
+   "claim_id": "failure-hgb-stuck",
+   "description": "C2 cross-modal physics on injected evidence",
+   "obligation_id": "obl:failure-hgb-stuck:failure-hgb-stuck:C2",
+   "required": true
+  },
+  {
+   "checker_id": "failure-hgb-stuck:A1",
+   "claim_id": "failure-hgb-stuck",
+   "description": "A1 collapse diagnostics on injected evidence",
+   "obligation_id": "obl:failure-hgb-stuck:failure-hgb-stuck:A1",
+   "required": true
+  },
+  {
+   "checker_id": "trace-invariant",
+   "claim_id": "policy-hgb-time_shift",
+   "description": "No action without an executed PASS on every obligation of its tier",
+   "obligation_id": "obl:policy-hgb-time_shift:trace-invariant",
+   "required": true
+  },
+  {
+   "checker_id": "trace-hash",
+   "claim_id": "policy-hgb-time_shift",
+   "description": "Metrics derive from the hash-pinned trace",
+   "obligation_id": "obl:policy-hgb-time_shift:trace-hash",
+   "required": true
+  },
+  {
+   "checker_id": "failure-hgb-time_shift:C1",
+   "claim_id": "failure-hgb-time_shift",
+   "description": "C1 per-channel integrity on injected evidence",
+   "obligation_id": "obl:failure-hgb-time_shift:failure-hgb-time_shift:C1",
+   "required": true
+  },
+  {
+   "checker_id": "failure-hgb-time_shift:C2",
+   "claim_id": "failure-hgb-time_shift",
+   "description": "C2 cross-modal physics on injected evidence",
+   "obligation_id": "obl:failure-hgb-time_shift:failure-hgb-time_shift:C2",
+   "required": true
+  },
+  {
+   "checker_id": "failure-hgb-time_shift:A1",
+   "claim_id": "failure-hgb-time_shift",
+   "description": "A1 collapse diagnostics on injected evidence",
+   "obligation_id": "obl:failure-hgb-time_shift:failure-hgb-time_shift:A1",
+   "required": true
+  },
+  {
+   "checker_id": "trace-invariant",
+   "claim_id": "policy-logreg-adv_offset",
+   "description": "No action without an executed PASS on every obligation of its tier",
+   "obligation_id": "obl:policy-logreg-adv_offset:trace-invariant",
+   "required": true
+  },
+  {
+   "checker_id": "trace-hash",
+   "claim_id": "policy-logreg-adv_offset",
+   "description": "Metrics derive from the hash-pinned trace",
+   "obligation_id": "obl:policy-logreg-adv_offset:trace-hash",
+   "required": true
+  },
+  {
+   "checker_id": "failure-logreg-adv_offset:C1",
+   "claim_id": "failure-logreg-adv_offset",
+   "description": "C1 per-channel integrity on injected evidence",
+   "obligation_id": "obl:failure-logreg-adv_offset:failure-logreg-adv_offset:C1",
+   "required": true
+  },
+  {
+   "checker_id": "failure-logreg-adv_offset:C2",
+   "claim_id": "failure-logreg-adv_offset",
+   "description": "C2 cross-modal physics on injected evidence",
+   "obligation_id": "obl:failure-logreg-adv_offset:failure-logreg-adv_offset:C2",
+   "required": true
+  },
+  {
+   "checker_id": "failure-logreg-adv_offset:A1",
+   "claim_id": "failure-logreg-adv_offset",
+   "description": "A1 collapse diagnostics on injected evidence",
+   "obligation_id": "obl:failure-logreg-adv_offset:failure-logreg-adv_offset:A1",
+   "required": true
+  },
+  {
+   "checker_id": "trace-invariant",
+   "claim_id": "policy-logreg-clean",
+   "description": "No action without an executed PASS on every obligation of its tier",
+   "obligation_id": "obl:policy-logreg-clean:trace-invariant",
+   "required": true
+  },
+  {
+   "checker_id": "trace-hash",
+   "claim_id": "policy-logreg-clean",
+   "description": "Metrics derive from the hash-pinned trace",
+   "obligation_id": "obl:policy-logreg-clean:trace-hash",
+   "required": true
+  },
+  {
+   "checker_id": "trace-invariant",
+   "claim_id": "policy-logreg-dropout",
+   "description": "No action without an executed PASS on every obligation of its tier",
+   "obligation_id": "obl:policy-logreg-dropout:trace-invariant",
+   "required": true
+  },
+  {
+   "checker_id": "trace-hash",
+   "claim_id": "policy-logreg-dropout",
+   "description": "Metrics derive from the hash-pinned trace",
+   "obligation_id": "obl:policy-logreg-dropout:trace-hash",
+   "required": true
+  },
+  {
+   "checker_id": "failure-logreg-dropout:C1",
+   "claim_id": "failure-logreg-dropout",
+   "description": "C1 per-channel integrity on injected evidence",
+   "obligation_id": "obl:failure-logreg-dropout:failure-logreg-dropout:C1",
+   "required": true
+  },
+  {
+   "checker_id": "failure-logreg-dropout:C2",
+   "claim_id": "failure-logreg-dropout",
+   "description": "C2 cross-modal physics on injected evidence",
+   "obligation_id": "obl:failure-logreg-dropout:failure-logreg-dropout:C2",
+   "required": true
+  },
+  {
+   "checker_id": "failure-logreg-dropout:A1",
+   "claim_id": "failure-logreg-dropout",
+   "description": "A1 collapse diagnostics on injected evidence",
+   "obligation_id": "obl:failure-logreg-dropout:failure-logreg-dropout:A1",
+   "required": true
+  },
+  {
+   "checker_id": "trace-invariant",
+   "claim_id": "policy-logreg-gain",
+   "description": "No action without an executed PASS on every obligation of its tier",
+   "obligation_id": "obl:policy-logreg-gain:trace-invariant",
+   "required": true
+  },
+  {
+   "checker_id": "trace-hash",
+   "claim_id": "policy-logreg-gain",
+   "description": "Metrics derive from the hash-pinned trace",
+   "obligation_id": "obl:policy-logreg-gain:trace-hash",
+   "required": true
+  },
+  {
+   "checker_id": "failure-logreg-gain:C1",
+   "claim_id": "failure-logreg-gain",
+   "description": "C1 per-channel integrity on injected evidence",
+   "obligation_id": "obl:failure-logreg-gain:failure-logreg-gain:C1",
+   "required": true
+  },
+  {
+   "checker_id": "failure-logreg-gain:C2",
+   "claim_id": "failure-logreg-gain",
+   "description": "C2 cross-modal physics on injected evidence",
+   "obligation_id": "obl:failure-logreg-gain:failure-logreg-gain:C2",
+   "required": true
+  },
+  {
+   "checker_id": "failure-logreg-gain:A1",
+   "claim_id": "failure-logreg-gain",
+   "description": "A1 collapse diagnostics on injected evidence",
+   "obligation_id": "obl:failure-logreg-gain:failure-logreg-gain:A1",
+   "required": true
+  },
+  {
+   "checker_id": "trace-invariant",
+   "claim_id": "policy-logreg-novel_severity",
+   "description": "No action without an executed PASS on every obligation of its tier",
+   "obligation_id": "obl:policy-logreg-novel_severity:trace-invariant",
+   "required": true
+  },
+  {
+   "checker_id": "trace-hash",
+   "claim_id": "policy-logreg-novel_severity",
+   "description": "Metrics derive from the hash-pinned trace",
+   "obligation_id": "obl:policy-logreg-novel_severity:trace-hash",
+   "required": true
+  },
+  {
+   "checker_id": "failure-logreg-novel_severity:C1",
+   "claim_id": "failure-logreg-novel_severity",
+   "description": "C1 per-channel integrity on injected evidence",
+   "obligation_id": "obl:failure-logreg-novel_severity:failure-logreg-novel_severity:C1",
+   "required": true
+  },
+  {
+   "checker_id": "failure-logreg-novel_severity:C2",
+   "claim_id": "failure-logreg-novel_severity",
+   "description": "C2 cross-modal physics on injected evidence",
+   "obligation_id": "obl:failure-logreg-novel_severity:failure-logreg-novel_severity:C2",
+   "required": true
+  },
+  {
+   "checker_id": "failure-logreg-novel_severity:A1",
+   "claim_id": "failure-logreg-novel_severity",
+   "description": "A1 collapse diagnostics on injected evidence",
+   "obligation_id": "obl:failure-logreg-novel_severity:failure-logreg-novel_severity:A1",
+   "required": true
+  },
+  {
+   "checker_id": "trace-invariant",
+   "claim_id": "policy-logreg-offset",
+   "description": "No action without an executed PASS on every obligation of its tier",
+   "obligation_id": "obl:policy-logreg-offset:trace-invariant",
+   "required": true
+  },
+  {
+   "checker_id": "trace-hash",
+   "claim_id": "policy-logreg-offset",
+   "description": "Metrics derive from the hash-pinned trace",
+   "obligation_id": "obl:policy-logreg-offset:trace-hash",
+   "required": true
+  },
+  {
+   "checker_id": "failure-logreg-offset:C1",
+   "claim_id": "failure-logreg-offset",
+   "description": "C1 per-channel integrity on injected evidence",
+   "obligation_id": "obl:failure-logreg-offset:failure-logreg-offset:C1",
+   "required": true
+  },
+  {
+   "checker_id": "failure-logreg-offset:C2",
+   "claim_id": "failure-logreg-offset",
+   "description": "C2 cross-modal physics on injected evidence",
+   "obligation_id": "obl:failure-logreg-offset:failure-logreg-offset:C2",
+   "required": true
+  },
+  {
+   "checker_id": "failure-logreg-offset:A1",
+   "claim_id": "failure-logreg-offset",
+   "description": "A1 collapse diagnostics on injected evidence",
+   "obligation_id": "obl:failure-logreg-offset:failure-logreg-offset:A1",
+   "required": true
+  },
+  {
+   "checker_id": "trace-invariant",
+   "claim_id": "policy-logreg-shift_unstable",
+   "description": "No action without an executed PASS on every obligation of its tier",
+   "obligation_id": "obl:policy-logreg-shift_unstable:trace-invariant",
+   "required": true
+  },
+  {
+   "checker_id": "trace-hash",
+   "claim_id": "policy-logreg-shift_unstable",
+   "description": "Metrics derive from the hash-pinned trace",
+   "obligation_id": "obl:policy-logreg-shift_unstable:trace-hash",
+   "required": true
+  },
+  {
+   "checker_id": "failure-logreg-shift_unstable:C1",
+   "claim_id": "failure-logreg-shift_unstable",
+   "description": "C1 per-channel integrity on injected evidence",
+   "obligation_id": "obl:failure-logreg-shift_unstable:failure-logreg-shift_unstable:C1",
+   "required": true
+  },
+  {
+   "checker_id": "failure-logreg-shift_unstable:C2",
+   "claim_id": "failure-logreg-shift_unstable",
+   "description": "C2 cross-modal physics on injected evidence",
+   "obligation_id": "obl:failure-logreg-shift_unstable:failure-logreg-shift_unstable:C2",
+   "required": true
+  },
+  {
+   "checker_id": "failure-logreg-shift_unstable:A1",
+   "claim_id": "failure-logreg-shift_unstable",
+   "description": "A1 collapse diagnostics on injected evidence",
+   "obligation_id": "obl:failure-logreg-shift_unstable:failure-logreg-shift_unstable:A1",
+   "required": true
+  },
+  {
+   "checker_id": "trace-invariant",
+   "claim_id": "policy-logreg-spike",
+   "description": "No action without an executed PASS on every obligation of its tier",
+   "obligation_id": "obl:policy-logreg-spike:trace-invariant",
+   "required": true
+  },
+  {
+   "checker_id": "trace-hash",
+   "claim_id": "policy-logreg-spike",
+   "description": "Metrics derive from the hash-pinned trace",
+   "obligation_id": "obl:policy-logreg-spike:trace-hash",
+   "required": true
+  },
+  {
+   "checker_id": "failure-logreg-spike:C1",
+   "claim_id": "failure-logreg-spike",
+   "description": "C1 per-channel integrity on injected evidence",
+   "obligation_id": "obl:failure-logreg-spike:failure-logreg-spike:C1",
+   "required": true
+  },
+  {
+   "checker_id": "failure-logreg-spike:C2",
+   "claim_id": "failure-logreg-spike",
+   "description": "C2 cross-modal physics on injected evidence",
+   "obligation_id": "obl:failure-logreg-spike:failure-logreg-spike:C2",
+   "required": true
+  },
+  {
+   "checker_id": "failure-logreg-spike:A1",
+   "claim_id": "failure-logreg-spike",
+   "description": "A1 collapse diagnostics on injected evidence",
+   "obligation_id": "obl:failure-logreg-spike:failure-logreg-spike:A1",
+   "required": true
+  },
+  {
+   "checker_id": "trace-invariant",
+   "claim_id": "policy-logreg-stuck",
+   "description": "No action without an executed PASS on every obligation of its tier",
+   "obligation_id": "obl:policy-logreg-stuck:trace-invariant",
+   "required": true
+  },
+  {
+   "checker_id": "trace-hash",
+   "claim_id": "policy-logreg-stuck",
+   "description": "Metrics derive from the hash-pinned trace",
+   "obligation_id": "obl:policy-logreg-stuck:trace-hash",
+   "required": true
+  },
+  {
+   "checker_id": "failure-logreg-stuck:C1",
+   "claim_id": "failure-logreg-stuck",
+   "description": "C1 per-channel integrity on injected evidence",
+   "obligation_id": "obl:failure-logreg-stuck:failure-logreg-stuck:C1",
+   "required": true
+  },
+  {
+   "checker_id": "failure-logreg-stuck:C2",
+   "claim_id": "failure-logreg-stuck",
+   "description": "C2 cross-modal physics on injected evidence",
+   "obligation_id": "obl:failure-logreg-stuck:failure-logreg-stuck:C2",
+   "required": true
+  },
+  {
+   "checker_id": "failure-logreg-stuck:A1",
+   "claim_id": "failure-logreg-stuck",
+   "description": "A1 collapse diagnostics on injected evidence",
+   "obligation_id": "obl:failure-logreg-stuck:failure-logreg-stuck:A1",
+   "required": true
+  },
+  {
+   "checker_id": "trace-invariant",
+   "claim_id": "policy-logreg-time_shift",
+   "description": "No action without an executed PASS on every obligation of its tier",
+   "obligation_id": "obl:policy-logreg-time_shift:trace-invariant",
+   "required": true
+  },
+  {
+   "checker_id": "trace-hash",
+   "claim_id": "policy-logreg-time_shift",
+   "description": "Metrics derive from the hash-pinned trace",
+   "obligation_id": "obl:policy-logreg-time_shift:trace-hash",
+   "required": true
+  },
+  {
+   "checker_id": "failure-logreg-time_shift:C1",
+   "claim_id": "failure-logreg-time_shift",
+   "description": "C1 per-channel integrity on injected evidence",
+   "obligation_id": "obl:failure-logreg-time_shift:failure-logreg-time_shift:C1",
+   "required": true
+  },
+  {
+   "checker_id": "failure-logreg-time_shift:C2",
+   "claim_id": "failure-logreg-time_shift",
+   "description": "C2 cross-modal physics on injected evidence",
+   "obligation_id": "obl:failure-logreg-time_shift:failure-logreg-time_shift:C2",
+   "required": true
+  },
+  {
+   "checker_id": "failure-logreg-time_shift:A1",
+   "claim_id": "failure-logreg-time_shift",
+   "description": "A1 collapse diagnostics on injected evidence",
+   "obligation_id": "obl:failure-logreg-time_shift:failure-logreg-time_shift:A1",
+   "required": true
+  },
+  {
+   "checker_id": "trace-invariant",
+   "claim_id": "invariant-no-unverified-admission",
+   "description": "No action without an executed PASS on every obligation of its tier",
+   "obligation_id": "obl:invariant-no-unverified-admission:trace-invariant",
+   "required": true
+  },
+  {
+   "checker_id": "trace-hash",
+   "claim_id": "invariant-no-unverified-admission",
+   "description": "Metrics derive from the hash-pinned trace",
+   "obligation_id": "obl:invariant-no-unverified-admission:trace-hash",
+   "required": true
+  },
+  {
+   "checker_id": "claim-injection",
+   "claim_id": "claim-injection-rejected",
+   "description": "Gate rejects unknown types, missing provenance, interpolated grades, missing obligations",
+   "obligation_id": "obl:claim-injection-rejected:claim-injection",
+   "required": true
+  },
+  {
+   "checker_id": "decision:logreg/s0:clean:0:cooler:O1_integrity",
+   "claim_id": "decision:logreg/s0:clean:0:cooler",
+   "description": "C1: every channel used passes non-finite/range/flatline/jump tests",
+   "obligation_id": "obl:decision:logreg/s0:clean:0:cooler:decision:logreg/s0:clean:0:cooler:O1_integrity",
+   "required": true
+  },
+  {
+   "checker_id": "decision:logreg/s0:clean:0:cooler:O2_physics",
+   "claim_id": "decision:logreg/s0:clean:0:cooler",
+   "description": "C2: all cross-modal balance relations within training residual bounds",
+   "obligation_id": "obl:decision:logreg/s0:clean:0:cooler:decision:logreg/s0:clean:0:cooler:O2_physics",
+   "required": true
+  },
+  {
+   "checker_id": "decision:logreg/s0:clean:0:cooler:O3_confidence",
+   "claim_id": "decision:logreg/s0:clean:0:cooler",
+   "description": "A2: calibrated confidence >= tier threshold",
+   "obligation_id": "obl:decision:logreg/s0:clean:0:cooler:decision:logreg/s0:clean:0:cooler:O3_confidence",
+   "required": true
+  },
+  {
+   "checker_id": "decision:logreg/s0:clean:0:cooler:O4_causal_signature",
+   "claim_id": "decision:logreg/s0:clean:0:cooler",
+   "description": "A3: causal-signature interval matches the claimed grade",
+   "obligation_id": "obl:decision:logreg/s0:clean:0:cooler:decision:logreg/s0:clean:0:cooler:O4_causal_signature",
+   "required": true
+  },
+  {
+   "checker_id": "decision:logreg/s0:clean:0:cooler:O5_conformal_singleton",
+   "claim_id": "decision:logreg/s0:clean:0:cooler",
+   "description": "A2: split-conformal set equals the claimed grade",
+   "obligation_id": "obl:decision:logreg/s0:clean:0:cooler:decision:logreg/s0:clean:0:cooler:O5_conformal_singleton",
+   "required": true
+  },
+  {
+   "checker_id": "decision:logreg/s0:clean:188:cooler:O1_integrity",
+   "claim_id": "decision:logreg/s0:clean:188:cooler",
+   "description": "C1: every channel used passes non-finite/range/flatline/jump tests",
+   "obligation_id": "obl:decision:logreg/s0:clean:188:cooler:decision:logreg/s0:clean:188:cooler:O1_integrity",
+   "required": true
+  },
+  {
+   "checker_id": "decision:logreg/s0:clean:188:cooler:O2_physics",
+   "claim_id": "decision:logreg/s0:clean:188:cooler",
+   "description": "C2: all cross-modal balance relations within training residual bounds",
+   "obligation_id": "obl:decision:logreg/s0:clean:188:cooler:decision:logreg/s0:clean:188:cooler:O2_physics",
+   "required": true
+  },
+  {
+   "checker_id": "decision:logreg/s0:clean:188:cooler:O3_confidence",
+   "claim_id": "decision:logreg/s0:clean:188:cooler",
+   "description": "A2: calibrated confidence >= tier threshold",
+   "obligation_id": "obl:decision:logreg/s0:clean:188:cooler:decision:logreg/s0:clean:188:cooler:O3_confidence",
+   "required": true
+  },
+  {
+   "checker_id": "decision:logreg/s0:clean:188:cooler:O5_conformal_singleton",
+   "claim_id": "decision:logreg/s0:clean:188:cooler",
+   "description": "A2: split-conformal set equals the claimed grade",
+   "obligation_id": "obl:decision:logreg/s0:clean:188:cooler:decision:logreg/s0:clean:188:cooler:O5_conformal_singleton",
+   "required": true
+  },
+  {
+   "checker_id": "decision:logreg/s0:clean:0:pump:O1_integrity",
+   "claim_id": "decision:logreg/s0:clean:0:pump",
+   "description": "C1: every channel used passes non-finite/range/flatline/jump tests",
+   "obligation_id": "obl:decision:logreg/s0:clean:0:pump:decision:logreg/s0:clean:0:pump:O1_integrity",
+   "required": true
+  },
+  {
+   "checker_id": "decision:logreg/s0:clean:0:pump:O2_physics",
+   "claim_id": "decision:logreg/s0:clean:0:pump",
+   "description": "C2: all cross-modal balance relations within training residual bounds",
+   "obligation_id": "obl:decision:logreg/s0:clean:0:pump:decision:logreg/s0:clean:0:pump:O2_physics",
+   "required": true
+  },
+  {
+   "checker_id": "decision:logreg/s0:clean:0:pump:O3_confidence",
+   "claim_id": "decision:logreg/s0:clean:0:pump",
+   "description": "A2: calibrated confidence >= tier threshold",
+   "obligation_id": "obl:decision:logreg/s0:clean:0:pump:decision:logreg/s0:clean:0:pump:O3_confidence",
+   "required": true
+  },
+  {
+   "checker_id": "decision:logreg/s0:clean:0:pump:O4_causal_signature",
+   "claim_id": "decision:logreg/s0:clean:0:pump",
+   "description": "A3: causal-signature interval matches the claimed grade",
+   "obligation_id": "obl:decision:logreg/s0:clean:0:pump:decision:logreg/s0:clean:0:pump:O4_causal_signature",
+   "required": true
+  },
+  {
+   "checker_id": "decision:logreg/s0:clean:0:pump:O5_conformal_singleton",
+   "claim_id": "decision:logreg/s0:clean:0:pump",
+   "description": "A2: split-conformal set equals the claimed grade",
+   "obligation_id": "obl:decision:logreg/s0:clean:0:pump:decision:logreg/s0:clean:0:pump:O5_conformal_singleton",
+   "required": true
+  },
+  {
+   "checker_id": "decision:logreg/s0:clean:72:accumulator:O1_integrity",
+   "claim_id": "decision:logreg/s0:clean:72:accumulator",
+   "description": "C1: every channel used passes non-finite/range/flatline/jump tests",
+   "obligation_id": "obl:decision:logreg/s0:clean:72:accumulator:decision:logreg/s0:clean:72:accumulator:O1_integrity",
+   "required": true
+  },
+  {
+   "checker_id": "decision:logreg/s0:clean:72:accumulator:O2_physics",
+   "claim_id": "decision:logreg/s0:clean:72:accumulator",
+   "description": "C2: all cross-modal balance relations within training residual bounds",
+   "obligation_id": "obl:decision:logreg/s0:clean:72:accumulator:decision:logreg/s0:clean:72:accumulator:O2_physics",
+   "required": true
+  },
+  {
+   "checker_id": "decision:logreg/s0:clean:72:accumulator:O3_confidence",
+   "claim_id": "decision:logreg/s0:clean:72:accumulator",
+   "description": "A2: calibrated confidence >= tier threshold",
+   "obligation_id": "obl:decision:logreg/s0:clean:72:accumulator:decision:logreg/s0:clean:72:accumulator:O3_confidence",
+   "required": true
+  },
+  {
+   "checker_id": "decision:logreg/s0:clean:72:accumulator:O4_causal_signature",
+   "claim_id": "decision:logreg/s0:clean:72:accumulator",
+   "description": "A3: causal-signature interval matches the claimed grade",
+   "obligation_id": "obl:decision:logreg/s0:clean:72:accumulator:decision:logreg/s0:clean:72:accumulator:O4_causal_signature",
+   "required": true
+  },
+  {
+   "checker_id": "decision:logreg/s0:clean:72:accumulator:O5_conformal_singleton",
+   "claim_id": "decision:logreg/s0:clean:72:accumulator",
+   "description": "A2: split-conformal set equals the claimed grade",
+   "obligation_id": "obl:decision:logreg/s0:clean:72:accumulator:decision:logreg/s0:clean:72:accumulator:O5_conformal_singleton",
+   "required": true
+  },
+  {
+   "checker_id": "decision:logreg/s0:dropout:PS1:0:cooler:O1_integrity",
+   "claim_id": "decision:logreg/s0:dropout:PS1:0:cooler",
+   "description": "C1: every channel used passes non-finite/range/flatline/jump tests",
+   "obligation_id": "obl:decision:logreg/s0:dropout:PS1:0:cooler:decision:logreg/s0:dropout:PS1:0:cooler:O1_integrity",
+   "required": true
+  },
+  {
+   "checker_id": "decision:logreg/s0:dropout:PS1:0:cooler:O2_physics",
+   "claim_id": "decision:logreg/s0:dropout:PS1:0:cooler",
+   "description": "C2: all cross-modal balance relations within training residual bounds",
+   "obligation_id": "obl:decision:logreg/s0:dropout:PS1:0:cooler:decision:logreg/s0:dropout:PS1:0:cooler:O2_physics",
+   "required": true
+  },
+  {
+   "checker_id": "decision:logreg/s0:dropout:PS1:0:cooler:O3_confidence",
+   "claim_id": "decision:logreg/s0:dropout:PS1:0:cooler",
+   "description": "A2: calibrated confidence >= tier threshold",
+   "obligation_id": "obl:decision:logreg/s0:dropout:PS1:0:cooler:decision:logreg/s0:dropout:PS1:0:cooler:O3_confidence",
+   "required": true
+  },
+  {
+   "checker_id": "decision:logreg/s0:dropout:PS1:0:cooler:O4_causal_signature",
+   "claim_id": "decision:logreg/s0:dropout:PS1:0:cooler",
+   "description": "A3: causal-signature interval matches the claimed grade",
+   "obligation_id": "obl:decision:logreg/s0:dropout:PS1:0:cooler:decision:logreg/s0:dropout:PS1:0:cooler:O4_causal_signature",
+   "required": true
+  },
+  {
+   "checker_id": "decision:logreg/s0:dropout:PS1:0:cooler:O5_conformal_singleton",
+   "claim_id": "decision:logreg/s0:dropout:PS1:0:cooler",
+   "description": "A2: split-conformal set equals the claimed grade",
+   "obligation_id": "obl:decision:logreg/s0:dropout:PS1:0:cooler:decision:logreg/s0:dropout:PS1:0:cooler:O5_conformal_singleton",
+   "required": true
+  },
+  {
+   "checker_id": "decision:logreg/s0:dropout:PS1:0:cooler:repaired:O1_integrity",
+   "claim_id": "decision:logreg/s0:dropout:PS1:0:cooler:repaired",
+   "description": "C1: every channel used passes non-finite/range/flatline/jump tests",
+   "obligation_id": "obl:decision:logreg/s0:dropout:PS1:0:cooler:repaired:decision:logreg/s0:dropout:PS1:0:cooler:repaired:O1_integrity",
+   "required": true
+  },
+  {
+   "checker_id": "decision:logreg/s0:dropout:PS1:0:cooler:repaired:O2_physics",
+   "claim_id": "decision:logreg/s0:dropout:PS1:0:cooler:repaired",
+   "description": "C2: all cross-modal balance relations within training residual bounds",
+   "obligation_id": "obl:decision:logreg/s0:dropout:PS1:0:cooler:repaired:decision:logreg/s0:dropout:PS1:0:cooler:repaired:O2_physics",
+   "required": true
+  },
+  {
+   "checker_id": "decision:logreg/s0:dropout:PS1:0:cooler:repaired:O3_confidence",
+   "claim_id": "decision:logreg/s0:dropout:PS1:0:cooler:repaired",
+   "description": "A2: calibrated confidence >= tier threshold",
+   "obligation_id": "obl:decision:logreg/s0:dropout:PS1:0:cooler:repaired:decision:logreg/s0:dropout:PS1:0:cooler:repaired:O3_confidence",
+   "required": true
+  },
+  {
+   "checker_id": "decision:logreg/s0:dropout:PS1:0:cooler:repaired:O4_causal_signature",
+   "claim_id": "decision:logreg/s0:dropout:PS1:0:cooler:repaired",
+   "description": "A3: causal-signature interval matches the claimed grade",
+   "obligation_id": "obl:decision:logreg/s0:dropout:PS1:0:cooler:repaired:decision:logreg/s0:dropout:PS1:0:cooler:repaired:O4_causal_signature",
+   "required": true
+  },
+  {
+   "checker_id": "decision:logreg/s0:dropout:PS1:0:cooler:repaired:O5_conformal_singleton",
+   "claim_id": "decision:logreg/s0:dropout:PS1:0:cooler:repaired",
+   "description": "A2: split-conformal set equals the claimed grade",
+   "obligation_id": "obl:decision:logreg/s0:dropout:PS1:0:cooler:repaired:decision:logreg/s0:dropout:PS1:0:cooler:repaired:O5_conformal_singleton",
+   "required": true
+  },
+  {
+   "checker_id": "decision:logreg/s0:dropout:PS1:188:cooler:O1_integrity",
+   "claim_id": "decision:logreg/s0:dropout:PS1:188:cooler",
+   "description": "C1: every channel used passes non-finite/range/flatline/jump tests",
+   "obligation_id": "obl:decision:logreg/s0:dropout:PS1:188:cooler:decision:logreg/s0:dropout:PS1:188:cooler:O1_integrity",
+   "required": true
+  },
+  {
+   "checker_id": "decision:logreg/s0:dropout:PS1:188:cooler:O2_physics",
+   "claim_id": "decision:logreg/s0:dropout:PS1:188:cooler",
+   "description": "C2: all cross-modal balance relations within training residual bounds",
+   "obligation_id": "obl:decision:logreg/s0:dropout:PS1:188:cooler:decision:logreg/s0:dropout:PS1:188:cooler:O2_physics",
+   "required": true
+  },
+  {
+   "checker_id": "decision:logreg/s0:dropout:PS1:188:cooler:O3_confidence",
+   "claim_id": "decision:logreg/s0:dropout:PS1:188:cooler",
+   "description": "A2: calibrated confidence >= tier threshold",
+   "obligation_id": "obl:decision:logreg/s0:dropout:PS1:188:cooler:decision:logreg/s0:dropout:PS1:188:cooler:O3_confidence",
+   "required": true
+  },
+  {
+   "checker_id": "decision:logreg/s0:dropout:PS1:188:cooler:O5_conformal_singleton",
+   "claim_id": "decision:logreg/s0:dropout:PS1:188:cooler",
+   "description": "A2: split-conformal set equals the claimed grade",
+   "obligation_id": "obl:decision:logreg/s0:dropout:PS1:188:cooler:decision:logreg/s0:dropout:PS1:188:cooler:O5_conformal_singleton",
+   "required": true
+  },
+  {
+   "checker_id": "decision:logreg/s0:dropout:PS1:188:cooler:repaired:O1_integrity",
+   "claim_id": "decision:logreg/s0:dropout:PS1:188:cooler:repaired",
+   "description": "C1: every channel used passes non-finite/range/flatline/jump tests",
+   "obligation_id": "obl:decision:logreg/s0:dropout:PS1:188:cooler:repaired:decision:logreg/s0:dropout:PS1:188:cooler:repaired:O1_integrity",
+   "required": true
+  },
+  {
+   "checker_id": "decision:logreg/s0:dropout:PS1:188:cooler:repaired:O2_physics",
+   "claim_id": "decision:logreg/s0:dropout:PS1:188:cooler:repaired",
+   "description": "C2: all cross-modal balance relations within training residual bounds",
+   "obligation_id": "obl:decision:logreg/s0:dropout:PS1:188:cooler:repaired:decision:logreg/s0:dropout:PS1:188:cooler:repaired:O2_physics",
+   "required": true
+  },
+  {
+   "checker_id": "decision:logreg/s0:dropout:PS1:188:cooler:repaired:O3_confidence",
+   "claim_id": "decision:logreg/s0:dropout:PS1:188:cooler:repaired",
+   "description": "A2: calibrated confidence >= tier threshold",
+   "obligation_id": "obl:decision:logreg/s0:dropout:PS1:188:cooler:repaired:decision:logreg/s0:dropout:PS1:188:cooler:repaired:O3_confidence",
+   "required": true
+  },
+  {
+   "checker_id": "decision:logreg/s0:dropout:PS1:188:cooler:repaired:O5_conformal_singleton",
+   "claim_id": "decision:logreg/s0:dropout:PS1:188:cooler:repaired",
+   "description": "A2: split-conformal set equals the claimed grade",
+   "obligation_id": "obl:decision:logreg/s0:dropout:PS1:188:cooler:repaired:decision:logreg/s0:dropout:PS1:188:cooler:repaired:O5_conformal_singleton",
+   "required": true
+  }
+ ],
+ "observations": [
+  {
+   "modality": "electrical",
+   "payload_ref": "data/raw/EPS1.txt",
+   "provenance": {
+    "dataset": "UCI-447 Condition monitoring of hydraulic systems (Helwig et al. 2015)",
+    "manifest_sha256": "15e6aebc2ba27e786bc03f77749122d7389414e3f89b6f4586f3b019015bfe69",
+    "sensors": [
+     "EPS1"
+    ]
+   },
+   "source": "uci447:electrical",
+   "timestamp": "2026-11-06T00:00:00Z"
+  },
+  {
+   "modality": "flow",
+   "payload_ref": "data/raw/FS1.txt, data/raw/FS2.txt",
+   "provenance": {
+    "dataset": "UCI-447 Condition monitoring of hydraulic systems (Helwig et al. 2015)",
+    "manifest_sha256": "15e6aebc2ba27e786bc03f77749122d7389414e3f89b6f4586f3b019015bfe69",
+    "sensors": [
+     "FS1",
+     "FS2"
+    ]
+   },
+   "source": "uci447:flow",
+   "timestamp": "2026-11-06T00:00:00Z"
+  },
+  {
+   "modality": "pressure",
+   "payload_ref": "data/raw/PS1.txt, data/raw/PS2.txt, data/raw/PS3.txt, data/raw/PS4.txt, data/raw/PS5.txt, data/raw/PS6.txt",
+   "provenance": {
+    "dataset": "UCI-447 Condition monitoring of hydraulic systems (Helwig et al. 2015)",
+    "manifest_sha256": "15e6aebc2ba27e786bc03f77749122d7389414e3f89b6f4586f3b019015bfe69",
+    "sensors": [
+     "PS1",
+     "PS2",
+     "PS3",
+     "PS4",
+     "PS5",
+     "PS6"
+    ]
+   },
+   "source": "uci447:pressure",
+   "timestamp": "2026-11-06T00:00:00Z"
+  },
+  {
+   "modality": "thermal",
+   "payload_ref": "data/raw/TS1.txt, data/raw/TS2.txt, data/raw/TS3.txt, data/raw/TS4.txt",
+   "provenance": {
+    "dataset": "UCI-447 Condition monitoring of hydraulic systems (Helwig et al. 2015)",
+    "manifest_sha256": "15e6aebc2ba27e786bc03f77749122d7389414e3f89b6f4586f3b019015bfe69",
+    "sensors": [
+     "TS1",
+     "TS2",
+     "TS3",
+     "TS4"
+    ]
+   },
+   "source": "uci447:thermal",
+   "timestamp": "2026-11-06T00:00:00Z"
+  },
+  {
+   "modality": "vibration",
+   "payload_ref": "data/raw/VS1.txt",
+   "provenance": {
+    "dataset": "UCI-447 Condition monitoring of hydraulic systems (Helwig et al. 2015)",
+    "manifest_sha256": "15e6aebc2ba27e786bc03f77749122d7389414e3f89b6f4586f3b019015bfe69",
+    "sensors": [
+     "VS1"
+    ]
+   },
+   "source": "uci447:vibration",
+   "timestamp": "2026-11-06T00:00:00Z"
+  },
+  {
+   "modality": "virtual",
+   "payload_ref": "data/raw/CE.txt, data/raw/CP.txt, data/raw/SE.txt",
+   "provenance": {
+    "dataset": "UCI-447 Condition monitoring of hydraulic systems (Helwig et al. 2015)",
+    "manifest_sha256": "15e6aebc2ba27e786bc03f77749122d7389414e3f89b6f4586f3b019015bfe69",
+    "sensors": [
+     "CE",
+     "CP",
+     "SE"
+    ]
+   },
+   "source": "uci447:virtual",
+   "timestamp": "2026-11-06T00:00:00Z"
+  },
+  {
+   "modality": "condition-labels",
+   "payload_ref": "data/raw/profile.txt",
+   "provenance": {
+    "manifest_sha256": "15e6aebc2ba27e786bc03f77749122d7389414e3f89b6f4586f3b019015bfe69"
+   },
+   "source": "uci447:labels",
+   "timestamp": "2026-11-06T00:00:00Z"
+  },
+  {
+   "modality": "derived",
+   "payload_ref": "experiments/cpu/trace.jsonl.gz",
+   "provenance": {
+    "records": 384820,
+    "sha256": "085f1d9d912bbe01fdf42ef0bebbf1ae190cb70a9896ef261e923b47be4d1c30"
+   },
+   "source": "decision-trace",
+   "timestamp": "2026-11-06T00:00:00Z"
+  },
+  {
+   "modality": "derived",
+   "payload_ref": "experiments/cpu/audit.json",
+   "provenance": {
+    "sha256": "7dafc0a2c752653887b6e86de09d3bb99df1f5a3d5776390f44845d521be5e97"
+   },
+   "source": "audit",
+   "timestamp": "2026-11-06T00:00:00Z"
+  },
+  {
+   "modality": "derived",
+   "payload_ref": "experiments/cpu/audit.json#/results/*/adv_offset*",
+   "provenance": {
+    "partitions": {
+     "hgb/s0": {
+      "cal": 223,
+      "novel_severity": 89,
+      "shift_unstable": 118,
+      "test": 243,
+      "train": 623
+     },
+     "hgb/s1": {
+      "cal": 207,
+      "novel_severity": 58,
+      "shift_unstable": 168,
+      "test": 224,
+      "train": 658
+     },
+     "hgb/s2": {
+      "cal": 288,
+      "novel_severity": 77,
+      "shift_unstable": 178,
+      "test": 195,
+      "train": 606
+     },
+     "hgb/s3": {
+      "cal": 254,
+      "novel_severity": 64,
+      "shift_unstable": 159,
+      "test": 227,
+      "train": 608
+     },
+     "hgb/s4": {
+      "cal": 238,
+      "novel_severity": 65,
+      "shift_unstable": 207,
+      "test": 163,
+      "train": 688
+     },
+     "logreg/s0": {
+      "cal": 223,
+      "novel_severity": 89,
+      "shift_unstable": 118,
+      "test": 243,
+      "train": 623
+     },
+     "logreg/s1": {
+      "cal": 207,
+      "novel_severity": 58,
+      "shift_unstable": 168,
+      "test": 224,
+      "train": 658
+     },
+     "logreg/s2": {
+      "cal": 288,
+      "novel_severity": 77,
+      "shift_unstable": 178,
+      "test": 195,
+      "train": 606
+     },
+     "logreg/s3": {
+      "cal": 254,
+      "novel_severity": 64,
+      "shift_unstable": 159,
+      "test": 227,
+      "train": 608
+     },
+     "logreg/s4": {
+      "cal": 238,
+      "novel_severity": 65,
+      "shift_unstable": 207,
+      "test": 163,
+      "train": 688
+     }
+    }
+   },
+   "source": "eval:adv_offset",
+   "timestamp": "2026-11-06T00:00:00Z"
+  },
+  {
+   "modality": "derived",
+   "payload_ref": "experiments/cpu/audit.json#/results/*/clean*",
+   "provenance": {
+    "partitions": {
+     "hgb/s0": {
+      "cal": 223,
+      "novel_severity": 89,
+      "shift_unstable": 118,
+      "test": 243,
+      "train": 623
+     },
+     "hgb/s1": {
+      "cal": 207,
+      "novel_severity": 58,
+      "shift_unstable": 168,
+      "test": 224,
+      "train": 658
+     },
+     "hgb/s2": {
+      "cal": 288,
+      "novel_severity": 77,
+      "shift_unstable": 178,
+      "test": 195,
+      "train": 606
+     },
+     "hgb/s3": {
+      "cal": 254,
+      "novel_severity": 64,
+      "shift_unstable": 159,
+      "test": 227,
+      "train": 608
+     },
+     "hgb/s4": {
+      "cal": 238,
+      "novel_severity": 65,
+      "shift_unstable": 207,
+      "test": 163,
+      "train": 688
+     },
+     "logreg/s0": {
+      "cal": 223,
+      "novel_severity": 89,
+      "shift_unstable": 118,
+      "test": 243,
+      "train": 623
+     },
+     "logreg/s1": {
+      "cal": 207,
+      "novel_severity": 58,
+      "shift_unstable": 168,
+      "test": 224,
+      "train": 658
+     },
+     "logreg/s2": {
+      "cal": 288,
+      "novel_severity": 77,
+      "shift_unstable": 178,
+      "test": 195,
+      "train": 606
+     },
+     "logreg/s3": {
+      "cal": 254,
+      "novel_severity": 64,
+      "shift_unstable": 159,
+      "test": 227,
+      "train": 608
+     },
+     "logreg/s4": {
+      "cal": 238,
+      "novel_severity": 65,
+      "shift_unstable": 207,
+      "test": 163,
+      "train": 688
+     }
+    }
+   },
+   "source": "eval:clean",
+   "timestamp": "2026-11-06T00:00:00Z"
+  },
+  {
+   "modality": "derived",
+   "payload_ref": "experiments/cpu/audit.json#/results/*/dropout*",
+   "provenance": {
+    "partitions": {
+     "hgb/s0": {
+      "cal": 223,
+      "novel_severity": 89,
+      "shift_unstable": 118,
+      "test": 243,
+      "train": 623
+     },
+     "hgb/s1": {
+      "cal": 207,
+      "novel_severity": 58,
+      "shift_unstable": 168,
+      "test": 224,
+      "train": 658
+     },
+     "hgb/s2": {
+      "cal": 288,
+      "novel_severity": 77,
+      "shift_unstable": 178,
+      "test": 195,
+      "train": 606
+     },
+     "hgb/s3": {
+      "cal": 254,
+      "novel_severity": 64,
+      "shift_unstable": 159,
+      "test": 227,
+      "train": 608
+     },
+     "hgb/s4": {
+      "cal": 238,
+      "novel_severity": 65,
+      "shift_unstable": 207,
+      "test": 163,
+      "train": 688
+     },
+     "logreg/s0": {
+      "cal": 223,
+      "novel_severity": 89,
+      "shift_unstable": 118,
+      "test": 243,
+      "train": 623
+     },
+     "logreg/s1": {
+      "cal": 207,
+      "novel_severity": 58,
+      "shift_unstable": 168,
+      "test": 224,
+      "train": 658
+     },
+     "logreg/s2": {
+      "cal": 288,
+      "novel_severity": 77,
+      "shift_unstable": 178,
+      "test": 195,
+      "train": 606
+     },
+     "logreg/s3": {
+      "cal": 254,
+      "novel_severity": 64,
+      "shift_unstable": 159,
+      "test": 227,
+      "train": 608
+     },
+     "logreg/s4": {
+      "cal": 238,
+      "novel_severity": 65,
+      "shift_unstable": 207,
+      "test": 163,
+      "train": 688
+     }
+    }
+   },
+   "source": "eval:dropout",
+   "timestamp": "2026-11-06T00:00:00Z"
+  },
+  {
+   "modality": "derived",
+   "payload_ref": "experiments/cpu/audit.json#/results/*/gain*",
+   "provenance": {
+    "partitions": {
+     "hgb/s0": {
+      "cal": 223,
+      "novel_severity": 89,
+      "shift_unstable": 118,
+      "test": 243,
+      "train": 623
+     },
+     "hgb/s1": {
+      "cal": 207,
+      "novel_severity": 58,
+      "shift_unstable": 168,
+      "test": 224,
+      "train": 658
+     },
+     "hgb/s2": {
+      "cal": 288,
+      "novel_severity": 77,
+      "shift_unstable": 178,
+      "test": 195,
+      "train": 606
+     },
+     "hgb/s3": {
+      "cal": 254,
+      "novel_severity": 64,
+      "shift_unstable": 159,
+      "test": 227,
+      "train": 608
+     },
+     "hgb/s4": {
+      "cal": 238,
+      "novel_severity": 65,
+      "shift_unstable": 207,
+      "test": 163,
+      "train": 688
+     },
+     "logreg/s0": {
+      "cal": 223,
+      "novel_severity": 89,
+      "shift_unstable": 118,
+      "test": 243,
+      "train": 623
+     },
+     "logreg/s1": {
+      "cal": 207,
+      "novel_severity": 58,
+      "shift_unstable": 168,
+      "test": 224,
+      "train": 658
+     },
+     "logreg/s2": {
+      "cal": 288,
+      "novel_severity": 77,
+      "shift_unstable": 178,
+      "test": 195,
+      "train": 606
+     },
+     "logreg/s3": {
+      "cal": 254,
+      "novel_severity": 64,
+      "shift_unstable": 159,
+      "test": 227,
+      "train": 608
+     },
+     "logreg/s4": {
+      "cal": 238,
+      "novel_severity": 65,
+      "shift_unstable": 207,
+      "test": 163,
+      "train": 688
+     }
+    }
+   },
+   "source": "eval:gain",
+   "timestamp": "2026-11-06T00:00:00Z"
+  },
+  {
+   "modality": "derived",
+   "payload_ref": "experiments/cpu/audit.json#/results/*/novel_severity*",
+   "provenance": {
+    "partitions": {
+     "hgb/s0": {
+      "cal": 223,
+      "novel_severity": 89,
+      "shift_unstable": 118,
+      "test": 243,
+      "train": 623
+     },
+     "hgb/s1": {
+      "cal": 207,
+      "novel_severity": 58,
+      "shift_unstable": 168,
+      "test": 224,
+      "train": 658
+     },
+     "hgb/s2": {
+      "cal": 288,
+      "novel_severity": 77,
+      "shift_unstable": 178,
+      "test": 195,
+      "train": 606
+     },
+     "hgb/s3": {
+      "cal": 254,
+      "novel_severity": 64,
+      "shift_unstable": 159,
+      "test": 227,
+      "train": 608
+     },
+     "hgb/s4": {
+      "cal": 238,
+      "novel_severity": 65,
+      "shift_unstable": 207,
+      "test": 163,
+      "train": 688
+     },
+     "logreg/s0": {
+      "cal": 223,
+      "novel_severity": 89,
+      "shift_unstable": 118,
+      "test": 243,
+      "train": 623
+     },
+     "logreg/s1": {
+      "cal": 207,
+      "novel_severity": 58,
+      "shift_unstable": 168,
+      "test": 224,
+      "train": 658
+     },
+     "logreg/s2": {
+      "cal": 288,
+      "novel_severity": 77,
+      "shift_unstable": 178,
+      "test": 195,
+      "train": 606
+     },
+     "logreg/s3": {
+      "cal": 254,
+      "novel_severity": 64,
+      "shift_unstable": 159,
+      "test": 227,
+      "train": 608
+     },
+     "logreg/s4": {
+      "cal": 238,
+      "novel_severity": 65,
+      "shift_unstable": 207,
+      "test": 163,
+      "train": 688
+     }
+    }
+   },
+   "source": "eval:novel_severity",
+   "timestamp": "2026-11-06T00:00:00Z"
+  },
+  {
+   "modality": "derived",
+   "payload_ref": "experiments/cpu/audit.json#/results/*/offset*",
+   "provenance": {
+    "partitions": {
+     "hgb/s0": {
+      "cal": 223,
+      "novel_severity": 89,
+      "shift_unstable": 118,
+      "test": 243,
+      "train": 623
+     },
+     "hgb/s1": {
+      "cal": 207,
+      "novel_severity": 58,
+      "shift_unstable": 168,
+      "test": 224,
+      "train": 658
+     },
+     "hgb/s2": {
+      "cal": 288,
+      "novel_severity": 77,
+      "shift_unstable": 178,
+      "test": 195,
+      "train": 606
+     },
+     "hgb/s3": {
+      "cal": 254,
+      "novel_severity": 64,
+      "shift_unstable": 159,
+      "test": 227,
+      "train": 608
+     },
+     "hgb/s4": {
+      "cal": 238,
+      "novel_severity": 65,
+      "shift_unstable": 207,
+      "test": 163,
+      "train": 688
+     },
+     "logreg/s0": {
+      "cal": 223,
+      "novel_severity": 89,
+      "shift_unstable": 118,
+      "test": 243,
+      "train": 623
+     },
+     "logreg/s1": {
+      "cal": 207,
+      "novel_severity": 58,
+      "shift_unstable": 168,
+      "test": 224,
+      "train": 658
+     },
+     "logreg/s2": {
+      "cal": 288,
+      "novel_severity": 77,
+      "shift_unstable": 178,
+      "test": 195,
+      "train": 606
+     },
+     "logreg/s3": {
+      "cal": 254,
+      "novel_severity": 64,
+      "shift_unstable": 159,
+      "test": 227,
+      "train": 608
+     },
+     "logreg/s4": {
+      "cal": 238,
+      "novel_severity": 65,
+      "shift_unstable": 207,
+      "test": 163,
+      "train": 688
+     }
+    }
+   },
+   "source": "eval:offset",
+   "timestamp": "2026-11-06T00:00:00Z"
+  },
+  {
+   "modality": "derived",
+   "payload_ref": "experiments/cpu/audit.json#/results/*/shift_unstable*",
+   "provenance": {
+    "partitions": {
+     "hgb/s0": {
+      "cal": 223,
+      "novel_severity": 89,
+      "shift_unstable": 118,
+      "test": 243,
+      "train": 623
+     },
+     "hgb/s1": {
+      "cal": 207,
+      "novel_severity": 58,
+      "shift_unstable": 168,
+      "test": 224,
+      "train": 658
+     },
+     "hgb/s2": {
+      "cal": 288,
+      "novel_severity": 77,
+      "shift_unstable": 178,
+      "test": 195,
+      "train": 606
+     },
+     "hgb/s3": {
+      "cal": 254,
+      "novel_severity": 64,
+      "shift_unstable": 159,
+      "test": 227,
+      "train": 608
+     },
+     "hgb/s4": {
+      "cal": 238,
+      "novel_severity": 65,
+      "shift_unstable": 207,
+      "test": 163,
+      "train": 688
+     },
+     "logreg/s0": {
+      "cal": 223,
+      "novel_severity": 89,
+      "shift_unstable": 118,
+      "test": 243,
+      "train": 623
+     },
+     "logreg/s1": {
+      "cal": 207,
+      "novel_severity": 58,
+      "shift_unstable": 168,
+      "test": 224,
+      "train": 658
+     },
+     "logreg/s2": {
+      "cal": 288,
+      "novel_severity": 77,
+      "shift_unstable": 178,
+      "test": 195,
+      "train": 606
+     },
+     "logreg/s3": {
+      "cal": 254,
+      "novel_severity": 64,
+      "shift_unstable": 159,
+      "test": 227,
+      "train": 608
+     },
+     "logreg/s4": {
+      "cal": 238,
+      "novel_severity": 65,
+      "shift_unstable": 207,
+      "test": 163,
+      "train": 688
+     }
+    }
+   },
+   "source": "eval:shift_unstable",
+   "timestamp": "2026-11-06T00:00:00Z"
+  },
+  {
+   "modality": "derived",
+   "payload_ref": "experiments/cpu/audit.json#/results/*/spike*",
+   "provenance": {
+    "partitions": {
+     "hgb/s0": {
+      "cal": 223,
+      "novel_severity": 89,
+      "shift_unstable": 118,
+      "test": 243,
+      "train": 623
+     },
+     "hgb/s1": {
+      "cal": 207,
+      "novel_severity": 58,
+      "shift_unstable": 168,
+      "test": 224,
+      "train": 658
+     },
+     "hgb/s2": {
+      "cal": 288,
+      "novel_severity": 77,
+      "shift_unstable": 178,
+      "test": 195,
+      "train": 606
+     },
+     "hgb/s3": {
+      "cal": 254,
+      "novel_severity": 64,
+      "shift_unstable": 159,
+      "test": 227,
+      "train": 608
+     },
+     "hgb/s4": {
+      "cal": 238,
+      "novel_severity": 65,
+      "shift_unstable": 207,
+      "test": 163,
+      "train": 688
+     },
+     "logreg/s0": {
+      "cal": 223,
+      "novel_severity": 89,
+      "shift_unstable": 118,
+      "test": 243,
+      "train": 623
+     },
+     "logreg/s1": {
+      "cal": 207,
+      "novel_severity": 58,
+      "shift_unstable": 168,
+      "test": 224,
+      "train": 658
+     },
+     "logreg/s2": {
+      "cal": 288,
+      "novel_severity": 77,
+      "shift_unstable": 178,
+      "test": 195,
+      "train": 606
+     },
+     "logreg/s3": {
+      "cal": 254,
+      "novel_severity": 64,
+      "shift_unstable": 159,
+      "test": 227,
+      "train": 608
+     },
+     "logreg/s4": {
+      "cal": 238,
+      "novel_severity": 65,
+      "shift_unstable": 207,
+      "test": 163,
+      "train": 688
+     }
+    }
+   },
+   "source": "eval:spike",
+   "timestamp": "2026-11-06T00:00:00Z"
+  },
+  {
+   "modality": "derived",
+   "payload_ref": "experiments/cpu/audit.json#/results/*/stuck*",
+   "provenance": {
+    "partitions": {
+     "hgb/s0": {
+      "cal": 223,
+      "novel_severity": 89,
+      "shift_unstable": 118,
+      "test": 243,
+      "train": 623
+     },
+     "hgb/s1": {
+      "cal": 207,
+      "novel_severity": 58,
+      "shift_unstable": 168,
+      "test": 224,
+      "train": 658
+     },
+     "hgb/s2": {
+      "cal": 288,
+      "novel_severity": 77,
+      "shift_unstable": 178,
+      "test": 195,
+      "train": 606
+     },
+     "hgb/s3": {
+      "cal": 254,
+      "novel_severity": 64,
+      "shift_unstable": 159,
+      "test": 227,
+      "train": 608
+     },
+     "hgb/s4": {
+      "cal": 238,
+      "novel_severity": 65,
+      "shift_unstable": 207,
+      "test": 163,
+      "train": 688
+     },
+     "logreg/s0": {
+      "cal": 223,
+      "novel_severity": 89,
+      "shift_unstable": 118,
+      "test": 243,
+      "train": 623
+     },
+     "logreg/s1": {
+      "cal": 207,
+      "novel_severity": 58,
+      "shift_unstable": 168,
+      "test": 224,
+      "train": 658
+     },
+     "logreg/s2": {
+      "cal": 288,
+      "novel_severity": 77,
+      "shift_unstable": 178,
+      "test": 195,
+      "train": 606
+     },
+     "logreg/s3": {
+      "cal": 254,
+      "novel_severity": 64,
+      "shift_unstable": 159,
+      "test": 227,
+      "train": 608
+     },
+     "logreg/s4": {
+      "cal": 238,
+      "novel_severity": 65,
+      "shift_unstable": 207,
+      "test": 163,
+      "train": 688
+     }
+    }
+   },
+   "source": "eval:stuck",
+   "timestamp": "2026-11-06T00:00:00Z"
+  },
+  {
+   "modality": "derived",
+   "payload_ref": "experiments/cpu/audit.json#/results/*/time_shift*",
+   "provenance": {
+    "partitions": {
+     "hgb/s0": {
+      "cal": 223,
+      "novel_severity": 89,
+      "shift_unstable": 118,
+      "test": 243,
+      "train": 623
+     },
+     "hgb/s1": {
+      "cal": 207,
+      "novel_severity": 58,
+      "shift_unstable": 168,
+      "test": 224,
+      "train": 658
+     },
+     "hgb/s2": {
+      "cal": 288,
+      "novel_severity": 77,
+      "shift_unstable": 178,
+      "test": 195,
+      "train": 606
+     },
+     "hgb/s3": {
+      "cal": 254,
+      "novel_severity": 64,
+      "shift_unstable": 159,
+      "test": 227,
+      "train": 608
+     },
+     "hgb/s4": {
+      "cal": 238,
+      "novel_severity": 65,
+      "shift_unstable": 207,
+      "test": 163,
+      "train": 688
+     },
+     "logreg/s0": {
+      "cal": 223,
+      "novel_severity": 89,
+      "shift_unstable": 118,
+      "test": 243,
+      "train": 623
+     },
+     "logreg/s1": {
+      "cal": 207,
+      "novel_severity": 58,
+      "shift_unstable": 168,
+      "test": 224,
+      "train": 658
+     },
+     "logreg/s2": {
+      "cal": 288,
+      "novel_severity": 77,
+      "shift_unstable": 178,
+      "test": 195,
+      "train": 606
+     },
+     "logreg/s3": {
+      "cal": 254,
+      "novel_severity": 64,
+      "shift_unstable": 159,
+      "test": 227,
+      "train": 608
+     },
+     "logreg/s4": {
+      "cal": 238,
+      "novel_severity": 65,
+      "shift_unstable": 207,
+      "test": 163,
+      "train": 688
+     }
+    }
+   },
+   "source": "eval:time_shift",
+   "timestamp": "2026-11-06T00:00:00Z"
+  }
+ ],
+ "outcome": "defer",
+ "run_id": "project-cpu-15e6aebc",
+ "versions": {
+  "audit_sha256": "7dafc0a2c752653887b6e86de09d3bb99df1f5a3d5776390f44845d521be5e97",
+  "code_sha256": "49706719be2b4300e8414b0096ac0cb533bbeab7670b3a5d6a28ac62a00d1eee",
+  "config": "config/cpu.yaml",
+  "config_sha256": "129ac4481d6041bb2d8ca8667f8d94473fc76932b3e5a3d3283139349d754e8d",
+  "dataset_manifest_sha256": "15e6aebc2ba27e786bc03f77749122d7389414e3f89b6f4586f3b019015bfe69",
+  "numpy": "2.5.3",
+  "python": "3.13.18",
+  "schema": "1.0",
+  "scikit-learn": "1.9.1",
+  "scipy": "1.18.1",
+  "trace_sha256": "085f1d9d912bbe01fdf42ef0bebbf1ae190cb70a9896ef261e923b47be4d1c30"
+ },
+ "warrants": [
+  {
+   "assumptions": [
+    "UCI-447 rig, 60 s cycles",
+    "train-split reference statistics",
+    "3 feature(s) constant in train are excluded from dead-dim test"
+   ],
+   "calibration": null,
+   "claim_id": "a1-representation",
+   "excludes": "learned or pretrained encoders; other rigs",
+   "supports": "frozen 170-d per-cycle statistics retain multi-dimensional structure on train cycles"
+  },
+  {
+   "assumptions": [
+    "exchangeable calibration and test cycles"
+   ],
+   "calibration": 0.0028,
+   "claim_id": "a2-calibration-hgb-cooler",
+   "excludes": "unstable cycles, unseen severities, other rigs",
+   "supports": "calibration of this component model on stable UCI-447 cycles"
+  },
+  {
+   "assumptions": [
+    "exchangeable calibration and test cycles"
+   ],
+   "calibration": 0.0052,
+   "claim_id": "a2-calibration-hgb-valve",
+   "excludes": "unstable cycles, unseen severities, other rigs",
+   "supports": "calibration of this component model on stable UCI-447 cycles"
+  },
+  {
+   "assumptions": [
+    "exchangeable calibration and test cycles"
+   ],
+   "calibration": 0.0272,
+   "claim_id": "a2-calibration-hgb-pump",
+   "excludes": "unstable cycles, unseen severities, other rigs",
+   "supports": "calibration of this component model on stable UCI-447 cycles"
+  },
+  {
+   "assumptions": [
+    "exchangeable calibration and test cycles"
+   ],
+   "calibration": 0.2663,
+   "claim_id": "a2-calibration-hgb-accumulator",
+   "excludes": "unstable cycles, unseen severities, other rigs",
+   "supports": "calibration of this component model on stable UCI-447 cycles"
+  },
+  {
+   "assumptions": [
+    "exchangeable calibration and test cycles"
+   ],
+   "calibration": 0.0013,
+   "claim_id": "a2-calibration-logreg-cooler",
+   "excludes": "unstable cycles, unseen severities, other rigs",
+   "supports": "calibration of this component model on stable UCI-447 cycles"
+  },
+  {
+   "assumptions": [
+    "exchangeable calibration and test cycles"
+   ],
+   "calibration": 0.0364,
+   "claim_id": "a2-calibration-logreg-valve",
+   "excludes": "unstable cycles, unseen severities, other rigs",
+   "supports": "calibration of this component model on stable UCI-447 cycles"
+  },
+  {
+   "assumptions": [
+    "exchangeable calibration and test cycles"
+   ],
+   "calibration": 0.0692,
+   "claim_id": "a2-calibration-logreg-pump",
+   "excludes": "unstable cycles, unseen severities, other rigs",
+   "supports": "calibration of this component model on stable UCI-447 cycles"
+  },
+  {
+   "assumptions": [
+    "exchangeable calibration and test cycles"
+   ],
+   "calibration": 0.1985,
+   "claim_id": "a2-calibration-logreg-accumulator",
+   "excludes": "unstable cycles, unseen severities, other rigs",
+   "supports": "calibration of this component model on stable UCI-447 cycles"
+  },
+  {
+   "assumptions": [
+    "other components fixed within strata"
+   ],
+   "calibration": null,
+   "claim_id": "A3-cooler-CE",
+   "excludes": "magnitudes outside trained grades; field machines",
+   "supports": "reduced cooler efficiency lowers measured cooling efficiency (UCI-447 test rig, stable cycles, fixed 60 s load profile)"
+  },
+  {
+   "assumptions": [
+    "other components fixed within strata"
+   ],
+   "calibration": null,
+   "claim_id": "A3-pump-FS1",
+   "excludes": "magnitudes outside trained grades; field machines",
+   "supports": "internal leakage returns flow to tank, reducing delivered volume flow (UCI-447 test rig, stable cycles, fixed 60 s load profile)"
+  },
+  {
+   "assumptions": [
+    "other components fixed within strata"
+   ],
+   "calibration": null,
+   "claim_id": "A3-valve-FS1early",
+   "excludes": "magnitudes outside trained grades; field machines",
+   "supports": "switching lag delays flow onset in the first 10 s of the cycle (UCI-447 test rig, stable cycles, fixed 60 s load profile)"
+  },
+  {
+   "assumptions": [
+    "blocked split",
+    "train-fit checker thresholds"
+   ],
+   "calibration": null,
+   "claim_id": "policy-hgb-adv_offset",
+   "excludes": "remaining useful life or time-to-failure of any component; fault diagnosis for components other than cooler, valve, pump, accumulator; condition grades not present in training (e.g. interpolated severities); any claim about plants or rigs other than the UCI-447 test rig; root-cause attribution among simultaneously degraded components; claims on cycles whose evidence failed integrity without repair",
+   "supports": "policy behaviour under 'adv_offset' on UCI-447 test blocks"
+  },
+  {
+   "assumptions": [
+    "blocked split",
+    "train-fit checker thresholds"
+   ],
+   "calibration": null,
+   "claim_id": "policy-hgb-clean",
+   "excludes": "remaining useful life or time-to-failure of any component; fault diagnosis for components other than cooler, valve, pump, accumulator; condition grades not present in training (e.g. interpolated severities); any claim about plants or rigs other than the UCI-447 test rig; root-cause attribution among simultaneously degraded components; claims on cycles whose evidence failed integrity without repair",
+   "supports": "policy behaviour under 'clean' on UCI-447 test blocks"
+  },
+  {
+   "assumptions": [
+    "blocked split",
+    "train-fit checker thresholds"
+   ],
+   "calibration": null,
+   "claim_id": "policy-hgb-dropout",
+   "excludes": "remaining useful life or time-to-failure of any component; fault diagnosis for components other than cooler, valve, pump, accumulator; condition grades not present in training (e.g. interpolated severities); any claim about plants or rigs other than the UCI-447 test rig; root-cause attribution among simultaneously degraded components; claims on cycles whose evidence failed integrity without repair",
+   "supports": "policy behaviour under 'dropout' on UCI-447 test blocks"
+  },
+  {
+   "assumptions": [
+    "blocked split",
+    "train-fit checker thresholds"
+   ],
+   "calibration": null,
+   "claim_id": "policy-hgb-gain",
+   "excludes": "remaining useful life or time-to-failure of any component; fault diagnosis for components other than cooler, valve, pump, accumulator; condition grades not present in training (e.g. interpolated severities); any claim about plants or rigs other than the UCI-447 test rig; root-cause attribution among simultaneously degraded components; claims on cycles whose evidence failed integrity without repair",
+   "supports": "policy behaviour under 'gain' on UCI-447 test blocks"
+  },
+  {
+   "assumptions": [
+    "blocked split",
+    "train-fit checker thresholds"
+   ],
+   "calibration": null,
+   "claim_id": "policy-hgb-novel_severity",
+   "excludes": "remaining useful life or time-to-failure of any component; fault diagnosis for components other than cooler, valve, pump, accumulator; condition grades not present in training (e.g. interpolated severities); any claim about plants or rigs other than the UCI-447 test rig; root-cause attribution among simultaneously degraded components; claims on cycles whose evidence failed integrity without repair",
+   "supports": "policy behaviour under 'novel_severity' on UCI-447 test blocks"
+  },
+  {
+   "assumptions": [
+    "blocked split",
+    "train-fit checker thresholds"
+   ],
+   "calibration": null,
+   "claim_id": "policy-hgb-offset",
+   "excludes": "remaining useful life or time-to-failure of any component; fault diagnosis for components other than cooler, valve, pump, accumulator; condition grades not present in training (e.g. interpolated severities); any claim about plants or rigs other than the UCI-447 test rig; root-cause attribution among simultaneously degraded components; claims on cycles whose evidence failed integrity without repair",
+   "supports": "policy behaviour under 'offset' on UCI-447 test blocks"
+  },
+  {
+   "assumptions": [
+    "blocked split",
+    "train-fit checker thresholds"
+   ],
+   "calibration": null,
+   "claim_id": "policy-hgb-shift_unstable",
+   "excludes": "remaining useful life or time-to-failure of any component; fault diagnosis for components other than cooler, valve, pump, accumulator; condition grades not present in training (e.g. interpolated severities); any claim about plants or rigs other than the UCI-447 test rig; root-cause attribution among simultaneously degraded components; claims on cycles whose evidence failed integrity without repair",
+   "supports": "policy behaviour under 'shift_unstable' on UCI-447 test blocks"
+  },
+  {
+   "assumptions": [
+    "blocked split",
+    "train-fit checker thresholds"
+   ],
+   "calibration": null,
+   "claim_id": "policy-hgb-spike",
+   "excludes": "remaining useful life or time-to-failure of any component; fault diagnosis for components other than cooler, valve, pump, accumulator; condition grades not present in training (e.g. interpolated severities); any claim about plants or rigs other than the UCI-447 test rig; root-cause attribution among simultaneously degraded components; claims on cycles whose evidence failed integrity without repair",
+   "supports": "policy behaviour under 'spike' on UCI-447 test blocks"
+  },
+  {
+   "assumptions": [
+    "blocked split",
+    "train-fit checker thresholds"
+   ],
+   "calibration": null,
+   "claim_id": "policy-hgb-stuck",
+   "excludes": "remaining useful life or time-to-failure of any component; fault diagnosis for components other than cooler, valve, pump, accumulator; condition grades not present in training (e.g. interpolated severities); any claim about plants or rigs other than the UCI-447 test rig; root-cause attribution among simultaneously degraded components; claims on cycles whose evidence failed integrity without repair",
+   "supports": "policy behaviour under 'stuck' on UCI-447 test blocks"
+  },
+  {
+   "assumptions": [
+    "blocked split",
+    "train-fit checker thresholds"
+   ],
+   "calibration": null,
+   "claim_id": "policy-hgb-time_shift",
+   "excludes": "remaining useful life or time-to-failure of any component; fault diagnosis for components other than cooler, valve, pump, accumulator; condition grades not present in training (e.g. interpolated severities); any claim about plants or rigs other than the UCI-447 test rig; root-cause attribution among simultaneously degraded components; claims on cycles whose evidence failed integrity without repair",
+   "supports": "policy behaviour under 'time_shift' on UCI-447 test blocks"
+  },
+  {
+   "assumptions": [
+    "blocked split",
+    "train-fit checker thresholds"
+   ],
+   "calibration": null,
+   "claim_id": "policy-logreg-adv_offset",
+   "excludes": "remaining useful life or time-to-failure of any component; fault diagnosis for components other than cooler, valve, pump, accumulator; condition grades not present in training (e.g. interpolated severities); any claim about plants or rigs other than the UCI-447 test rig; root-cause attribution among simultaneously degraded components; claims on cycles whose evidence failed integrity without repair",
+   "supports": "policy behaviour under 'adv_offset' on UCI-447 test blocks"
+  },
+  {
+   "assumptions": [
+    "blocked split",
+    "train-fit checker thresholds"
+   ],
+   "calibration": null,
+   "claim_id": "policy-logreg-clean",
+   "excludes": "remaining useful life or time-to-failure of any component; fault diagnosis for components other than cooler, valve, pump, accumulator; condition grades not present in training (e.g. interpolated severities); any claim about plants or rigs other than the UCI-447 test rig; root-cause attribution among simultaneously degraded components; claims on cycles whose evidence failed integrity without repair",
+   "supports": "policy behaviour under 'clean' on UCI-447 test blocks"
+  },
+  {
+   "assumptions": [
+    "blocked split",
+    "train-fit checker thresholds"
+   ],
+   "calibration": null,
+   "claim_id": "policy-logreg-dropout",
+   "excludes": "remaining useful life or time-to-failure of any component; fault diagnosis for components other than cooler, valve, pump, accumulator; condition grades not present in training (e.g. interpolated severities); any claim about plants or rigs other than the UCI-447 test rig; root-cause attribution among simultaneously degraded components; claims on cycles whose evidence failed integrity without repair",
+   "supports": "policy behaviour under 'dropout' on UCI-447 test blocks"
+  },
+  {
+   "assumptions": [
+    "blocked split",
+    "train-fit checker thresholds"
+   ],
+   "calibration": null,
+   "claim_id": "policy-logreg-gain",
+   "excludes": "remaining useful life or time-to-failure of any component; fault diagnosis for components other than cooler, valve, pump, accumulator; condition grades not present in training (e.g. interpolated severities); any claim about plants or rigs other than the UCI-447 test rig; root-cause attribution among simultaneously degraded components; claims on cycles whose evidence failed integrity without repair",
+   "supports": "policy behaviour under 'gain' on UCI-447 test blocks"
+  },
+  {
+   "assumptions": [
+    "blocked split",
+    "train-fit checker thresholds"
+   ],
+   "calibration": null,
+   "claim_id": "policy-logreg-novel_severity",
+   "excludes": "remaining useful life or time-to-failure of any component; fault diagnosis for components other than cooler, valve, pump, accumulator; condition grades not present in training (e.g. interpolated severities); any claim about plants or rigs other than the UCI-447 test rig; root-cause attribution among simultaneously degraded components; claims on cycles whose evidence failed integrity without repair",
+   "supports": "policy behaviour under 'novel_severity' on UCI-447 test blocks"
+  },
+  {
+   "assumptions": [
+    "blocked split",
+    "train-fit checker thresholds"
+   ],
+   "calibration": null,
+   "claim_id": "policy-logreg-offset",
+   "excludes": "remaining useful life or time-to-failure of any component; fault diagnosis for components other than cooler, valve, pump, accumulator; condition grades not present in training (e.g. interpolated severities); any claim about plants or rigs other than the UCI-447 test rig; root-cause attribution among simultaneously degraded components; claims on cycles whose evidence failed integrity without repair",
+   "supports": "policy behaviour under 'offset' on UCI-447 test blocks"
+  },
+  {
+   "assumptions": [
+    "blocked split",
+    "train-fit checker thresholds"
+   ],
+   "calibration": null,
+   "claim_id": "policy-logreg-shift_unstable",
+   "excludes": "remaining useful life or time-to-failure of any component; fault diagnosis for components other than cooler, valve, pump, accumulator; condition grades not present in training (e.g. interpolated severities); any claim about plants or rigs other than the UCI-447 test rig; root-cause attribution among simultaneously degraded components; claims on cycles whose evidence failed integrity without repair",
+   "supports": "policy behaviour under 'shift_unstable' on UCI-447 test blocks"
+  },
+  {
+   "assumptions": [
+    "blocked split",
+    "train-fit checker thresholds"
+   ],
+   "calibration": null,
+   "claim_id": "policy-logreg-spike",
+   "excludes": "remaining useful life or time-to-failure of any component; fault diagnosis for components other than cooler, valve, pump, accumulator; condition grades not present in training (e.g. interpolated severities); any claim about plants or rigs other than the UCI-447 test rig; root-cause attribution among simultaneously degraded components; claims on cycles whose evidence failed integrity without repair",
+   "supports": "policy behaviour under 'spike' on UCI-447 test blocks"
+  },
+  {
+   "assumptions": [
+    "blocked split",
+    "train-fit checker thresholds"
+   ],
+   "calibration": null,
+   "claim_id": "policy-logreg-stuck",
+   "excludes": "remaining useful life or time-to-failure of any component; fault diagnosis for components other than cooler, valve, pump, accumulator; condition grades not present in training (e.g. interpolated severities); any claim about plants or rigs other than the UCI-447 test rig; root-cause attribution among simultaneously degraded components; claims on cycles whose evidence failed integrity without repair",
+   "supports": "policy behaviour under 'stuck' on UCI-447 test blocks"
+  },
+  {
+   "assumptions": [
+    "blocked split",
+    "train-fit checker thresholds"
+   ],
+   "calibration": null,
+   "claim_id": "policy-logreg-time_shift",
+   "excludes": "remaining useful life or time-to-failure of any component; fault diagnosis for components other than cooler, valve, pump, accumulator; condition grades not present in training (e.g. interpolated severities); any claim about plants or rigs other than the UCI-447 test rig; root-cause attribution among simultaneously degraded components; claims on cycles whose evidence failed integrity without repair",
+   "supports": "policy behaviour under 'time_shift' on UCI-447 test blocks"
+  }
+ ]
+}

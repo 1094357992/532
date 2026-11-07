@@ -1,0 +1,44 @@
+# Full CPU evaluation (proposed). Contract: <= 2 CPU hours, 4 cores, 16 GB RAM, no network.
+run_id: cpu
+seeds: [0, 1, 2, 3, 4]
+workers: 2                     # (kind, seed) jobs in parallel; results merged in fixed order
+data:
+  raw_dir: data/raw
+  manifest: data/manifest.json
+  cache: data/cache
+  subset: {stride: 1}          # all 2205 cycles
+split:
+  scheme: blocked
+  block_size: 30
+  fractions: {train: 0.6, cal: 0.2, test: 0.2}
+  holdout_grade: {valve: 73}   # novel-severity partition: never seen in train/cal
+features:
+  segments: 6
+  sensors: null
+a1: {erank_floor_frac: 0.1, drift_ratio: 0.5}   # A1 collapse diagnostics (batch-level)
+model:
+  kinds: [logreg, hgb]
+  C: 1.0
+  max_iter: 2000
+  hgb_iter: 200
+calibration:
+  method: split_conformal_lac
+  alpha: 0.05
+policy:
+  tau: {medium: 0.80, high: 0.90, critical: 0.95}   # course RiskTier vocabulary
+  repair: true
+checkers:
+  integrity: {range_margin: 0.10, flatline_rel: 0.5, spike_factor: 2.0}
+  physics: {residual_quantile: 0.995, slack: 1.5, coherence_margin: 0.05}
+  causal: {min_support: 0.9, interval_margin: 0.05}
+injection:
+  modes: [dropout, stuck, offset, gain, time_shift, spike]
+  sensors: [PS1, PS2, EPS1, FS1, TS1, CE, VS1]
+  offset_sd: 3.0
+  gain: 0.05
+  shift_frac: 0.1
+  spike_mag: 0.5
+  adversarial_sensors: [PS1, FS1, TS1, EPS1]
+  adv_grid: [0.5, 1, 1.5, 2, 3, 4, 6]
+outputs: {dir: experiments/cpu}
+budget: {wall_seconds: 7200, peak_rss_mib: 16384}
