@@ -4,7 +4,6 @@ Yilong Peng, graduate track.
 
 | File | What it is |
 |---|---|
-| `docs/proposal/proposal.pdf` | Two-page research proposal plus annotated references |
 | `config/smoke.yaml`, `config/cpu.yaml` | Proposed smoke and full CPU configurations |
 | `docs/DATA_ACCESS.md`, `data/manifest.json` | Data-access confirmation (UCI #447, CC BY 4.0) and SHA-256 of every data file |
 | `docs/SCALEUP.md` | Optional scale-up justification (separately labeled; none requested) |
